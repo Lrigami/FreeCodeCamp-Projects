@@ -1,0 +1,104 @@
+body {
+    color: #F7F1F6;
+  }
+  
+  #imgbooks {
+    background-image: url(https://images.unsplash.com/photo-1532012197267-da84d127e765?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8Nnx8fGVufDB8fHx8fA%3D%3D);
+  }
+  
+  h1 {
+    padding-top: 50px;
+    font-family: Times, "Times New Roman";
+  }
+  
+  h1, #description {
+    text-align: center;
+  }
+  
+  #description {
+    padding-bottom: 20px;
+  }
+  
+  form {
+    background-color: #E0E0E0;
+    border-radius: 20px;
+    width: 50%;
+    margin: auto;
+    padding: 30px 30px;
+    display: flex;
+    flex-direction: column; 
+    gap: 20px;
+    opacity: 0.7;
+    color: black;
+    font-family: Georgia, serif;
+  }
+  
+  fieldset {
+    display: flex; 
+    flex-direction: column; 
+    gap: 20px;
+    padding: 10px;
+    border-radius: 10px;
+  }
+  
+  fieldset div {
+    display: flex; 
+    flex-direction: column; 
+    gap: 10px;
+  }
+  
+  legend {
+    font-weight: bold;
+    font-size: 150%;
+    color: #202020;
+  }
+  
+  input {
+    height: 25px;
+    width: auto;
+  }
+  
+  select {
+    height: 25px;
+    background-color: white;
+    border: 1px solid grey;
+  }
+  
+  input[type="radio"] {
+    margin: 0;
+    vertical-align: middle;
+  }
+  
+  #allsupports {
+    flex-direction: unset;
+  }
+  
+  #allgenres {
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  ol {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  ol input {
+    width: 95%;
+  }
+  
+  footer {
+    height: 20px;
+  }
+  
+  #padding {
+    height: 100px;
+  }
+  
+  input[type="submit"] {
+    width: 50%;
+    margin: auto;
+    height: 40px;
+    font-size: 120%;
+  }

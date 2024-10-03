@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="styles.css">
+<title>Book Survey</title>
+</head>
+
+<body>
+  <div id="imgbooks">
+    <h1 id="title">The 100 Favorite Books of All Times</h1>
+    <p id="description">Thank you for helping us determinate the 100 best books of all times!</p>
+    <form id="survey-form">
+      <fieldset>
+        <legend>Who are you?</legend>
+        <div>
+          <label id="name-label"  for="name">Name </label>
+          <input type="text" id="name" required="" placeholder="Enter your name" />
+        </div>
+        <div>
+          <label id="email-label" for="email">Email </label>
+          <input type="email" id="email" required="" placeholder="Enter your email"/>
+        </div>
+        <div>
+          <label id="number-label" for="number">Age (optional) </label>
+          <input type="number" id="number" placeholder="Enter your age" min="3" max="130" />
+        </div>
+        <div>
+          <label for="dropdown">What is your status? </label>
+          <select id="dropdown">
+            <option value="">select one</option>
+            <option value="1">Student</option>
+            <option value="2">Working</option>
+            <option value="3">Retired</option>
+            <option value="4">Other</option>
+          </select>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Reading habits</legend>
+        <div>
+          <label>Are you a reader?  
+            <label for="yes">Yes <input checked type="radio" id="yes" name="yesorno" value="1" /></label>
+            <label for="no">No <input type="radio" id="no" name="yesorno" value="2" /></label>
+          </label>
+        </div>
+        <div>
+          <label>On what support are you reading? </label>
+          <div id="allsupports">
+            <label for="none"><input type="checkbox" id="none" value="0" />None</label>
+            <label for="paper"><input type="checkbox" id="paper" value="1" />Paper</label>
+            <label for="digital"><input type="checkbox" id="digital" value="2" />Digital</label>
+            <label for="audio"><input type="checkbox" id="audio" value="3" />Audio</label>
+            <label for="other"><input type="checkbox" id="other" value="4" />Other</label>
+          </div>
+        </div>
+        <div>
+          <label for="readinghours">How many hours do you read a week? </label>
+          <input id="readinghours" type="number" min="0" max="168" />
+        </div>
+        <div>
+          <label for="bookspages">How many pages do you read a week? </label>
+          <input id="bookspages" type="number" min="O" max="10080" step="50"/>
+        </div>
+        <div>
+          <label>What are your favorite book genres? </label>
+          <div id="allgenres"> 
+            <label><input type="checkbox" value="Non-Fiction"/> Non-Fiction</label>
+            <label><input type="checkbox" value="Detective-books"/> Detective books</label>
+            <label><input type="checkbox" value="Memoir" /> Memoir</label>
+            <label><input type="checkbox" value="Romance" /> Romance</label>
+            <label><input type="checkbox" value="Fantasy" /> Fantasy</label>
+            <label><input type="checkbox" value="Science-Fiction" /> Science-fiction</label>
+            <label><input type="checkbox" value="Theatre" /> Theatre</label>
+            <label><input type="checkbox" value="Poetry" /> Poetry</label>
+            <label><input type="checkbox" value="Fantastic" /> Fantastic</label>
+            <label><input type="checkbox" value="Academic" /> Academic</label>
+            <label><input type="checkbox" value="Historical-Fiction" /> Historical fiction</label>
+          </div>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Your top 5 books</legend>
+        <ol>
+          <li><input type="text" name="top1"/></li>
+          <li><input type="text" name="top2"/></li>
+          <li><input type="text" name="top3"/></li>
+          <li><input type="text" name="top4"/></li>
+          <li><input type="text" name="top5"/></li>
+        </ol>
+      </fieldset>
+      <fieldset>
+        <legend>Want to add something?</legend>
+        <label for="comment">Feel free to leave some comments!</label>
+        <textarea id="comment" rows="6" cols="30" placeholder="I love reading detective books..."></textarea>
+      </fieldset>
+      <input type="submit" id="submit">
+    </form>
+    <div id="padding"></div>
+  </div>
+</body>
+</html>
