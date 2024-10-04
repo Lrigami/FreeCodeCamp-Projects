@@ -78,7 +78,84 @@ h1 {
 
 /* Section bio */
 
+#bio {
+    margin-bottom: 100px;
+}
 
+#info {
+    height: 100%;
+}
+
+#ligne {
+    width: 2px;
+    height: 40rem;
+    background-color: black;
+    position: relative;
+    margin: auto;
+    bottom: 0;
+    margin-top: 80px;
+}
+
+#biogroup {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: -1px;
+    grid-template-rows:minmax(100px, auto);
+    margin: auto;
+    max-width: 80%;
+    margin-top: -40rem;
+}
+
+.bioinfo {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    text-align: justify;
+}
+
+
+.one {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.two {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.three {
+    grid-column: 2;
+    grid-row: 3;
+}
+
+.four {
+    grid-column: 2;
+    grid-row: 4;
+}
+
+.five {
+    grid-column: 1;
+    grid-row: 5;
+}
+
+.six {
+    grid-column: 1;
+    grid-row: 6;
+}
+
+.seven {
+    grid-column: 2;
+    grid-row: 7;
+}
+
+.droite {
+    margin-left: -4px;
+}
+
+.gauche {
+    margin-right: -4px;
+}
 
 /* responsive */
 
