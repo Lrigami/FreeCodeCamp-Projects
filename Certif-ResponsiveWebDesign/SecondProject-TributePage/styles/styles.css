@@ -84,6 +84,8 @@ h1 {
 
 #info {
     height: 100%;
+    width: 90%;
+    margin: auto;
 }
 
 #ligne {
@@ -103,7 +105,7 @@ h1 {
     grid-template-rows:minmax(100px, auto);
     margin: auto;
     max-width: 80%;
-    margin-top: -40rem;
+    margin-top: -39rem;
 }
 
 .bioinfo {
@@ -112,7 +114,6 @@ h1 {
     gap: 10px;
     text-align: justify;
 }
-
 
 .one {
     grid-column: 1;
@@ -155,6 +156,94 @@ h1 {
 
 .gauche {
     margin-right: -4px;
+}
+
+/* section booklist */
+
+h3 {
+    text-align: center;
+}
+
+#booklist {
+    width: 60%;
+    height: 250px;
+    margin: auto;
+    margin-bottom: 70px;
+}
+
+#frame2 {
+    width: 100%;
+    height: 60%;
+    background-color: rgba(80, 102, 239, 0.5);
+    border-radius: 20px;
+}
+
+#defilement {
+    width: 90%;
+    height: 60%;
+    margin: auto;
+    margin-top: -6rem;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#defilement button {
+    background-color: #F4F2FF;
+    color: black;
+    font-weight: bold;
+    border: 1px solid #3E6082;
+    border-radius: 5px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.books {
+    width: 20%;
+    height: 120%;
+    background-color: #3E6082;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bookcover {
+    width: 60%;
+    height: 100%;
+    background-color: wheat;
+    margin-top: 3px;
+    border-radius: 5px;
+}
+
+.booktitle, .parution {
+    font-size: 11px;
+    margin: 2px auto;
+}
+
+.booktitle {
+    font-style: italic;
+}
+
+.parution {
+    font-weight: bold;
+}
+
+/* section showmore */
+
+#showmore {
+    text-align: center;
+}
+
+#showmore a {
+    color: #173d63;
+}
+
+#showmore a:active {
+    color: black;
 }
 
 /* responsive */
