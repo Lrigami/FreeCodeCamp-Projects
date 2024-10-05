@@ -17,6 +17,6 @@ User Stories:
 What I want to add to this project to make it more personal and deepened :
 
 - [ ] Being able to choose the language of the page. The text will change automatically. 
-- [ ] Design a better timeline : on the left the bio aspects, on the right the literary ones. 
+- [x] Design a better timeline : on the left the bio aspects, on the right the literary ones. 
 - [ ] Add a sliding div that contains the published books by the author. Users can scroll right or left.
-- [ ] Add a better design so the colors are matching. Put the photo of Ogawa Yôko and the sliding div in a asymetric frame. 
+- [x] Add a better design so the colors are matching. Put the photo of Ogawa Yôko and the sliding div in a asymetric frame. 
