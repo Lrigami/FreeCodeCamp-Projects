@@ -55,8 +55,8 @@ buttons.forEach(button => {
             langue.lang = "jp"
         }
         console.log("langue cible selectionnée : ", langueCible)
+      let texteATraduire = getVisibleTextFromPage();
+      console.log(texteATraduire)
+      translateText(texteATraduire, langueCible);
     })
-    let texteATraduire = getVisibleTextFromPage();
-    console.log(texteATraduire)
-    translateText(texteATraduire, langueCible);
 })
