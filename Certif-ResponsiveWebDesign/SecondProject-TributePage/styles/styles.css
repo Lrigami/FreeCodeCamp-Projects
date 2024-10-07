@@ -9,6 +9,10 @@ h2 {
     text-align: center;
 }
 
+.titre {
+    font-style: italic;
+}
+
 /* section presentation */
 
 #presentation {
