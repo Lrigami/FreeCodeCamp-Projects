@@ -178,7 +178,7 @@ h3 {
     border-radius: 20px;
 }
 
-#defilement {
+.defilement {
     width: 90%;
     height: 60%;
     margin: auto;
@@ -190,8 +190,8 @@ h3 {
     align-items: center;
 }
 
-#defilement button {
-    background-color: #F4F2FF;
+.defilement button {
+    background-color: #3E6082;
     color: black;
     font-weight: bold;
     border: 1px solid #3E6082;
@@ -201,27 +201,39 @@ h3 {
     cursor: pointer;
 }
 
+.defilement button:hover {
+    background-color: #3E6082;
+}
+
 .books {
-    width: 20%;
-    height: 120%;
+    width: 80% !important;
+    height: 12rem;
     background-color: #3E6082;
     border-radius: 10px;
-    display: flex;
+    display: flex !important;
     flex-direction: column;
-    align-items: center;
+    justify-content: space-between;
 }
 
 .bookcover {
-    width: 60%;
-    height: 100%;
+    width: 50%;
+    height: 55%;
     background-color: wheat;
-    margin-top: 3px;
+    margin: 10px auto;
     border-radius: 5px;
 }
 
+.bookcover img {
+    object-fit: fill;
+    max-width: 100%;
+    height: auto;
+}
+
 .booktitle, .parution {
+    max-width: 95%;
     font-size: 11px;
-    margin: 2px auto;
+    margin: auto;
+    text-align: center;
 }
 
 .booktitle {
@@ -230,6 +242,16 @@ h3 {
 
 .parution {
     font-weight: bold;
+}
+
+/* carousel */
+
+.slick-next {
+    right: -70px !important;
+}
+
+.slick-prev {
+    left: -70px !important;
 }
 
 /* section showmore */

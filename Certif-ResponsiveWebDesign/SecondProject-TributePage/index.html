@@ -4,6 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="translate.js" defer></script>
     <title>Hommage à Ogawa Yôko</title>
 </head>
@@ -70,30 +72,63 @@
             <div id="booklist">
                 <h3>Retrouvez ici les oeuvres d'Ogawa Yôko</h3>
                 <div id="frame2"></div>
-                <div id="defilement">
-                    <button> < </button>
+                <div class="defilement">
                     <div class="books">
                         <div class="bookcover">
-
+                            <img src="img/bookcover/1994Cristallisation.jpg" alt="Couverture de 'Cristallisation secrète' d'Ogawa Yôko">
                         </div>
-                        <p class="booktitle"></p>
-                        <p class="parution"></p>
+                        <p class="booktitle">Cristallisation secrète</p>
+                        <p class="parution">1994</p>
                     </div>
                     <div class="books">
                         <div class="bookcover">
-
+                            <img src="img/bookcover/1994Lannulaire.jpg" alt="Couverture de 'L'Annulaire' d'Ogawa Yôko">
                         </div>
-                        <p class="booktitle"></p>
-                        <p class="parution"></p>
+                        <p class="booktitle">L'Annulaire</p>
+                        <p class="parution">1994</p>
                     </div>
                     <div class="books">
                         <div class="bookcover">
-
+                            <img src="img/bookcover/1995AnneFrank.jpg" alt="Couverture japonaise de 'La mémoire d'Anne Frank' d'Ogawa Yôko, livre japonais non traduit en français">
                         </div>
-                        <p class="booktitle"></p>
-                        <p class="parution"></p>
+                        <p class="booktitle">La mémoire d'Anne Frank (アンネフランクの記憶)</p>
+                        <p class="parution">1995</p>
                     </div>
-                    <button> > </button>
+                    <div class="books">
+                        <div class="bookcover">
+                            <img src="img/bookcover/2007Monogatari.jpg" alt="Couverture japonaise de 'Le rôle des histoires' d'Ogawa Yôko, livre japonais non traduit en français">
+                        </div>
+                        <p class="booktitle">Le Rôle des histoires (物語の役割)</p>
+                        <p class="parution">2007</p>
+                    </div>
+                    <div class="books">
+                        <div class="bookcover">
+                            <img src="img/bookcover/2009Joueur.jpg" alt="Couverture japonaise de 'Le Petit Joueur d'échecs' d'Ogawa Yôko">
+                        </div>
+                        <p class="booktitle">Le Petit Joueur d'échecs</p>
+                        <p class="parution">2009</p>
+                    </div>
+                    <div class="books">
+                        <div class="bookcover">
+                            <img src="img/bookcover/2009Oeuvres.jpg" alt="Couverture de la première anthologie des oeuvres d'Ogawa Yôko, livre uniquement paru en français">
+                        </div>
+                        <p class="booktitle">Oeuvres, t.1</p>
+                        <p class="parution">2009</p>
+                    </div>
+                    <div class="books">
+                        <div class="bookcover">
+                            <img src="img/bookcover/2012Kotori.jpg" alt="Couverture japonaise de 'Petits Oiseaux' d'Ogawa Yôko">
+                        </div>
+                        <p class="booktitle">Petits Oiseaux</p>
+                        <p class="parution">2012</p>
+                    </div>
+                    <div class="books">
+                        <div class="bookcover">
+                            <img src="img/bookcover/2021Ogawa.jpg" alt="Couverture japonaise de 'La Fabrique d'Ogawa Yôko', livre non traduit en français">
+                        </div>
+                        <p class="booktitle">La Frabrique d'Ogawa Yôko (小川洋子のつくり方)</p>
+                        <p class="parution">2021</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -105,6 +140,41 @@
             </div>
         </section>
     </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.5.2/jquery-migrate.min.js" integrity="sha512-BzvgYEoHXuphX+g7B/laemJGYFdrq4fTKEo+B3PurSxstMZtwu28FHkPKXu6dSBCzbUWqz/rMv755nUwhjQypw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+        $(document).ready(function(){
+        $('.defilement').slick({
+            centerMode: true,
+            centerPadding: '60px',
+            slidesToShow: 3,
+            responsive: [
+                {
+                breakpoint: 768,
+                settings: {
+                    arrows: false,
+                    centerMode: true,
+                    centerPadding: '40px',
+                    slidesToShow: 3
+                }
+                },
+                {
+                breakpoint: 480,
+                settings: {
+                    arrows: false,
+                    centerMode: true,
+                    centerPadding: '40px',
+                    slidesToShow: 1
+                }
+                }
+            ]
+        });
+        });
+    </script>
+
 </body>
 
 </html>
