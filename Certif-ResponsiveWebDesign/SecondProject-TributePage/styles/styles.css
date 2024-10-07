@@ -217,8 +217,8 @@ h3 {
 
 .bookcover {
     width: 50%;
-    height: 55%;
-    background-color: wheat;
+    max-height: 60%;
+    background-color: #3E6082;
     margin: 10px auto;
     border-radius: 5px;
 }
@@ -226,7 +226,8 @@ h3 {
 .bookcover img {
     object-fit: fill;
     max-width: 100%;
-    height: auto;
+    max-height: 100%;
+    margin: auto;
 }
 
 .booktitle, .parution {
