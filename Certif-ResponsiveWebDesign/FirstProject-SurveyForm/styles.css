@@ -73,6 +73,12 @@ body {
     flex-direction: unset;
   }
   
+  #allsupports label {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+  }
+
   #allgenres {
     display: grid; 
     grid-template-columns: repeat(3, 1fr);
