@@ -13,6 +13,10 @@ h2 {
     font-style: italic;
 }
 
+.hidden {
+    visibility: hidden;
+}
+
 /* section presentation */
 
 #presentation {
@@ -115,7 +119,7 @@ h1 {
 .bioinfo {
     display: flex;
     flex-direction: row;
-    gap: 10px;
+    gap: 30px;
     text-align: justify;
 }
 
@@ -263,6 +267,10 @@ h3 {
 
 #showmore {
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
 }
 
 #showmore a {
