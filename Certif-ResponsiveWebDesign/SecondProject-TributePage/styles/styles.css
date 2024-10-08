@@ -37,7 +37,8 @@ h1 {
     display: flex;
     justify-content: space-between;
     margin: auto;
-    padding: 20px 0;
+    margin-bottom: 20px;
+    padding: 30px 0;
 }
 
 #language button {
@@ -176,7 +177,7 @@ h3 {
     width: 60%;
     height: 250px;
     margin: auto;
-    margin-bottom: 70px;
+    margin-bottom: 100px;
 }
 
 #frame2 {
