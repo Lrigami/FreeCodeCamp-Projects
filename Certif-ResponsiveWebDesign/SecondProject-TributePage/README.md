@@ -20,7 +20,7 @@ What I want to add to this project to make it more personal and deepened :
 - [x] Design a better timeline : on the left the bio aspects, on the right the literary ones. 
 - [x] Add a sliding div that contains the published books by the author. Users can scroll right or left.
 - [x] Add a better design so the colors are matching. Put the photo of Ogawa Yôko and the sliding div in a asymetric frame.
-- [ ] Responsive design
+- [x] Responsive design
 
 /!\ To make the translation button work, you need a free DeepLAPI key. /!\
 
@@ -34,8 +34,9 @@ What I want to add to this project to make it more personal and deepened :
 ### Designed biography 
 ![image](https://github.com/user-attachments/assets/17d9b84c-084d-46a4-843e-e4fe6251c76d)
 
-## Books carousel 
-![image](https://github.com/user-attachments/assets/12d1dbc7-917e-4099-acd4-0c3bb0f88f4f)
+### Books carousel 
+![image](https://github.com/user-attachments/assets/8467312e-a647-4020-9e7e-e0ea2226d35f)
+
 
 
 
