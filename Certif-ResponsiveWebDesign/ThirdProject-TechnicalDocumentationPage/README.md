@@ -22,5 +22,5 @@ User Stories:
 
 What I want to add to make the project more personal and deepened : 
 
-- [x] Add a maximum of tables and graphs 
+- [x] Training in tables and graphs 
 - [ ] Add a day/night mode button
