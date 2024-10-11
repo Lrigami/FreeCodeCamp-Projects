@@ -7,7 +7,7 @@ require('dotenv').config();         // Pour charger les variables d'environnemen
 
 const app = express();
 const port = process.env.PORT || 3000;  // Définit le port du serveur, par défaut 3000
-const deeplApiKey = process.env.DEEPL_API_KEY; // Récupère la clé API de DeepL depuis le fichier .env
+const deeplApiKey = process.env.DEEPL_API_KEY; // Récupère la clé API de DeepL depuis le fichier .env (besoin d'une free DeepL API key)
 
 // Middleware pour traiter les requêtes POST avec JSON
 app.use(cors()); 
@@ -22,7 +22,7 @@ app.post('/translate', async (req, res) => {
       params: {
         auth_key: deeplApiKey,
         text: text,
-        target_lang: target_lang.toUpperCase(), // La langue doit être en majuscules (ex: 'FR', 'EN')
+        target_lang: target_lang.toUpperCase(), // La langue doit être en majuscules (ex: 'FR', 'EN', 'JA')
       },
     });
 

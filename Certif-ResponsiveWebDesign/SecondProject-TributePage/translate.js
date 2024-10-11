@@ -1,8 +1,9 @@
 // translate.js
 
+// fonction pour traduire le texte
 async function translateText(text, targetLang) {
     try {
-      const response = await fetch('http://localhost:3000/translate', { // Assurez-vous que le serveur backend tourne
+      const response = await fetch('http://localhost:3000/translate', { // S'assurer que le serveur backend tourne
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -21,6 +22,8 @@ async function translateText(text, targetLang) {
     }
   }
 
+
+// click du bouton : changer la langue cible + initialisation fonction traduction
 let langueCible = ""
 let buttons = document.querySelectorAll("#language button")
 let langue = document.querySelector("html")
@@ -45,6 +48,7 @@ buttons.forEach(button => {
     })
 })
 
+// fonction qui récupère les éléments à traduire, le texte traduit par la fonction de traduction + remplacement du texte par le texte traduit
 async function updatePageWithTranslation(targetLang) {
   const elements = document.querySelectorAll('h1, h2, h3, a, p:not(.puce), span, figcaption'); // Sélectionner les éléments à traduire
 

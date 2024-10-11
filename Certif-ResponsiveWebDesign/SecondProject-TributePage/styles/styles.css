@@ -80,17 +80,17 @@ h1 {
     width: 100%;
 }
 
-#img-div {
-    margin: -35% auto auto auto;
-    text-align: center;
-}
-
 #frame1 {
     background-color: var(--frame-background);
     max-width: 67%;
     height: 80vh;
     margin: auto;
     border-radius: 20px;
+}
+
+#img-div {
+    margin: -35% auto auto auto;
+    text-align: center;
 }
 
 #image {
@@ -184,15 +184,15 @@ h1 {
 
 /* section booklist */
 
-h3 {
-    text-align: center;
-}
-
 #booklist {
     width: 60%;
     height: 250px;
     margin: auto;
     margin-bottom: 100px;
+}
+
+h3 {
+    text-align: center;
 }
 
 #frame2 {
