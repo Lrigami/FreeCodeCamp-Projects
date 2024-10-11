@@ -7,3 +7,5 @@ You can find here all the certfication projects for the Responsive Web Design Ce
 3. A Technical Documentation Page (added : graphs, day/night mode button)
 4. Product Landing Page
 5. Personal Portfolio Page
+
+Please go read the Readme file on each project to have further information
