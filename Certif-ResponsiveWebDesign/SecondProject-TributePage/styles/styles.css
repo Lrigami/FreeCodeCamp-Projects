@@ -1,8 +1,25 @@
+/* root */
+:root {
+    --background: #F4F2FF;
+    --books-title: #F4F2FF;
+    --frame-background: rgba(80, 102, 239, 0.5);
+    --books-color: #3E6082;
+    --showmore: #173d63;
+}
+
 /* main */
 
 body {
-    background-color: #F4F2FF;
+    background-color: var(--background);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
 }
 
 h2 {
@@ -44,7 +61,7 @@ h1 {
 #language button {
     width: 30px;
     padding: 0;
-    background-color: #F4F2FF;
+    background-color: var(--background);
     border: none;
 }
 
@@ -61,20 +78,17 @@ h1 {
 
 #intro {
     width: 100%;
-    height: 100%;
-    margin-bottom: 30px;
 }
 
 #img-div {
     margin: -35% auto auto auto;
     text-align: center;
-    height: 100%;
 }
 
 #frame1 {
-    background-color: rgba(80, 102, 239, 0.5);
-    width: 67%;
-    height: 38vw;
+    background-color: var(--frame-background);
+    max-width: 67%;
+    height: 80vh;
     margin: auto;
     border-radius: 20px;
 }
@@ -99,7 +113,8 @@ h1 {
 
 #ligne {
     width: 2px;
-    height: 40rem;
+    height: 100vh;
+    max-height: 100%;
     background-color: black;
     position: relative;
     margin: auto;
@@ -114,7 +129,7 @@ h1 {
     grid-template-rows:minmax(100px, auto);
     margin: auto;
     max-width: 80%;
-    margin-top: -39rem;
+    margin-top: -99vh;
 }
 
 .bioinfo {
@@ -183,41 +198,34 @@ h3 {
 #frame2 {
     width: 100%;
     height: 60%;
-    background-color: rgba(80, 102, 239, 0.5);
+    background-color: var(--frame-background);
     border-radius: 20px;
 }
 
 .defilement {
-    width: 90%;
+    width: 100%;
     height: 60%;
     margin: auto;
     margin-top: -6rem;
     border-radius: 20px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+    backdrop-filter: blur(5px);
+    padding: 0 40px;
 }
 
 .defilement button {
-    background-color: #3E6082;
-    color: black;
+    background-color: var(--books-color) !important;
     font-weight: bold;
-    border: 1px solid #3E6082;
+    border: 1px solid var(--books-color);
     border-radius: 5px;
     width: 30px;
     height: 30px;
     cursor: pointer;
 }
 
-.defilement button:hover {
-    background-color: #3E6082;
-}
-
 .books {
     width: 80% !important;
     height: 12rem;
-    background-color: #3E6082;
+    background-color: var(--books-color);
     border-radius: 10px;
     display: flex !important;
     flex-direction: column;
@@ -227,7 +235,7 @@ h3 {
 .bookcover {
     width: 50%;
     max-height: 60%;
-    background-color: #3E6082;
+    background-color: var(--books-color);
     margin: 10px auto;
     border-radius: 5px;
 }
@@ -240,6 +248,7 @@ h3 {
 }
 
 .booktitle, .parution {
+    color: var(--books-title);
     max-width: 95%;
     font-size: 11px;
     margin: auto;
@@ -256,12 +265,8 @@ h3 {
 
 /* carousel */
 
-.slick-next {
-    right: -70px !important;
-}
-
-.slick-prev {
-    left: -70px !important;
+.slick-next:focus::before, .slick-prev:focus::before {
+    opacity: 0.75 !important;
 }
 
 /* section showmore */
@@ -275,7 +280,7 @@ h3 {
 }
 
 #showmore a {
-    color: #173d63;
+    color: var(--showmore);
 }
 
 #showmore a:active {
@@ -283,7 +288,82 @@ h3 {
 }
 
 /* responsive */
+/* Smaller than 900px */
 
+@media screen and (max-width: 900px) {
+    #frame1 {
+        height: 24vh;
+    }
 
+    #ligne {
+        height: 70vh;
+    }
 
-/* accessibility */
+    #biogroup {
+        margin-top: -69vh;
+    }
+
+    #booklist {
+        width: 80%;
+    }
+
+    .books {
+        width: 95% !important;
+    }
+}
+
+/* Smaller than 450px */
+
+@media screen and (max-width: 450px) {
+    #main {
+        gap: 0;
+    }
+
+    #intro {
+        margin-bottom: 20px;
+    }
+
+    #frame1 {
+        height: 18vh;
+    }
+
+    #ligne {
+        display: none;
+    }
+
+    #biogroup {
+        display: flex;
+        flex-direction: column;
+        margin-top: 0;
+    }
+    
+    .bioinfo.gauche {
+        display: flex;
+        flex-direction: row-reverse;
+        height: auto;
+    }
+
+    #bio {
+        margin-bottom: 30px;
+    }
+
+    figcaption, p, a {
+        font-size: small;
+    }
+
+    h1 {
+        font-size: xx-large;
+    }
+
+    h2 {
+        font-size: large;
+    }
+
+    .books {
+        width: 98% !important;
+    }
+
+    #booklist {
+        margin-bottom: 120px;
+    }
+}
