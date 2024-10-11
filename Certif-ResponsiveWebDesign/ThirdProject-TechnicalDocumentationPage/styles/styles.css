@@ -1,3 +1,181 @@
+:root {
+    /* day mode */
+    --text-color-day: black;
+    --background-nav-day: rgb(171, 160, 160);
+    --border-color-day: black;
+
+    /* night mode */
+}
+
+/* main */
+
+body {
+    height: 100vh;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    display: flex;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+body.day {
+
+}
+
+body.night {
+
+}
+
+main {
+    height: 95%;
+    width: 72%;
+    position: absolute;
+    max-width: calc(95% - 310px);
+    right: 0px;
+    padding-right: 25px;
+    bottom: 25px;
+    overflow-x: hidden;
+}
+
+section {
+    width: 100%;
+}
+
+header {
+    display: none;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    height: 25px;
+    width: 72%;
+    max-width: calc(95% - 310px);
+    right: 10px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    align-items: center;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+/* navigation */
+
+aside {
+    height: 100%;
+    width: 25%;
+    min-width: 300px;
+    position: fixed;
+}
+
+aside.day {
+    border-right: 1px solid var(--border-color-day);
+}
+
+aside.night {
+    border-right: 1px solid var(--border-color-night);
+}
+
+#navbar {
+    display: grid;
+    justify-content: stretch;
+    align-content: stretch;
+    height: 100%;
+    text-decoration: none;
+    vertical-align: middle;
+}
+
+#navbar header {
+    display: unset;
+}
+
+#navbar header.day, #navbar a.day {
+    border-bottom: 1px solid var(--background-nav-day);
+}
+
+#navbar header.night, #navbar a.night {
+    border-bottom: 1px solid var(--background-nav-night);
+}
+
+#navbar header a {
+    font-size: 1.5em;
+    border-bottom: unset;
+}
+
+#navbar a {
+    text-decoration: none;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    color: var(--text-color);
+}
+
+#navbar a.day:hover {
+    background-color: var(--background-nav-day);
+}
+
+#navbar a.night:hover {
+    background-color: var(--background-nav-night);
+}
+
+.nav-link {
+    padding-left: 3%;
+    font-weight: bold;
+}
+
+#navbar .h3 {
+    padding-left: 8%;
+}
+
+/* Heading section */
+/* Navigation buttons */
+
+#JLPT_Documentation_Page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Day/Night mode */
+
+#day-night-mode {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 70px;
+    height: 30px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+}
+
+#day-night-mode div:first-of-type.day {
+    padding: 0 20px 0 5px;
+    border: 1px solid black;
+    border-radius: 20px;
+}
+
+#day-night-mode div:first-of-type.night {
+    padding: 0 5px 0 5px;
+}
+
+#day-night-mode div:last-of-type.day {
+    padding: 0 5px 0 5px;
+}
+
+#day-night-mode div:last-of-type.night {
+    padding: 0 20px 0 5px;
+    border: 1px solid black;
+    border-radius: 20px;
+}
+
+/* tables */
+
 table {
     border: 1px solid black;
 }
@@ -6,13 +184,6 @@ th, td {
     border: 1px solid black;
 }
 
-
-
-#navbar {
-    top: 0;
-    left: 0;
-    position: sticky;
-}
 
 @media (prefers-reduced-motion: no-preference) {
     * {
