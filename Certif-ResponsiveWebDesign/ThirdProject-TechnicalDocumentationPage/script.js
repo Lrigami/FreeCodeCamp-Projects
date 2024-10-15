@@ -24,7 +24,7 @@ let currentThemeSetting = calculateSettingAsThemeString({localStorageTheme, syst
 updateThemeOnHtmlEl({ theme: currentThemeSetting });
 
 //AddEventListener sur le bouton :
-button.addEventListener("click", (event) => {
+button.addEventListener("click", () => {
     // au click : newTheme var regarder si currentThemeSetting = dark. Si oui newTheme = light, sinon newTheme = dark
     const newTheme = currentThemeSetting === "dark" ? "light" : "dark";
 
