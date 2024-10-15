@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="styles/styles.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/charts.css/dist/charts.min.css">
+        <script src="script.js" defer></script>
         <title>JLPT Documentation Page</title>
     </head>
 
@@ -48,11 +49,28 @@
                     <button><a class="nav-button" href="#Sec4h2">FAQ</a></button>
                 </div> 
                 <!-- Night mode button -->
-                <button id="day-night-mode">
+                <button id="day-night-mode" data-theme-toggle>
                     <div class="day">☼</div>
                     <div class="day">☾</div>
                 </button>
             </section>
+
+            <!-- <script>
+
+
+                function switchmode(x) {
+                    if(x.matches) {
+                        html.setAttribute[data-theme="dark"]
+                    }
+                    else {
+
+                    }
+                }
+
+                const darkmode = window.matchMedia('(prefers-color-scheme: dark)');
+
+                switchmode(darkmode);
+            </script> -->
 
             <!-- Section "What is JLPT?" : Presentation of JLPT -->
             <section id="What_is_JLPT?" class="main-section" role="region" aria-labelledby="page content">
@@ -399,7 +417,7 @@
                     <div id="score-report">
 
                         <!-- Overall test result -->
-                        <table>
+                        <table class="center">
                             <caption>Example of an examinee's N3 test results</caption>
                             <tbody>
                                 <tr>
@@ -422,7 +440,7 @@
 
                         <!-- Reference information -->
                         <div id="ref-info">
-                            <table>
+                            <table class="center">
                                 <tbody>
                                     <tr>
                                         <td colspan="2">Reference information*</td>
@@ -447,7 +465,7 @@
                                 </ol>
                             </div>
                         </div>
-                        <p class="warning">*The sample reference information for Language Knowledge (Vocabulary/Grammar) shows that Vocabulary has been rated A (the number of correct responses is 67% of higer), which is Good, and that the Grammar has been rated C (the number of correct responses is less than 34%) which is Poor. This score report indicates that the sample examinee did well in vocabulary, but would benefit from more grammar.</p>
+                        <p class="comments">*The sample reference information for Language Knowledge (Vocabulary/Grammar) shows that Vocabulary has been rated A (the number of correct responses is 67% of higer), which is Good, and that the Grammar has been rated C (the number of correct responses is less than 34%) which is Poor. This score report indicates that the sample examinee did well in vocabulary, but would benefit from more grammar.</p>
                     </div>
 
                     <!-- Composition of test items -->
@@ -473,7 +491,7 @@
                         <tbody>
                             <!-- Language Knowledge and Reading Section -->
                             <tr>
-                                <th rowspan="18">Language Knowledge - Reading</th>
+                                <th rowspan="18" class="vertical">Language Knowledge - Reading</th>
                                 <th rowspan="6">Vocabulary</th>
                                 <td>Kanji reading</td>
                                 <td>6</td>
@@ -683,28 +701,28 @@
                             </tr>
                         </tbody>
                     </table>
-                    <p>Warning: the number of test items can differ slightly from the table above.</p>
+                    <p class="comments">Warning: the number of test items can differ slightly from the table above.</p>
 
                 <!-- Inscription section -->
                 <h3 id="Sec1h34">Inscription</h3>
                     <p>Inscription modalities may differ from site to site. Please refer to the table below to know where to take the JLPT test in France:</p>
 
                     <!-- Information of inscription modalities in France -->
-                    <table>
+                    <table class="center">
                         <caption>Test Sites in France</caption>
                         <thead>
                             <tr>
                                 <th>City</th>
                                 <th>Site website</th>
-                                <th>July</th>
-                                <th>December</th>
+                                <th class="equal">July</th>
+                                <th class="equal">December</th>
                                 <th>Contact</th>
                             </tr>
                         </thead>
                         <tbody>
                             <!-- In Paris -->
                             <tr>
-                                <td>Paris</td>
+                                <td class="bold">Paris</td>
                                 <td><a href="https://www.inalco.fr/formations/formation-continue/certification-preparation-tests/jlpt">Service Commun de la Formation Continue de l'Inalco</a></td>
                                 <td>○</td>
                                 <td>○</td>
@@ -718,7 +736,7 @@
                             </tr>
                             <!-- In Lyon -->
                             <tr>
-                                <td>Lyon</td>
+                                <td class="bold">Lyon</td>
                                 <td><a href="https://jlpt.lyon-nihonjinkai.org/">Association Lyon-Japon Nihonjinkai</a></td>
                                 <td>－</td>
                                 <td>○</td>
@@ -732,7 +750,7 @@
                             </tr>
                             <!-- In Bordeaux -->
                             <tr>
-                                <td>Bordeaux</td>
+                                <td class="bold">Bordeaux</td>
                                 <td><a href="https://formations.u-bordeaux-montaigne.fr/fr/catalogue-des-formations/tests-internationaux-de-langues-TLI/jlpt-test-d-aptitude-en-japonais-KZK2L385.html">Université Bordeaux Montaigne</a></td>
                                 <td>－</td>
                                 <td>○</td>
@@ -746,7 +764,7 @@
                             </tr>
                             <!-- In Strasbourg -->
                             <tr>
-                                <td>Strasbourg</td>
+                                <td class="bold">Strasbourg</td>
                                 <td><a href="https://lansad.unistra.fr/certifications/jlpt">Cellule de certifications en langues, Université de Strasbourg</a></td>
                                 <td>○</td>
                                 <td>－</td>
@@ -760,7 +778,7 @@
                             </tr>
                             <!-- In Nantes -->
                             <tr>
-                                <td>Nantes</td>
+                                <td class="bold">Nantes</td>
                                 <td><a href="https://pratiquerleslangues.univ-nantes.fr/les-certifications">Nantes Université</a></td>
                                 <td>○</td>
                                 <td>○</td>
@@ -795,7 +813,7 @@
 
                 <!-- Graph (table + css) that shows the changes in number of applicants (2010-2023) -->
                 <h3 id="Sec2h31">Changes in number of applicants (2010-2023)</h3>
-                <div>
+                <div id="changes-in-number" class="tables">
                     <table class="charts-css column multiple show-heading show-labels show-data-on-hover data-spacing-5 show-primary-axis show-data-axes">
                         <caption>Changes in number of countries and cities, and in number of applicants and examinees</caption>
 
@@ -909,121 +927,120 @@
                 </div>
 
                 <!-- Graph (table + css) that shows the changes in number of examinees for each level (2010-2023) -->
-                <div>
+                <div class="tables">
                     <table class="charts-css line multpiple show-heading show-labels show-primary-axis show-data-on-hover">
                         <caption>Number of examinees for each level from 2010 to 2023</caption>
-
                         <tr>
                             <th scope="row">2010</th>
-                            <td style="--start: 0; --end: 0.36;"><span class="data">211,206</span></td>
-                            <td style="--start: 0; --end: 0.35;"><span class="data">216,016</span></td>
-                            <td style="--start: 0; --end: 0.15;"><span class="data">91,951</span></td>
-                            <td style="--start: 0; --end: 0.08;"><span class="data">48,801</span></td>
-                            <td style="--start: 0; --end: 0.06;"><span class="data">39,998</span></td>
+                            <td style="--start: 0; --end: 0.72;"><span class="data">211,206</span></td>
+                            <td style="--start: 0; --end: 0.70;"><span class="data">216,016</span></td>
+                            <td style="--start: 0; --end: 0.30;"><span class="data">91,951</span></td>
+                            <td style="--start: 0; --end: 0.16;"><span class="data">48,801</span></td>
+                            <td style="--start: 0; --end: 0.12;"><span class="data">39,998</span></td>
                         </tr>
                         <tr>
                             <th scope="row">2011</th>
-                            <td style="--start: 0.36; --end: 0.36;"><span class="data">211,206</span></td>
-                            <td style="--start: 0.35; --end: 0.33;"><span class="data">216,016</span></td>
-                            <td style="--start: 0.15; --end: 0.14;"><span class="data">91,951</span></td>
-                            <td style="--start: 0.08; --end: 0.1;"><span class="data">48,801</span></td>
-                            <td style="--start: 0.06; --end: 0.07;"><span class="data">39,998</span></td>
+                            <td style="--start: 0.72; --end: 0.72;"><span class="data">211,206</span></td>
+                            <td style="--start: 0.70; --end: 0.66;"><span class="data">216,016</span></td>
+                            <td style="--start: 0.30; --end: 0.28;"><span class="data">91,951</span></td>
+                            <td style="--start: 0.16; --end: 0.2;"><span class="data">48,801</span></td>
+                            <td style="--start: 0.12; --end: 0.14;"><span class="data">39,998</span></td>
                         </tr>
                         <tr>
                             <th scope="row">2012</th>
-                            <td style="--start: 0.36; --end: 0.35;"><span class="data">211,206</span></td>
-                            <td style="--start: 0.33; --end: 0.31;"><span class="data">216,016</span></td>
-                            <td style="--start: 0.14; --end: 0.15;"><span class="data">91,951</span></td>
-                            <td style="--start: 0.1; --end: 0.11;"><span class="data">48,801</span></td>
-                            <td style="--start: 0.07; --end: 0.08;"><span class="data">39,998</span></td>
+                            <td style="--start: 0.72; --end: 0.70;"><span class="data">211,206</span></td>
+                            <td style="--start: 0.66; --end: 0.62;"><span class="data">216,016</span></td>
+                            <td style="--start: 0.28; --end: 0.30;"><span class="data">91,951</span></td>
+                            <td style="--start: 0.2; --end: 0.22;"><span class="data">48,801</span></td>
+                            <td style="--start: 0.14; --end: 0.16;"><span class="data">39,998</span></td>
                         </tr>
                         <tr>
                             <th scope="row">2013</th>
-                            <td style="--start: 0.35; --end: 0.33;"><span class="data">211,206</span></td>
-                            <td style="--start: 0.31; --end: 0.30;"><span class="data">216,016</span></td>
-                            <td style="--start: 0.15; --end: 0.17;"><span class="data">91,951</span></td>
-                            <td style="--start: 0.11; --end: 0.11;"><span class="data">48,801</span></td>
-                            <td style="--start: 0.08; --end: 0.09;"><span class="data">39,998</span></td>
+                            <td style="--start: 0.70; --end: 0.66;"><span class="data">211,206</span></td>
+                            <td style="--start: 0.62; --end: 0.60;"><span class="data">216,016</span></td>
+                            <td style="--start: 0.3; --end: 0.34;"><span class="data">91,951</span></td>
+                            <td style="--start: 0.22; --end: 0.22;"><span class="data">48,801</span></td>
+                            <td style="--start: 0.16; --end: 0.18;"><span class="data">39,998</span></td>
                         </tr>
                         <tr>
                             <th scope="row">2014</th>
-                            <td style="--start: 0.33; --end: 0.31;"><span class="data">211,206</span></td>
-                            <td style="--start: 0.30; --end: 0.29;"><span class="data">216,016</span></td>
-                            <td style="--start: 0.17; --end: 0.18;"><span class="data">91,951</span></td>
-                            <td style="--start: 0.11; --end: 0.12;"><span class="data">48,801</span></td>
-                            <td style="--start: 0.09; --end: 0.1;"><span class="data">39,998</span></td>
+                            <td style="--start: 0.66; --end: 0.62;"><span class="data">211,206</span></td>
+                            <td style="--start: 0.60; --end: 0.58;"><span class="data">216,016</span></td>
+                            <td style="--start: 0.34; --end: 0.36;"><span class="data">91,951</span></td>
+                            <td style="--start: 0.22; --end: 0.24;"><span class="data">48,801</span></td>
+                            <td style="--start: 0.18; --end: 0.2;"><span class="data">39,998</span></td>
                         </tr>
                         <tr>
                             <th scope="row">2015</th>
-                            <td style="--start: 0.31; --end: 0.27;"><span class="data">211,206</span></td>
-                            <td style="--start: 0.29; --end: 0.29;"><span class="data">216,016</span></td>
-                            <td style="--start: 0.18; --end: 0.2;"><span class="data">91,951</span></td>
-                            <td style="--start: 0.12; --end: 0.13;"><span class="data">48,801</span></td>
-                            <td style="--start: 0.1; --end: 0.1;"><span class="data">39,998</span></td>
+                            <td style="--start: 0.62; --end: 0.54;"><span class="data">211,206</span></td>
+                            <td style="--start: 0.58; --end: 0.58;"><span class="data">216,016</span></td>
+                            <td style="--start: 0.36; --end: 0.4;"><span class="data">91,951</span></td>
+                            <td style="--start: 0.24; --end: 0.26;"><span class="data">48,801</span></td>
+                            <td style="--start: 0.2; --end: 0.2;"><span class="data">39,998</span></td>
                         </tr>
                         <tr>
                             <th scope="row">2016</th>
-                            <td style="--start: 0.27; --end: 0.25;"><span class="data">211,206</span></td>
-                            <td style="--start: 0.29; --end: 0.3;"><span class="data">216,016</span></td>
-                            <td style="--start: 0.2; --end: 0.22;"><span class="data">91,951</span></td>
-                            <td style="--start: 0.13; --end: 0.13;"><span class="data">48,801</span></td>
-                            <td style="--start: 0.1; --end: 0.1;"><span class="data">39,998</span></td>
+                            <td style="--start: 0.54; --end: 0.50;"><span class="data">211,206</span></td>
+                            <td style="--start: 0.58; --end: 0.6;"><span class="data">216,016</span></td>
+                            <td style="--start: 0.4; --end: 0.44;"><span class="data">91,951</span></td>
+                            <td style="--start: 0.26; --end: 0.26;"><span class="data">48,801</span></td>
+                            <td style="--start: 0.2; --end: 0.2;"><span class="data">39,998</span></td>
                         </tr>
                         <tr>
                             <th scope="row">2017</th>
-                            <td style="--start: 0.25; --end: 0.23;"><span class="data">211,206</span></td>
-                            <td style="--start: 0.3; --end: 0.31;"><span class="data">216,016</span></td>
-                            <td style="--start: 0.22; --end: 0.23;"><span class="data">91,951</span></td>
-                            <td style="--start: 0.13; --end: 0.13;"><span class="data">48,801</span></td>
-                            <td style="--start: 0.1; --end: 0.1;"><span class="data">39,998</span></td>
+                            <td style="--start: 0.50; --end: 0.46;"><span class="data">211,206</span></td>
+                            <td style="--start: 0.6; --end: 0.62;"><span class="data">216,016</span></td>
+                            <td style="--start: 0.44; --end: 0.46;"><span class="data">91,951</span></td>
+                            <td style="--start: 0.26; --end: 0.26;"><span class="data">48,801</span></td>
+                            <td style="--start: 0.2; --end: 0.2;"><span class="data">39,998</span></td>
                         </tr>
                         <tr>
                             <th scope="row">2018</th>
-                            <td style="--start: 0.23; --end: 0.22;"><span class="data">211,206</span></td>
-                            <td style="--start: 0.31; --end: 0.3;"><span class="data">216,016</span></td>
-                            <td style="--start: 0.23; --end: 0.24;"><span class="data">91,951</span></td>
-                            <td style="--start: 0.13; --end: 0.13;"><span class="data">48,801</span></td>
-                            <td style="--start: 0.1; --end: 0.1;"><span class="data">39,998</span></td>
+                            <td style="--start: 0.46; --end: 0.44;"><span class="data">211,206</span></td>
+                            <td style="--start: 0.62; --end: 0.6;"><span class="data">216,016</span></td>
+                            <td style="--start: 0.46; --end: 0.48;"><span class="data">91,951</span></td>
+                            <td style="--start: 0.26; --end: 0.26;"><span class="data">48,801</span></td>
+                            <td style="--start: 0.2; --end: 0.2;"><span class="data">39,998</span></td>
                         </tr>
                         <tr>
                             <th scope="row">2019</th>
-                            <td style="--start: 0.22; --end: 0.21;"><span class="data">211,206</span></td>
-                            <td style="--start: 0.3; --end: 0.29;"><span class="data">216,016</span></td>
-                            <td style="--start: 0.24; --end: 0.24;"><span class="data">91,951</span></td>
-                            <td style="--start: 0.13; --end: 0.16;"><span class="data">48,801</span></td>
-                            <td style="--start: 0.1; --end: 0.1;"><span class="data">39,998</span></td>
+                            <td style="--start: 0.44; --end: 0.42;"><span class="data">211,206</span></td>
+                            <td style="--start: 0.6; --end: 0.58;"><span class="data">216,016</span></td>
+                            <td style="--start: 0.48; --end: 0.48;"><span class="data">91,951</span></td>
+                            <td style="--start: 0.26; --end: 0.32;"><span class="data">48,801</span></td>
+                            <td style="--start: 0.2; --end: 0.2;"><span class="data">39,998</span></td>
                         </tr>
                         <tr>
                             <th scope="row">2020</th>
-                            <td style="--start: 0.21; --end: 0.22;"><span class="data">211,206</span></td>
-                            <td style="--start: 0.29; --end: 0.31;"><span class="data">216,016</span></td>
-                            <td style="--start: 0.24; --end: 0.27;"><span class="data">91,951</span></td>
-                            <td style="--start: 0.16; --end: 0.14;"><span class="data">48,801</span></td>
-                            <td style="--start: 0.1; --end: 0.07;"><span class="data">39,998</span></td>
+                            <td style="--start: 0.42; --end: 0.44;"><span class="data">211,206</span></td>
+                            <td style="--start: 0.58; --end: 0.62;"><span class="data">216,016</span></td>
+                            <td style="--start: 0.48; --end: 0.54;"><span class="data">91,951</span></td>
+                            <td style="--start: 0.32; --end: 0.28;"><span class="data">48,801</span></td>
+                            <td style="--start: 0.2; --end: 0.14;"><span class="data">39,998</span></td>
                         </tr>
                         <tr>
                             <th scope="row">2021</th>
-                            <td style="--start: 0.22; --end: 0.27;"><span class="data">211,206</span></td>
-                            <td style="--start: 0.31; --end: 0.31;"><span class="data">216,016</span></td>
-                            <td style="--start: 0.27; --end: 0.23;"><span class="data">91,951</span></td>
-                            <td style="--start: 0.14; --end: 0.13;"><span class="data">48,801</span></td>
-                            <td style="--start: 0.07; --end: 0.06;"><span class="data">39,998</span></td>
+                            <td style="--start: 0.44; --end: 0.54;"><span class="data">211,206</span></td>
+                            <td style="--start: 0.62; --end: 0.62;"><span class="data">216,016</span></td>
+                            <td style="--start: 0.54; --end: 0.46;"><span class="data">91,951</span></td>
+                            <td style="--start: 0.28; --end: 0.26;"><span class="data">48,801</span></td>
+                            <td style="--start: 0.14; --end: 0.12;"><span class="data">39,998</span></td>
                         </tr>
                         <tr>
                             <th scope="row">2022</th>
-                            <td style="--start: 0.27; --end: 0.22;"><span class="data">211,206</span></td>
-                            <td style="--start: 0.31; --end: 0.25;"><span class="data">216,016</span></td>
-                            <td style="--start: 0.23; --end: 0.21;"><span class="data">91,951</span></td>
-                            <td style="--start: 0.13; --end: 0.21;"><span class="data">48,801</span></td>
-                            <td style="--start: 0.06; --end: 0.11;"><span class="data">39,998</span></td>
+                            <td style="--start: 0.54; --end: 0.44;"><span class="data">211,206</span></td>
+                            <td style="--start: 0.62; --end: 0.50;"><span class="data">216,016</span></td>
+                            <td style="--start: 0.46; --end: 0.42;"><span class="data">91,951</span></td>
+                            <td style="--start: 0.26; --end: 0.42;"><span class="data">48,801</span></td>
+                            <td style="--start: 0.12; --end: 0.22;"><span class="data">39,998</span></td>
                         </tr>
                         <tr>
                             <th scope="row">2023</th>
-                            <td style="--start: 0.22; --end: 0.2;"><span class="data">211,206</span></td>
-                            <td style="--start: 0.25; --end: 0.24;"><span class="data">216,016</span></td>
-                            <td style="--start: 0.21; --end: 0.23;"><span class="data">91,951</span></td>
-                            <td style="--start: 0.21; --end: 0.25;"><span class="data">48,801</span></td>
-                            <td style="--start: 0.11; --end: 0.08;"><span class="data">39,998</span></td>
+                            <td style="--start: 0.44; --end: 0.4;"><span class="data">211,206</span></td>
+                            <td style="--start: 0.50; --end: 0.48;"><span class="data">216,016</span></td>
+                            <td style="--start: 0.42; --end: 0.46;"><span class="data">91,951</span></td>
+                            <td style="--start: 0.42; --end: 0.50;"><span class="data">48,801</span></td>
+                            <td style="--start: 0.22; --end: 0.16;"><span class="data">39,998</span></td>
                         </tr>
                     </table>
 
