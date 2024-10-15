@@ -5,6 +5,7 @@
     --frame-background: rgba(80, 102, 239, 0.5);
     --books-color: #3E6082;
     --showmore: #173d63;
+    --font: "Updock";
 }
 
 /* main */
@@ -20,6 +21,10 @@ body {
     display: flex;
     flex-direction: column;
     gap: 30px;
+}
+
+h1 {
+    font-family: var(--font);
 }
 
 h2 {
@@ -57,6 +62,15 @@ nav a {
     margin: auto;
     color: black;
     text-decoration: none;
+    font-family: var(--font);
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 200,
+  'GRAD' 0,
+  'opsz' 24;
 }
 
 /* section presentation */
