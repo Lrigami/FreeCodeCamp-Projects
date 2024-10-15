@@ -34,6 +34,10 @@ h2 {
     visibility: hidden;
 }
 
+section, #language {
+    scroll-margin-top: 40px;
+}
+
 /* Navigation */
 
 nav {
@@ -42,8 +46,9 @@ nav {
     height: 40px;
     justify-content: space-between;
     position: sticky;
-    margin: auto;
+    margin: auto 30px;
     top: 0px;
+    left: 0px;
     background-color: var(--background);
     z-index: 999;
 }
