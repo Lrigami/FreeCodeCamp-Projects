@@ -1,8 +1,15 @@
 :root {
     /* day mode */
-    --text-color-day: black;
-    --background-nav-day: rgb(171, 160, 160);
-    --border-color-day: black;
+    --text-color: black;
+    --background-nav: #F2D7D7;
+    --border-color: black;
+    --background-footer: white;
+    --button-color: #F2D7D7;
+    --button-color-hover: #d47a7a;
+    --button-border: black;
+    --button-shadow: #d47a7a;
+    --table-border : black;
+    --table-hd : #F2D7D7;
 
     /* night mode : voir @media */
 }
@@ -61,6 +68,23 @@ h4 {
     padding-left: 60px;
 }
 
+#score-report {
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    row-gap: 20px;
+}
+
+#ref-info {
+    display: flex;
+}
+
+.warning {
+    font-size: 0.8rem;
+}
+
 footer {
     position: fixed;
     bottom: 0;
@@ -68,7 +92,7 @@ footer {
     width: 72%;
     max-width: calc(95% - 310px);
     right: 10px;
-    background-color: white;
+    background-color: var(--background-footer);
     display: flex;
     justify-content: center;
     padding: 0;
@@ -82,7 +106,7 @@ aside {
     width: 25%;
     min-width: 300px;
     position: fixed;
-    border-right: 1px solid var(--border-color-day);
+    border-right: 1px solid var(--border-color);
 }
 
 #navbar {
@@ -96,7 +120,7 @@ aside {
 
 #navbar header {
     display: unset;
-    border-bottom: 1px solid var(--background-nav-day);
+    border-bottom: 1px solid var(--background-nav);
 }
 
 #navbar header a {
@@ -113,7 +137,7 @@ aside {
 }
 
 #navbar a:hover {
-    background-color: var(--background-nav-day);
+    background-color: var(--background-nav);
 }
 
 .nav-link {
@@ -158,21 +182,21 @@ h1 {
     width: 200px;
     height: 100px;
     box-sizing: border-box;
-    box-shadow: 10px 10px 10px #d47a7a;
-    border: 1px solid black;
+    box-shadow: 10px 10px 10px var(--button-shadow);
+    border: 1px solid var(--button-border);
     border-radius: 25px;
-    background-color: #F2D7D7;
+    background-color: var(--button-color);
     font-size: 1.5rem;
 }
 
 #a-buttons button:hover {
-    background-color: #d47a7a;
+    background-color: var(--button-color-hover);
     cursor: pointer;
 }
 
 #a-buttons a {
     text-decoration: none;
-    color: black;
+    color: var(--text-color);
 }
 
 /* Day/Night mode */
@@ -211,7 +235,7 @@ h1 {
 /* tables */
 
 table {
-    border: 1px solid black;
+    border: 1px solid var(--table-border);
     border-collapse: collapse;
 }
 
@@ -221,8 +245,12 @@ caption {
 }
 
 th, td {
-    border: 1px solid black;
+    border: 1px solid var(--table-border);
     padding: 5px;
+}
+
+th {
+    background-color: var(--table-hd);
 }
 
 .center {
