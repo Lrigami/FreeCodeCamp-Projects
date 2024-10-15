@@ -4,7 +4,7 @@
     --background-nav-day: rgb(171, 160, 160);
     --border-color-day: black;
 
-    /* night mode */
+    /* night mode : voir @media */
 }
 
 /* main */
@@ -16,14 +16,6 @@ body {
     margin: 0;
     display: flex;
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-}
-
-body.day {
-
-}
-
-body.night {
-
 }
 
 main {
@@ -45,6 +37,30 @@ header {
     display: none;
 }
 
+img {
+    width: 100%;
+    height: auto;
+}
+
+p, li {
+    text-align: justify;
+}
+
+h2 {
+    font-size: 2rem;
+    padding-left: 20px;
+}
+
+h3 {
+    font-size: 1.5rem;
+    padding-left: 40px;
+}
+
+h4 {
+    font-size: 1.2rem;
+    padding-left: 60px;
+}
+
 footer {
     position: fixed;
     bottom: 0;
@@ -59,11 +75,6 @@ footer {
     align-items: center;
 }
 
-img {
-    width: 100%;
-    height: auto;
-}
-
 /* navigation */
 
 aside {
@@ -71,14 +82,7 @@ aside {
     width: 25%;
     min-width: 300px;
     position: fixed;
-}
-
-aside.day {
     border-right: 1px solid var(--border-color-day);
-}
-
-aside.night {
-    border-right: 1px solid var(--border-color-night);
 }
 
 #navbar {
@@ -92,14 +96,7 @@ aside.night {
 
 #navbar header {
     display: unset;
-}
-
-#navbar header.day, #navbar a.day {
     border-bottom: 1px solid var(--background-nav-day);
-}
-
-#navbar header.night, #navbar a.night {
-    border-bottom: 1px solid var(--background-nav-night);
 }
 
 #navbar header a {
@@ -115,12 +112,8 @@ aside.night {
     color: var(--text-color);
 }
 
-#navbar a.day:hover {
+#navbar a:hover {
     background-color: var(--background-nav-day);
-}
-
-#navbar a.night:hover {
-    background-color: var(--background-nav-night);
 }
 
 .nav-link {
@@ -133,12 +126,53 @@ aside.night {
 }
 
 /* Heading section */
-/* Navigation buttons */
+/* Title and subtitle */
 
 #JLPT_Documentation_Page {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+h1 {
+    font-size: 5rem;
+}
+#JLPT_Documentation_Page p {
+    font-size: 2rem;
+}
+
+/* Navigation buttons */
+
+#a-buttons {
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    row-gap: 20px;
+    column-gap: 40px;
+    margin: 50px auto;
+}
+
+#a-buttons button {
+    width: 200px;
+    height: 100px;
+    box-sizing: border-box;
+    box-shadow: 10px 10px 10px #d47a7a;
+    border: 1px solid black;
+    border-radius: 25px;
+    background-color: #F2D7D7;
+    font-size: 1.5rem;
+}
+
+#a-buttons button:hover {
+    background-color: #d47a7a;
+    cursor: pointer;
+}
+
+#a-buttons a {
+    text-decoration: none;
+    color: black;
 }
 
 /* Day/Night mode */
@@ -178,11 +212,28 @@ aside.night {
 
 table {
     border: 1px solid black;
+    border-collapse: collapse;
+}
+
+caption {
+    font-size: 1.3rem;
+    padding: 10px;
 }
 
 th, td {
     border: 1px solid black;
+    padding: 5px;
 }
+
+.center {
+    text-align: center;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+/* @media */
 
 
 @media (prefers-reduced-motion: no-preference) {
@@ -190,3 +241,11 @@ th, td {
         scroll-behavior: smooth;
     }
 }
+
+/* 
+@media (prefers : prefered color : ) {
+    :root {
+    redéfinir les couleurs 
+    }
+} 
+*/
