@@ -83,7 +83,7 @@ h1 {
 #frame1 {
     background-color: var(--frame-background);
     max-width: 67%;
-    height: 80vh;
+    height: 38vw;
     margin: auto;
     border-radius: 20px;
 }
@@ -291,10 +291,6 @@ h3 {
 /* Smaller than 900px */
 
 @media screen and (max-width: 900px) {
-    #frame1 {
-        height: 24vh;
-    }
-
     #ligne {
         height: 70vh;
     }
@@ -321,10 +317,6 @@ h3 {
 
     #intro {
         margin-bottom: 20px;
-    }
-
-    #frame1 {
-        height: 18vh;
     }
 
     #ligne {
