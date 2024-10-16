@@ -16,12 +16,12 @@ function calculateSettingAsThemeString({ localStorageTheme, systemSettingDark })
 
 // Change the setting on html element : 
 function updateThemeOnHtmlEl({ theme }) {
-    document.querySelector("html").setAttribute("data-theme", theme); //Après avoir récupérer "dark" ou "light", on attribue cette valeur à l'attribut "data-theme" de l'élément html
+    document.querySelector("html").setAttribute("data-theme", theme); //Après avoir récupérer "dark" ou "light" via currentThemeSetting, on attribue cette valeur à l'attribut "data-theme" de l'élément html
   }
 
 //Appel des fonctions : 
 let currentThemeSetting = calculateSettingAsThemeString({localStorageTheme, systemSettingDark}); //on appelle ici la fonction pour savoir 
-updateThemeOnHtmlEl({ theme: currentThemeSetting });
+updateThemeOnHtmlEl({ theme: currentThemeSetting }); //on appelle la fonction avec la valeur de theme qui change pour prendre la valeur de currentThemeSettings
 
 //AddEventListener sur le bouton :
 button.addEventListener("click", () => {
