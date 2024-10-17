@@ -16,6 +16,7 @@ body {
     display: flex;
     align-items: center;
     flex-direction: column;
+    font-family: Roboto, Verdana, Geneva, Tahoma, sans-serif;
 }
 
 /* header */
@@ -39,7 +40,7 @@ header img {
 }
 
 h1 {
-    margin: 10% 15% 10% 15%;
+    margin: 10% 10% 10% 10%;
     text-align: center;
     color: white;
     font-size: 350%;
@@ -56,18 +57,24 @@ nav {
     padding: 0 2%;
 }
 
+nav a {
+    font-weight: 300;
+}
+
 #links {
     display: flex;
     justify-content: space-evenly;
-    width: 50%;
+    width: 45%;
 }
 
 #searchbar input {
-    background: top left / contain no-repeat url(images/search.png);
-    padding-left: 25px;
-    height: 25px;
-    border-radius: 15px;
+    background: 5px / contain no-repeat url(images/search.png);
+    padding-left: 30px;
+    height: 35px;
+    border-radius: 10px;
     background-color: white;
+    border: none;
+    background-size: 10%;
 }
 
     /* Booking bar */
