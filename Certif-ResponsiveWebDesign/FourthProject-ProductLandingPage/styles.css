@@ -1,0 +1,18 @@
+/* general */
+
+/* body */
+
+/* header */
+
+
+
+/* navigation */
+
+#searchbar input {
+    background: top left / contain no-repeat url(images/search.png);
+    padding-left: 25px;
+}
+
+/* main */
+
+/* footer */
