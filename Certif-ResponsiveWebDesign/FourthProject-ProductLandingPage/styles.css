@@ -92,7 +92,7 @@ nav a:hover {
     padding-left: 30px;
     height: 35px;
     border-radius: 10px;
-    background-color: var(--titles-inside);
+    background-color: white;
     border: none;
     background-size: 10%;
     box-sizing: border-box;
