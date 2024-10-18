@@ -105,16 +105,25 @@ nav a {
     backdrop-filter: blur(10px);
     border-radius: 30px;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
-    gap: 40px;
+    padding: 0 1%; 
 }
 
 #booking-bar div {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    gap: 10px;
+    gap: 5%;
+    width: max-content;
+}
+
+#booking-bar > div > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
 }
 
 #booking-bar span {
@@ -122,8 +131,14 @@ nav a {
     color: var(--titles-inside);
 }
 
+#booking-bar > div > div > span {
+    font-size: 16px;
+    padding: 0;
+}
+
 #booking-bar p, #search {
     font-size: 20px;
+    text-align: center;
 }
 
 #booking-bar p {
@@ -134,9 +149,41 @@ nav a {
     color: var(--titles);
     background-color: var(--titles-inside);
     box-sizing: border-box;
-    border: none;
+    border: 2px solid var(--titles-inside);
     border-radius: 30px;
     padding: 10px 40px;
+    cursor: pointer;
+}
+
+#search:hover {
+    background-color: var(--footer);
+}
+
+#search:active {
+    border: 2px solid var(--titles);
+}
+
+#checkinout, #guests {
+    background: none;
+    width: 16px;
+    height: 32px;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 10px;
+    color: transparent;
+    position: absolute;
+}
+
+#guests {
+    color: var(--titles);
+}
+
+#guests option {
+    background-color: var(--titles-inside);
+}
+
+#checkinout:focus-visible, #checkinout:active, #guests:focus, #guests:focus-visible, #guests:active {
+    outline: 2px solid var(--titles-inside);
 }
 
 /* main */
