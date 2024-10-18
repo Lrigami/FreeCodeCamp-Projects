@@ -18,7 +18,6 @@ html {
 
 body {
     margin: 0;
-    padding: 0 10%;
     width: 100%;
     height: 100%;
     box-sizing: border-box;
@@ -27,6 +26,8 @@ body {
     flex-direction: column;
     font-family: Roboto, Verdana, Geneva, Tahoma, sans-serif;
     background: var(--body-gradient);
+    border-left: 10vw solid white;
+    border-right: 10vw solid white;
 }
 
 /* header */
