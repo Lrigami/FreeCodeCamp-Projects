@@ -41,6 +41,7 @@ header {
     background-position-y: 45%;
     width: 80%;
     box-shadow: -2px 5px 5px gray;
+    overflow: inherit;
 }
 
 header img {
@@ -52,7 +53,7 @@ header img {
 h1 {
     margin: 11% 10% 10% 10%;
     text-align: center;
-    color: white;
+    color: var(--titles-inside);
     font-size: 350%;
 }
 
@@ -86,7 +87,7 @@ nav a {
     padding-left: 30px;
     height: 35px;
     border-radius: 10px;
-    background-color: white;
+    background-color: var(--titles-inside);
     border: none;
     background-size: 10%;
     box-sizing: border-box;
@@ -101,7 +102,7 @@ nav a {
 #booking-bar {
     height: 60px;
     width: 80%;
-    margin: 0 auto 15% auto;
+    margin: 5% auto 10% auto;
     backdrop-filter: blur(10px);
     border-radius: 30px;
     display: flex;
@@ -184,6 +185,45 @@ nav a {
 
 #checkinout:focus-visible, #checkinout:active, #guests:focus, #guests:focus-visible, #guests:active {
     outline: 2px solid var(--titles-inside);
+}
+
+    /* Booking now */
+#booking {
+    position: relative;
+    top: 6.5%;
+    left: 70%;
+    z-index: 1;
+    display: flex;
+    align-items: first baseline;
+    gap: 10px;
+    font-weight: 400;
+    color: var(--titles);
+}
+
+#booking-arrow {
+    width: 60px;
+    height: 60px;
+    box-sizing: border-box;
+    border: 2px solid var(--button-border);
+    background-color: var(--titles-inside);
+    border-radius: 50%;
+    color: var(--titles);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#booking-arrow span {
+    font-size: 36px;
+    top: -200px;
+}
+
+#booking a:hover {
+    cursor: pointer;
+}
+
+#booking a p:hover {
+    text-decoration: underline;
 }
 
 /* main */
