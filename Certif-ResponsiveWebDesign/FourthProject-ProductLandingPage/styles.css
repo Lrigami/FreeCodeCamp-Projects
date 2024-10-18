@@ -107,8 +107,37 @@ nav a {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    gap: 40px;
 }
 
+#booking-bar div {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
+}
+
+#booking-bar span {
+    font-size: 36px;
+    color: var(--titles-inside);
+}
+
+#booking-bar p, #search {
+    font-size: 20px;
+}
+
+#booking-bar p {
+    color: var(--titles-inside);
+}
+
+#search {
+    color: var(--titles);
+    background-color: var(--titles-inside);
+    box-sizing: border-box;
+    border: none;
+    border-radius: 30px;
+    padding: 10px 40px;
+}
 
 /* main */
 
