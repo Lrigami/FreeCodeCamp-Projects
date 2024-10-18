@@ -72,6 +72,11 @@ nav a {
     font-weight: 400;
 }
 
+nav a:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
 #links {
     display: flex;
     justify-content: space-evenly;
