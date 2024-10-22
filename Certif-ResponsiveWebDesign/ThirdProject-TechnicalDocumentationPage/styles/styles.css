@@ -243,23 +243,25 @@ h1 {
     border-radius: 30px;
     display: flex;
     align-items: center;
+    z-index: 2;
 }
 
-#day-night-mode div:first-of-type.day {
+#day-night-mode div:first-of-type {
     padding: 0 20px 0 5px;
     border: 1px solid black;
     border-radius: 20px;
 }
 
-#day-night-mode div:first-of-type.night {
+#day-night-mode.night div:first-of-type {
+    padding: 0 5px 0 5px;
+    border: none;
+}
+
+#day-night-mode div:last-of-type {
     padding: 0 5px 0 5px;
 }
 
-#day-night-mode div:last-of-type.day {
-    padding: 0 5px 0 5px;
-}
-
-#day-night-mode div:last-of-type.night {
+#day-night-mode.night div:last-of-type {
     padding: 0 20px 0 5px;
     border: 1px solid black;
     border-radius: 20px;
