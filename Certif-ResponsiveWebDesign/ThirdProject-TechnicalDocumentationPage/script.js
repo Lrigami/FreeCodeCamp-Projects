@@ -37,5 +37,5 @@ button.addEventListener("click", () => {
     // Comme cela, si on rappuie sur le bouton, la const newTheme changera puisque currentThemeSetting aura changé également
     currentThemeSetting = newTheme;
 
-    const toggleclass = button.classList.toggle("night");
+    button.classList.toggle("night");
 })

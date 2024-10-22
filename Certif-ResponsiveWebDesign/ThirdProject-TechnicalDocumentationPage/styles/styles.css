@@ -246,9 +246,15 @@ h1 {
     z-index: 2;
 }
 
+#day-night-mode.night {
+    background-color: var(--background-nav);
+    border-color: var(--link-color);
+    color: var(--button-color);
+}
+
 #day-night-mode div:first-of-type {
     padding: 0 20px 0 5px;
-    border: 1px solid black;
+    border: 1px solid var(--border-color);
     border-radius: 20px;
 }
 
@@ -259,11 +265,12 @@ h1 {
 
 #day-night-mode div:last-of-type {
     padding: 0 5px 0 5px;
+    border: none;
 }
 
 #day-night-mode.night div:last-of-type {
     padding: 0 20px 0 5px;
-    border: 1px solid black;
+    border: 1px solid var(--border-color);
     border-radius: 20px;
 }
 
