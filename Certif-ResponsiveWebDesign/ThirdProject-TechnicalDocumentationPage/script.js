@@ -1,4 +1,4 @@
-const localStorageTheme = localStorage.getItem("theme"); //récupère le theme du localStorage
+const localStorageTheme = localStorage.getItem("theme"); //récupère le "theme" du localStorage
 const button = document.querySelector("[data-theme-toggle]");
 const systemSettingDark = window.matchMedia("(prefers-color-scheme: dark)"); //récupère les préférences d'affichage
 

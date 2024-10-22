@@ -235,9 +235,9 @@ h1 {
 /* Day/Night mode */
 
 #day-night-mode {
-    position: absolute;
-    top: 5px;
-    right: 5px;
+    position: fixed;
+    top: 10px;
+    right: 30px;
     width: 70px;
     height: 30px;
     border-radius: 30px;
