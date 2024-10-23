@@ -203,7 +203,7 @@ nav a:hover {
     left: 70%;
     z-index: 1;
     display: flex;
-    align-items: first baseline;
+    align-items: baseline;
     gap: 10px;
     font-weight: 400;
     color: var(--titles);
@@ -220,6 +220,10 @@ nav a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+#booking-arrow:hover {
+    background-color: var(--footer);
 }
 
 #booking-arrow span {
