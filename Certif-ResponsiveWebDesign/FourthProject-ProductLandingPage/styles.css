@@ -3,10 +3,12 @@
     --body-gradient: linear-gradient(#FFFFFF, #D8DADA);
     --titles: #1F2615;
     --navigation: #828873;
+    --transparency: #828873B3;
     --titles-inside: #F5FAFB;
     --button-border: #797D33;
     --footer: #D8DADA;
     --p: #465437;
+    --shadow: -2px 5px 5px gray;
 }
 
 html {
@@ -44,7 +46,7 @@ header {
     background-position-y: 45%;
     width: 80%;
     height: 37vw;
-    box-shadow: -2px 5px 5px gray;
+    box-shadow: var(--shadow);
     overflow: inherit;
 }
 
@@ -281,7 +283,7 @@ main {
     background-color: var(--footer);
 }
 
-#hotel-section button span {
+#hotel-presentation button span {
     font-size: 14px;
 }
 
@@ -326,6 +328,9 @@ main {
     border-radius: 20px;
     background-repeat: no-repeat !important;
     background-position: 0% 50% !important;
+    display: flex;
+    align-items: flex-end;
+    box-shadow: var(--shadow);
 }
 
 .hotel-card.one, .hotel-card.four {
@@ -350,6 +355,42 @@ main {
 
 .hotel-card.four {
     background: url(/images/Go-Shirakawa-house.JPG);
+}
+
+.hotel-description {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    width: 100%;
+    padding: 0 20px 15px 20px;
+}
+
+.go-to-hotel {
+    width: 50px !important;
+    height: 50px !important;
+    border-radius: 50% !important;
+    font-size: 20px !important;
+}
+
+.hotel {
+    display: flex !important;
+    align-items: flex-start !important;
+    flex-direction: column;
+    background-color: var(--transparency);
+    width: 140px;
+    padding: 5px 0;
+    border-radius: 10px;
+}
+
+.hotel p {
+    margin: 0;
+    padding-left: 5px;
+    color: var(--titles-inside);
+    font-size: 20px;
+}
+
+.hotel p:first-of-type {
+    font-weight: 300;
 }
 
 /* footer */
