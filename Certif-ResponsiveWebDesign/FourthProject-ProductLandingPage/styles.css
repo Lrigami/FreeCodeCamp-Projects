@@ -241,7 +241,69 @@ nav a:hover {
 }
 
 /* main */
+
+main {
+    width: 80%;
+    margin: auto;
+}
+
     /* Hotels Section */
+        /* Hotels Section title */
+
+#hotel-section {
+    width:100%;
+    margin-top: 5%;
+}
+
+#hotel-section div:first-of-type {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+
+#hotel-section button {
+    height: 35px;
+    width: 130px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid var(--button-border);
+    border-radius: 10px;
+    background-color: var(--titles-inside);
+    color: var(--titles);
+    cursor: pointer;
+}
+
+#hotel-section button:hover {
+    background-color: var(--footer);
+}
+
+#hotel-section button span {
+    font-size: 14px;
+}
+
+.title-section {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-start !important;
+    gap: 5px;
+    margin-left: 8%;
+}
+
+.title-section h2, .title-section h3 {
+    margin: 0;
+    color: var(--titles);
+    font-weight: 400;
+}
+
+.title-section h2 {
+    font-size: 3vw;
+}
+
+        /* Hotels Section cards - hotels gallery */
+
+
 
 /* footer */
 
