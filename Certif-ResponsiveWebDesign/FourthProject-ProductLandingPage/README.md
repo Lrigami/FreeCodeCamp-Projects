@@ -20,6 +20,7 @@
 ## Personal features:
 1. - [ ] A select element where you can type what you want
 2. - [ ] An automatised review section composed with a user icon and its review (after a certain delay, another user and review takes place)
+3. - [ ] Parallax effect
 
 -- attributions --
 I wanted to use personal photos and videos for this project.

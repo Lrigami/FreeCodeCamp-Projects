@@ -37,7 +37,7 @@ body {
 /* header */
 
 header {
-    margin: 2% auto 5% auto;
+    margin: 5% auto;
     border-radius: 20px;
     overflow: hidden;
     box-sizing: border-box;
@@ -204,7 +204,7 @@ nav a:hover {
 
 #booking {
     position: absolute;
-    top: 36.75vw;
+    top: 39.25vw;
     left: 70%;
     z-index: 1;
     display: flex;
@@ -405,7 +405,8 @@ main {
 video {
     border-radius: 20px;
     width: 80%;
-    margin: 20% 0;
+    margin: 10% 0;
+    box-shadow: var(--shadow);
 }
 
 #video-section p {
