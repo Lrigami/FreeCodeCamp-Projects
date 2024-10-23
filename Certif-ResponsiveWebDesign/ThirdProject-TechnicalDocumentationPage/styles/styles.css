@@ -93,6 +93,14 @@ h4 {
     padding-left: 60px;
 }
 
+sup {
+    color: var(--link-color);
+}
+
+.sup {
+    text-decoration: none;
+}
+
 #score-report {
     display: flex;
     width: 50%;
