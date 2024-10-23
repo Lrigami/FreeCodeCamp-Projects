@@ -353,43 +353,6 @@ main {
     background: url(/images/Go-Shirakawa-house.JPG);
 }
 
-
-
-.note {
-    width: 100%;
-    background-color: #e5f3fe;
-    border-left: 2px solid #0085f2;
-    border-radius: 3px;
-    padding: 5px 10px;
-}
-
-.note::before {
-    content: "i";
-    color: white;
-    background-color: #0085f2;
-    height: 16px;
-    width: 16px;
-    border-radius: 50%;
-    float: left;
-    margin: auto;
-    text-align: center;
-    position: relative;
-    top: 17px;
-    left: 5px;
-    font-size: 0.8rem;
-    text-align: center;
-}
-
-.note p {
-    text-align: justify;
-    padding: 0 15px 0 40px;
-}
-
-
-
-
-
-
 /* footer */
 
 footer {
