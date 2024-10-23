@@ -6,6 +6,7 @@
     --transparency: #828873B3;
     --titles-inside: #F5FAFB;
     --button-border: #797D33;
+    --background-html: #9fa265;
     --footer: #D8DADA;
     --p: #465437;
     --shadow: -2px 5px 5px gray;
@@ -27,9 +28,9 @@ body {
     align-items: center;
     flex-direction: column;
     font-family: Roboto, Verdana, Geneva, Tahoma, sans-serif;
-    background: var(--body-gradient);
-    border-left: 10vw solid white;
-    border-right: 10vw solid white;
+    background-color: var(--titles-inside);
+    border-left: 10vw solid var(--background-html);
+    border-right: 10vw solid var(--background-html);
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -317,7 +318,7 @@ main {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    gap: 15px;
+    gap: 28px;
     padding: 0;
 }
 
