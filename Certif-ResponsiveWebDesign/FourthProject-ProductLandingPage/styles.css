@@ -303,6 +303,53 @@ main {
 
         /* Hotels Section cards - hotels gallery */
 
+#hotel-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#hotel-gallery ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 0;
+}
+
+.hotel-card {
+    height: 20vw;
+    background-size: cover !important;
+    box-sizing: border-box;
+    border-radius: 20px;
+}
+
+.hotel-card.one, .hotel-card.four {
+    width: 42%;
+}
+
+.hotel-card.two, .hotel-card.three {
+    width: 54%;
+}
+
+.hotel-card.one {
+    background: url(/images/Heian-Jingu.JPG);
+    background-position-y: -170px !important;
+}
+
+.hotel-card.two {
+    background: url(/images/Yoshino-yama.JPG);
+    background-position-y: -57px !important;
+}
+
+.hotel-card.three {
+    background: url(/images/Shinjuku-Gyoen.JPG);
+    background-position-y: -70px !important;
+}
+
+.hotel-card.four {
+    background: url(/images/Go-Shirakawa-house.JPG);
+}
 
 
 /* footer */
