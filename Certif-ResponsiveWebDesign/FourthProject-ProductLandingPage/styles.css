@@ -333,6 +333,10 @@ main {
     box-shadow: var(--shadow);
 }
 
+.hotel-card:hover {
+    background-size: 102% !important;
+}
+
 .hotel-card.one, .hotel-card.four {
     width: 42%;
 }
