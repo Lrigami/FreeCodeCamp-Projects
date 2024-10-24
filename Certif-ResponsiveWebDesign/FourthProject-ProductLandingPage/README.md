@@ -1,6 +1,10 @@
 # Product landing page project
+## Initialisation
+Clone the repository of each project. Then launch the index.html file.
 
-## User stories: 
+## Instructions for the project:
+User stories: 
+
 1. - [x] Your product landing page should have a header element with a corresponding id="header"
 2. - [ ] You can see an image within the header element with a corresponding id="header-img" (A logo would make a good image here)
 3. - [x] Within the #header element, you can see a nav element with a corresponding id="nav-bar"
