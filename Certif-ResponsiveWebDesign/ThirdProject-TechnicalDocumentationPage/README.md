@@ -21,8 +21,15 @@ User Stories:
 - [x] On regular sized devices (laptops, desktops), the element with id="navbar" should be shown on the left side of the screen and should always be visible to the user
 - [x] Your technical documentation should use at least one media query
 
-
 What I want to add to make the project more personal and deepened : 
 
 - [x] Training in tables and graphs 
 - [x] Add a day/night mode button
+
+## Screenshot snippets 
+
+![image](https://github.com/user-attachments/assets/a3a94c26-a169-45fc-8957-9c25c8a39c45)
+
+![image](https://github.com/user-attachments/assets/9759108a-30e6-4d5a-9025-7a5b60db2741)
+
+![image](https://github.com/user-attachments/assets/c29178c5-f4b0-4a79-b156-5bc2b8917337)
