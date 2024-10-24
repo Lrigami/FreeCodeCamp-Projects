@@ -1,6 +1,6 @@
 # First Project : Survey Form
 
-## Initialization 
+## Initialisation 
 Clone the repository of each project. Then launch the index.html file.
 
 ## User Stories:
