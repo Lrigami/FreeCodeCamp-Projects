@@ -331,10 +331,11 @@ main {
     display: flex;
     align-items: flex-end;
     box-shadow: var(--shadow);
+    transition: transform .1s;
 }
 
 .hotel-card:hover {
-    background-size: 102% !important;
+    transform: scale(1.02) !important;
 }
 
 .hotel-card.one, .hotel-card.four {
@@ -411,6 +412,7 @@ video {
     width: 80%;
     margin: 10% 0;
     box-shadow: var(--shadow);
+    transition: transform .1s;
 }
 
 #video-section p {
@@ -420,6 +422,11 @@ video {
     bottom: 37.5vw;
     right: 10vw;
     color: var(--titles-inside);
+}
+
+#video-section video:focus {
+    transform: scale(1.5);
+    z-index: 1;
 }
 
 /* footer */
