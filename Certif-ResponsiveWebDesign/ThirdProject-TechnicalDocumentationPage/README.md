@@ -1,6 +1,8 @@
-# FreeCodeCamp Third Project 
-## Technical Documentation Page
+# FreeCodeCamp Third Project - Technical Documentation Page
+## Initialisation
+Clone the repository of each project. Then launch the index.html file. 
 
+## Instructions for the project :
 User Stories:
 
 - [x] You can see a main element with a corresponding id="main-doc", which contains the page's main content (technical documentation)
