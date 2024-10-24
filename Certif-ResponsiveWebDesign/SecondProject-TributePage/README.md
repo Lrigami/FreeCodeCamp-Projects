@@ -1,5 +1,9 @@
 # FreeCodeCamp Certification Project intitulated "Tribute Page"
 
+## Initialisation 
+Clone the repository of each project. Then launch the index.html file. \
+If you want to use the automatised translation, you need a free DeepL API key. [You can find more information about it here](https://support.deepl.com/hc/en-us/articles/360020695820-API-Key-for-DeepL-s-API#h_01HM9MFQ195GTHM93RRY63M18W).
+
 ## Instructions for the project : 
 
 User Stories:
