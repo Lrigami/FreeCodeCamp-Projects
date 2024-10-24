@@ -8,7 +8,7 @@ User Stories:
 - [x] The first element within each .main-section should be a header element, which contains text that describes the topic of that section.
 - [x] Each section element with the class of main-section should also have an id that corresponds with the text of each header contained within it. Any spaces should be replaced with underscores (e.g. The section that contains the header "JavaScript and Java" should have a corresponding id="JavaScript_and_Java")
 - [x] The .main-section elements should contain at least ten p elements total (not each)
-- [x] The .main-section elements should contain at least five code elements total (not each)
+- [x] The .main-section elements should contain at least five code elements total (not each) --> I removed the code elements from the project because it wasn't relevant in it.
 - [x] The .main-section elements should contain at least five li items total (not each)
 - [x] You can see a nav element with a corresponding id="navbar"
 - [x] The navbar element should contain one header element which contains text that describes the topic of the technical documentation
@@ -23,4 +23,4 @@ User Stories:
 What I want to add to make the project more personal and deepened : 
 
 - [x] Training in tables and graphs 
-- [ ] Add a day/night mode button
+- [x] Add a day/night mode button
