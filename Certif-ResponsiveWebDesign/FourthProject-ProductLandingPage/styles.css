@@ -292,8 +292,8 @@ section {
     width: 100%;
     padding: 5% 10%;
     display: grid;
-    grid-template-columns: repeat(220, 5.15px);
-    grid-template-rows: repeat(220 , 4.565px);
+    grid-template-columns: repeat(220, 10px);
+    grid-template-rows: repeat(220 , 10px);
     overflow: hidden;
 }
 

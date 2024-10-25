@@ -44,93 +44,63 @@ window.addEventListener("scroll", () => {
 let locations = [
     {
         name: "Tokyo",
-        prefecture: "Tokyo", 
-        x: 356,
-        y: 1397
+        prefecture: "Tokyo"
     }, 
     {
         name: "Takao Mount", 
-        prefecture: "Tokyo",
-        x: 356,
-        y: 1392
+        prefecture: "Tokyo"
     }, 
     {
         name: "Oze National Park",
-        prefecture: "Tochigi",
-        x: 369,
-        y: 1392
+        prefecture: "Tochigi"
     },
     {
         name: "Takayama",
-        prefecture: "Gifu",
-        x: 361,
-        y: 1372
+        prefecture: "Gifu"
     },
     {
         name: "Kurobe River",
-        prefecture: "Toyama",
-        x: 355,
-        y: 1376
+        prefecture: "Toyama"
     },
     {
         name: "Shirakawa-Gô",
-        prefecture: "Gifu",
-        x: 362,
-        y: 1368
+        prefecture: "Gifu"
     },
     {
         name: "Nara",
-        prefecture: "Nara",
-        x: 346,
-        y: 1357
+        prefecture: "Nara"
     },
     {
         name: "Yoshino-yama",
-        prefecture: "Nara",
-        x: 341,
-        y: 1359
+        prefecture: "Nara"
     },
     {
         name: "Osaka",
-        prefecture: "Osaka",
-        x: 346,
-        y: 1354
+        prefecture: "Osaka"
     },
     {
         name: "Kyôto",
-        prefecture: "Kyôto",
-        x: 349,
-        y: 1357
+        prefecture: "Kyôto"
     },
     {
         name: "Tottori",
-        prefecture: "Tottori",
-        x: 355,
-        y: 1342
+        prefecture: "Tottori"
     },
     {
         name: "Kinosaki-onsen",
-        prefecture: "Hyôgo",
-        x: 356,
-        y: 1348
+        prefecture: "Hyôgo"
     },
     {
         name: "Hiroshima",
-        prefecture: "Hiroshima",
-        x: 343,
-        y: 1324
+        prefecture: "Hiroshima"
     },
     {
         name: "Onna",
-        prefecture: "Okinawa",
-        x: 264,
-        y: 1278
+        prefecture: "Okinawa"
     },
     {
         name: "Nagano",
-        prefecture: "Nagano",
-        x: 366,
-        y: 1381
+        prefecture: "Nagano"
     }
 ];
 
@@ -150,14 +120,6 @@ locationsFilter.forEach((location) => {
     let mapIcon = document.createElement("span");
     mapIcon.classList.add("material-icons");
     mapIcon.innerHTML = "location_on";
-
-    let buttonX = location.x;
-    let buttonY = location.y;
-
-    mapButton.style.gridColumnStart = (237 - buttonX)*(-1);
-    mapButton.style.gridColumnEnd = ((237 - buttonX)*(-1)) + 1;
-    mapButton.style.gridRowStart = 1256 - buttonY + 220;
-    mapButton.style.gridRowEnd = 1256 - buttonY + 220 + 1;
 
     mapButton.style.zIndex = "6";
     select.appendChild(option);
