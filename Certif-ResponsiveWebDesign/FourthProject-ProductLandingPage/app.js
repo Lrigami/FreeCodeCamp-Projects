@@ -104,10 +104,10 @@ let locations = [
     },
 ];
 
-// filter locations array by alphabetical order
+// sort locations array by alphabetical order
 const locationsFilter = locations.sort((a, b) => a.name.localeCompare(b.name));
 
-// create an option for each location of the filtered array
+// create an option for each location of the sorted array
 const select = document.getElementById("select-location");
 locationsFilter.forEach((location) => {
     let option = document.createElement("option");
