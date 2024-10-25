@@ -40,8 +40,8 @@ window.addEventListener("scroll", () => {
     joinUsButton.style.borderColor = rgbaJoinUsButtonBorderColor;
 })
 
-const select = document.getElementById("select-option");
-const locations = [
+// locations (modifiable array)
+let locations = [
     {
         name: "Tokyo",
         prefecture: "Tokyo", 
@@ -102,4 +102,16 @@ const locations = [
         name: "Nagano",
         prefecture: "Nagano"
     },
-]
+];
+
+// filter locations array by alphabetical order
+const locationsFilter = locations.sort((a, b) => a.name.localeCompare(b.name));
+
+// create an option for each location of the filtered array
+const select = document.getElementById("select-location");
+locationsFilter.forEach((location) => {
+    let option = document.createElement("option");
+    option.value = `${location.name}`;
+    option.innerHTML = `${location.name}`;
+    select.appendChild(option);
+})
