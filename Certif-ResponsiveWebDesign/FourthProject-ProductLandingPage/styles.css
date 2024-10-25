@@ -287,19 +287,29 @@ section {
     background-color: #68936849;
 }
 
+#japanMapLocations h2, label, select {
+    position: absolute;
+}
+
+#container {
+    width: 100%;
+    padding: 0 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 #mapgrid {
     position: relative;
-    width: 100%;
-    padding: 5% 10%;
     display: grid;
-    grid-template-columns: repeat(220, 10px);
-    grid-template-rows: repeat(220 , 10px);
+    grid-template-columns: repeat(113, 10px);
+    grid-template-rows: repeat(104 , 10px);
     overflow: hidden;
 }
 
 #japan-map {
-    grid-column: 1 / 221;
-    grid-row: 1 / 221;
+    grid-column: 1 / 114;
+    grid-row: 1 / 105;
     width: 100%;
     height: 100%;
     z-index: 3;
@@ -323,6 +333,81 @@ section {
 .map-location::after {
     display: hidden;
     content: ""; 
+}
+
+.Hiroshima {
+    grid-column: 47 / 48;
+    grid-row: 51 / 52;
+}
+
+.Kinosaki-onsen {
+    grid-column: 59 / 60;
+    grid-row: 46 / 47;
+}
+
+.Kurobe-River {
+    grid-column: 72 / 73;
+    grid-row: 42 / 43;
+}
+
+.Kyôto {
+    grid-column: 63 / 64;
+    grid-row: 48 / 49;
+}
+
+.Nara {
+    grid-column: 63 / 64;
+    grid-row: 50 / 51;
+}
+
+.Nagano {
+    grid-column: 75 / 76;
+    grid-row: 41 / 42;
+}
+
+.Onna {
+    grid-column: 25 / 26;
+    grid-row: 88 / 89;
+}
+
+.Osaka {
+    grid-column: 61 / 62;
+    grid-row: 50 / 51;
+}
+
+.Oze-National-Park {
+    grid-column: 81 / 82;
+    grid-row: 39 / 40;
+}
+
+.Shirakawa-Gô {
+    grid-column: 67 / 68;
+    grid-row: 44 / 45;
+}
+
+.Takao-Mount {
+    grid-column: 80 / 81;
+    grid-row: 45 / 46;
+}
+
+.Takayama {
+    grid-column: 69 / 70;
+    grid-row: 45 / 46;
+}
+
+.Tokyo {
+    grid-column: 83 / 84;
+    grid-row: 45 / 46;
+}
+
+.Tottori {
+    grid-column: 55 / 56;
+    grid-row: 47 / 48;
+}
+
+.Yoshino-yama {
+    grid-column: 63 / 64;
+    grid-row: 53 / 54;
 }
 
 /* animations */
