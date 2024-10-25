@@ -101,17 +101,27 @@ let locations = [
     {
         name: "Nagano",
         prefecture: "Nagano"
-    },
+    }
 ];
 
 // sort locations array by alphabetical order
 const locationsFilter = locations.sort((a, b) => a.name.localeCompare(b.name));
 
-// create an option for each location of the sorted array
+// create an option for each location of the sorted array and a button for the map
 const select = document.getElementById("select-location");
+const map = document.getElementById("japanMapLocations");
 locationsFilter.forEach((location) => {
     let option = document.createElement("option");
     option.value = `${location.name}`;
     option.innerHTML = `${location.name}`;
+
+    let mapButton = document.createElement("button");
+    mapButton.classList.add("map-location", `${location.name.replace(/\s+/g, '-')}`);
+    let mapIcon = document.createElement("span");
+    mapIcon.classList.add("material-icons");
+    mapIcon.innerHTML = "location_on";
+
     select.appendChild(option);
+    mapButton.appendChild(mapIcon);
+    map.appendChild(mapButton);
 })

@@ -291,6 +291,26 @@ section {
     padding: 5% 10%;
 }
 
+            /* buttons */
+
+.map-location {
+    background: transparent;
+    cursor: pointer;
+    border: none;
+    width: 40px;
+    height: 40px;
+}
+
+.map-location span {
+    font-size: 30px;
+    color: var(--todefine3);
+}
+
+.map-location::after {
+    display: hidden;
+    content: 
+}
+
 /* scroll-margin-top: 40px; */
 /* animations */
 
