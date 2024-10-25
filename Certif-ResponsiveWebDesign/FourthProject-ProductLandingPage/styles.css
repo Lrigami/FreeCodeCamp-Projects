@@ -1,0 +1,58 @@
+:root {
+    --color: #fff;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* body */
+
+header {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.title {
+    position: absolute;
+    text-align: center;
+    top: calc(42% - 5rem);
+    width: 100%;
+    font-size: 10rem;
+    line-height: 8rem;
+    z-index: 14;
+    color: var(--color);
+}
+
+.oze1 {
+    position: absolute;
+    bottom: -700px;
+    left: -100px;
+    width: 2080px;
+    z-index: 16;
+}
+
+.oze2 {
+    position: absolute;
+    bottom: -700px;
+    left: -100px;
+    width: 2080px;
+    z-index: 15;    
+}
+
+.oze3 {
+    position: absolute;
+    top: -100px;
+    left: 0;
+    width: 2080px;
+    z-index: 13;
+}
+
+section {
+    height: 2000px;
+}
