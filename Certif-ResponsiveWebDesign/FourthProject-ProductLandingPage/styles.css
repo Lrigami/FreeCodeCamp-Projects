@@ -287,10 +287,22 @@ section {
     background-color: #68936849;
 }
 
-#japan-map {
+#mapgrid {
     position: relative;
     width: 100%;
     padding: 5% 10%;
+    display: grid;
+    grid-template-columns: repeat(220, 5.15px);
+    grid-template-rows: repeat(220 , 4.565px);
+    overflow: hidden;
+}
+
+#japan-map {
+    grid-column: 1 / 221;
+    grid-row: 1 / 221;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
 }
 
             /* buttons */
@@ -310,7 +322,7 @@ section {
 
 .map-location::after {
     display: hidden;
-    content: 
+    content: ""; 
 }
 
 /* animations */

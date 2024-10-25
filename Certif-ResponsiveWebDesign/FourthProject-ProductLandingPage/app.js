@@ -45,62 +45,92 @@ let locations = [
     {
         name: "Tokyo",
         prefecture: "Tokyo", 
+        x: 356,
+        y: 1397
     }, 
     {
         name: "Takao Mount", 
-        prefecture: "Tokyo"
+        prefecture: "Tokyo",
+        x: 356,
+        y: 1392
     }, 
     {
         name: "Oze National Park",
-        prefecture: "Tochigi"
+        prefecture: "Tochigi",
+        x: 369,
+        y: 1392
     },
     {
         name: "Takayama",
-        prefecture: "Gifu"
+        prefecture: "Gifu",
+        x: 361,
+        y: 1372
     },
     {
         name: "Kurobe River",
-        prefecture: "Toyama"
+        prefecture: "Toyama",
+        x: 355,
+        y: 1376
     },
     {
         name: "Shirakawa-Gô",
-        prefecture: "Gifu"
+        prefecture: "Gifu",
+        x: 362,
+        y: 1368
     },
     {
         name: "Nara",
-        prefecture: "Nara"
+        prefecture: "Nara",
+        x: 346,
+        y: 1357
     },
     {
         name: "Yoshino-yama",
-        prefecture: "Nara"
+        prefecture: "Nara",
+        x: 341,
+        y: 1359
     },
     {
         name: "Osaka",
-        prefecture: "Osaka"
+        prefecture: "Osaka",
+        x: 346,
+        y: 1354
     },
     {
         name: "Kyôto",
-        prefecture: "Kyôto"
+        prefecture: "Kyôto",
+        x: 349,
+        y: 1357
     },
     {
         name: "Tottori",
-        prefecture: "Tottori"
+        prefecture: "Tottori",
+        x: 355,
+        y: 1342
     },
     {
         name: "Kinosaki-onsen",
-        prefecture: "Hyôgo"
+        prefecture: "Hyôgo",
+        x: 356,
+        y: 1348
     },
     {
         name: "Hiroshima",
-        prefecture: "Hiroshima"
+        prefecture: "Hiroshima",
+        x: 343,
+        y: 1324
     },
     {
         name: "Onna",
-        prefecture: "Okinawa"
+        prefecture: "Okinawa",
+        x: 264,
+        y: 1278
     },
     {
         name: "Nagano",
-        prefecture: "Nagano"
+        prefecture: "Nagano",
+        x: 366,
+        y: 1381
     }
 ];
 
@@ -109,7 +139,7 @@ const locationsFilter = locations.sort((a, b) => a.name.localeCompare(b.name));
 
 // create an option for each location of the sorted array and a button for the map
 const select = document.getElementById("select-location");
-const map = document.getElementById("japanMapLocations");
+const map = document.getElementById("mapgrid");
 locationsFilter.forEach((location) => {
     let option = document.createElement("option");
     option.value = `${location.name}`;
@@ -121,7 +151,17 @@ locationsFilter.forEach((location) => {
     mapIcon.classList.add("material-icons");
     mapIcon.innerHTML = "location_on";
 
+    let buttonX = location.x;
+    let buttonY = location.y;
+
+    mapButton.style.gridColumnStart = (237 - buttonX)*(-1);
+    mapButton.style.gridColumnEnd = ((237 - buttonX)*(-1)) + 1;
+    mapButton.style.gridRowStart = 1256 - buttonY + 220;
+    mapButton.style.gridRowEnd = 1256 - buttonY + 220 + 1;
+
+    mapButton.style.zIndex = "6";
     select.appendChild(option);
     mapButton.appendChild(mapIcon);
     map.appendChild(mapButton);
 })
+
