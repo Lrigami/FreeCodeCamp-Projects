@@ -278,6 +278,8 @@ section {
 #locations {
     width: 100%;
     height: auto;
+    margin: 30px 0 0 0;
+    scroll-margin-top: 75.9px; 
 }
 
 #japanMapLocations {
@@ -311,7 +313,6 @@ section {
     content: 
 }
 
-/* scroll-margin-top: 40px; */
 /* animations */
 
 @keyframes round-big {
