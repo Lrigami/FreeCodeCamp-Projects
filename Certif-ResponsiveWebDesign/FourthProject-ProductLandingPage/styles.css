@@ -72,30 +72,34 @@ header {
     height: 400px;
     left: calc(50% - 200px);
     bottom: -200px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    animation: round-big 60s linear infinite;
 }
 
 .medium {
     width: 200px;
     height: 200px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    left: calc(50% - 100px);
+    bottom: -100px;
+    animation: round-medium 30s linear infinite;
 }
 
 .small {
     width: 150px;
     height: 150px;
-    display: flex;
-    justify-content: center;
+    left: calc(50% - 75px);
+    bottom: -75px;
+    animation: round-small 30s linear infinite;
 }
 
-.small p {
-    position: relative;
-    top: 50px;
-    line-height: 1rem;
+.scroll-down {
+    z-index: 17;
+    position: absolute;
+    left: calc(50% - 1.75rem);
+    bottom: 5px;
+}
+
+.scroll-down p {
+    line-height: 1.5rem;
     font-size: 1.5rem;
     color: var(--color);
 }
@@ -108,3 +112,46 @@ section {
 }
 
 
+/* animations */
+
+@keyframes round-big {
+    0% {
+        rotate: 0deg;
+        scale: 1;
+    }
+
+    50% {
+        scale: 1.1;
+    }
+
+    100% {
+        rotate: 360deg;
+        scale: 1;
+    }
+}
+
+@keyframes round-medium {
+    0% {
+        rotate: 0deg;
+        scale: 1.3;
+    }
+
+    50% {
+        scale: 1;
+    }
+
+    100% {
+        rotate: -360deg;
+        scale: 1.3;
+    }
+}
+
+@keyframes round-small {
+    0% {
+        rotate: 0deg; 
+    }
+
+    100% {
+        rotate: 360deg;
+    }
+}
