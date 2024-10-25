@@ -39,3 +39,67 @@ window.addEventListener("scroll", () => {
     let rgbaJoinUsButtonBorderColor = currentJoinUsButtonBorderColor.replace(/rgba?\((\d+), (\d+), (\d+),? ?[\d\.]*\)/, `rgba($1, $2, $3, ${newJoinUsButtonOpacity})`);
     joinUsButton.style.borderColor = rgbaJoinUsButtonBorderColor;
 })
+
+const select = document.getElementById("select-option");
+const locations = [
+    {
+        name: "Tokyo",
+        prefecture: "Tokyo", 
+    }, 
+    {
+        name: "Takao Mount", 
+        prefecture: "Tokyo"
+    }, 
+    {
+        name: "Oze National Park",
+        prefecture: "Tochigi"
+    },
+    {
+        name: "Takayama",
+        prefecture: "Gifu"
+    },
+    {
+        name: "Kurobe River",
+        prefecture: "Toyama"
+    },
+    {
+        name: "Shirakawa-Gô",
+        prefecture: "Gifu"
+    },
+    {
+        name: "Nara",
+        prefecture: "Nara"
+    },
+    {
+        name: "Yoshino-yama",
+        prefecture: "Nara"
+    },
+    {
+        name: "Osaka",
+        prefecture: "Osaka"
+    },
+    {
+        name: "Kyôto",
+        prefecture: "Kyôto"
+    },
+    {
+        name: "Tottori",
+        prefecture: "Tottori"
+    },
+    {
+        name: "Kinosaki-onsen",
+        prefecture: "Hyôgo"
+    },
+    {
+        name: "Hiroshima",
+        prefecture: "Hiroshima"
+    },
+    {
+        name: "Onna",
+        prefecture: "Okinawa"
+    },
+    {
+        name: "Nagano",
+        prefecture: "Nagano"
+    },
+]
