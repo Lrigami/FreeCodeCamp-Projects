@@ -52,7 +52,11 @@ let locations = [
             {
                 name: "Tokyo", 
                 image: "./images/Tokyo.jpg"
-            }
+            }, 
+            {
+                name: "Fuji-san", 
+                image: "./images/Fuji-san.jpg"
+            }, 
         ]
     }, 
     {
@@ -245,10 +249,15 @@ locationsFilter.forEach((location) => {
     mapIcon.classList.add("material-icons");
     mapIcon.innerHTML = "location_on";
 
-    mapButton.style.zIndex = "6";
+    mapButton.style.zIndex = "3";
     select.appendChild(option);
     mapButton.appendChild(mapIcon);
     map.appendChild(mapButton);
+
+    let divIndicate = document.createElement("div");
+    divIndicate.style.zIndex = "4";
+    divIndicate.innerHTML = `${location.name}`;
+    mapButton.appendChild(divIndicate);
 
     // display places cards when we click on a map button
     mapButton.addEventListener("click", () => {

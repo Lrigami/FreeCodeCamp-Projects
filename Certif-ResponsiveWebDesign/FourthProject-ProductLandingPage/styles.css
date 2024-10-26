@@ -322,6 +322,11 @@ section {
     border: none;
     width: 40px;
     height: 40px;
+    position: absolute;
+}
+
+.map-location:hover {
+    z-index: 100 !important;
 }
 
 .map-location span {
@@ -329,9 +334,19 @@ section {
     color: var(--todefine3);
 }
 
-.map-location::after {
-    display: hidden;
-    content: ""; 
+.map-location div {
+    background-color: var(--todefine2);
+    font-family: "Roboto Condensed", Arial, Helvetica, sans-serif;
+    padding: 0 5px;
+    width: 100px;
+    position: relative;
+    display: none;
+    text-align: center;
+    z-index: 999;
+}
+
+.map-location:hover div {
+    display: block;
 }
 
 .Hiroshima {
