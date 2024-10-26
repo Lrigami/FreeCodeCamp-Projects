@@ -100,6 +100,11 @@ let locations = [
             {
                 name: "Hiuchigatake summit", 
                 image: "./images/Oze-summit.jpg"
+            }, 
+            {
+                name: "Hiuchigatake summit", 
+                video: "./images/video/Oze-summit.mp4",
+                text: "Panorama from Hiuchigatake summit."
             }
         ]
     },
@@ -193,7 +198,7 @@ let locations = [
                 name: "Osaka Light festival", 
                 video: "./images/video/Osaka-light-festival.mp4",
                 text: "Short film of Osaka light festival"
-            }, 
+            } 
         ]
     },
     {
@@ -253,7 +258,7 @@ let locations = [
             {
                 name: "Tottori Sand museum", 
                 image: "./images/Tottori-sand-museum.jpg"
-            }, 
+            } 
         ] 
     },
     {
@@ -263,7 +268,7 @@ let locations = [
             {
                 name: "Kinosaki onsen", 
                 image: "./images/Kinosaki-onsen.jpg"
-            }, 
+            } 
         ]
     },
     {
@@ -281,7 +286,7 @@ let locations = [
             {
                 name: "Hiroshima castle", 
                 image: "./images/Hiroshima-castle-2.jpg"
-            }, 
+            }
         ]
     },
     {
@@ -296,6 +301,11 @@ let locations = [
                 name: "Okinawa beach", 
                 image: "./images/Okinawa-beach.jpg"
             }, 
+            {
+                name: "Snorkeling & fish feeding", 
+                video: "./images/video/Okinawa-fish.mp4",
+                text: "Short film of someone feeding fishes in Okinawa sea."
+            }
         ]
     },
     {
