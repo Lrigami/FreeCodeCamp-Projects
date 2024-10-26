@@ -1,5 +1,5 @@
 const translate = document.querySelectorAll(".translate");
-const translateInverted = document.querySelectorAll(".translateInverted")
+const translateInverted = document.querySelectorAll(".translateInverted");
 const shadow = document.querySelectorAll(".shadow");
 const navbar = document.getElementById("nav-bar");
 const joinUsButton = document.getElementById("join-us-button");
@@ -16,7 +16,6 @@ window.addEventListener("scroll", () => {
     translateInverted.forEach(element => {
         let speed = element.dataset.speed;
         element.style.transform = `translateY(-${scroll * speed}px)`;
-        console.log(0 - scroll * speed);
     })
 
     // Change opacity of scroll-down-circles depending on scrollY
@@ -274,6 +273,9 @@ locationsFilter.forEach((location) => {
             let card = document.createElement("div");
             card.classList.add("place-card");
 
+            let textAndButton = document.createElement("div");
+            textAndButton.classList.add("blur");
+
             let placeName = document.createElement("h5");
             placeName.innerHTML = place.name;
             if (place.image) {
@@ -295,11 +297,45 @@ locationsFilter.forEach((location) => {
             let bookNow = document.createElement("button");
             bookNow.innerHTML = "Book now";
 
-            card.appendChild(placeName);
-            card.appendChild(bookNow);
+            textAndButton.appendChild(placeName);
+            textAndButton.appendChild(bookNow);
+
+            card.appendChild(textAndButton);
 
             cardSection.appendChild(card);
         })
+
+        const evenCard = document.querySelectorAll("#automatised-locations > div:nth-child(even)");
+        const oddCard = document.querySelectorAll("#automatised-locations > div:nth-child(odd)");
+
+        evenCard.forEach((child) => {
+            child.classList.add("translate");
+            child.setAttribute("data-speed", "0.05");
+        })
+
+        oddCard.forEach((child) => {
+            child.classList.add("translateInverted");
+            child.setAttribute("data-speed", "0.05");
+        })
+
+        let firstChild = document.querySelector(".title-div");
+        firstChild.classList.remove("translateInverted");
     })
 })
 
+window.addEventListener("scroll", () => {
+    let scroll = window.scrollY;
+    const translate = document.querySelectorAll(".translate");
+    const translateInverted = document.querySelectorAll(".translateInverted");
+    
+    // parallax effect
+    translate.forEach(element => {
+        let speed = element.dataset.speed;
+        element.style.transform = `translateY(${scroll * speed}px)`;
+    })
+
+    translateInverted.forEach(element => {
+        let speed = element.dataset.speed;
+        element.style.transform = `translateY(-${scroll * speed}px)`;
+    })
+})

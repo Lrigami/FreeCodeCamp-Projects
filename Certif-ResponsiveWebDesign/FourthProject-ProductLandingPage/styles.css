@@ -412,7 +412,7 @@ section {
             /* automatised location cards */
 
 #automatised-locations {
-    width: 80%;
+    width: 65%;
     margin: 2% auto;
     padding: 8% 0;
     display: flex;
@@ -450,16 +450,76 @@ section {
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-end;
-    gap: 2%;
-    padding: 0 1% 20px 1%;
     border: 1px solid var(--todefine1);
     border-radius: 10px;
     transition: .3s;
+    overflow: hidden;
 }
 
 .place-card:hover {
     scale: 1.15;
     box-shadow: 5px 5px 5px var(--background3);
+}
+
+.place-card.translate {
+    position: relative;
+    top: -122px;
+}
+
+.place-card.translate:hover {
+    top: -163px !important;
+}
+
+.place-card.translateInverted {
+    position: relative;
+    bottom: -161px;
+}
+
+.place-card.translateInverted:hover {
+    bottom: -163px !important;
+}
+
+.blur {
+    backdrop-filter: blur(1px);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.place-card h5 {
+    font-size: 1rem;
+    font-family: "DM Serif Text", Arial, Helvetica, sans-serif;
+    color: var(--white);
+    margin: 0 0 1% 2%;
+}
+
+.place-card button {
+    align-self: center;
+    font-size: 1.2rem;
+    color: var(--todefine3);
+    font-family: "Roboto Condensed", Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    background-color: var(--background2);
+    padding: 1% 0;
+    margin: 1% 0;
+    width: 90%;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.place-card button:hover {
+    background-color: var(--background1);
+}
+
+.place-card video {
+    position: relative;
+    height: 34vh;
+    bottom: -23%;
+    left: -61%;
+    z-index: -1;
+    /* éditer les vidéos pour enlever le son */
 }
 
 /* animations */
