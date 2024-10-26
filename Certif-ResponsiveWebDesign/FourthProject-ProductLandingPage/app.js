@@ -57,6 +57,10 @@ let locations = [
                 name: "Fuji-san", 
                 image: "./images/Fuji-san.jpg"
             }, 
+            {
+                name: "Tokyo National Museum", 
+                image: "./images/Tokyo-museum.jpg"
+            }
         ]
     }, 
     {
@@ -66,7 +70,11 @@ let locations = [
             {
                 name: "Takao Mount", 
                 image: "./images/Takao-mount.jpg"
-            }
+            }, 
+            {
+                name: "Takao Mount sculpture", 
+                image: "./images/Takao-sculpture.jpg"
+            } 
         ]
     }, 
     {
@@ -88,6 +96,10 @@ let locations = [
             {
                 name: "Oze park - Miike", 
                 image: "./images/Oze-park-dragonfly.jpg"
+            }, 
+            {
+                name: "Hiuchigatake summit", 
+                image: "./images/Oze-summit.jpg"
             }
         ]
     },
@@ -106,6 +118,10 @@ let locations = [
             {
                 name: "Sakurayama Hachimangu Shrine",
                 image: "./images/Sakurayama-Hachimangu-Shrine.jpg"
+            }, 
+            {
+                name: "Hida no sato - folkloric village", 
+                image: "./images/Takayama.jpg"
             }
         ]
     },
@@ -166,7 +182,7 @@ let locations = [
             {
                 name: "Yoshino yama", 
                 image: "./images/Yoshino-yama.jpg"
-            }, 
+            }
         ]
     },
     {
@@ -202,33 +218,95 @@ let locations = [
             }, 
             {
                 name: "Kinkaku-ji", 
-                image: "./images/Pavillon-dor.jpg"
+                image: "./images/Kinkaku-ji.jpg"
             }, 
             {
                 name: "Nijô castle", 
                 image: "./images/Nijô.jpg"
             }, 
+            {
+                name: "Kyôto light festival", 
+                image: "./images/Kyoto-light-festival.jpg"
+            }, 
+            {
+                name: "Kyôto tower", 
+                image: "./images/Kyoto-tower.jpg"
+            }, 
+            {
+                name: "Tea ceremony", 
+                image: "./images/Tea-ceremony.jpg"
+            }
         ]
     },
     {
         name: "Tottori",
-        prefecture: "Tottori"
+        prefecture: "Tottori", 
+        places: [
+            {
+                name: "Tottori Dunes", 
+                image: "./images/Tottori-dunes.jpg"
+            }, 
+            {
+                name: "Tottori Bus", 
+                image: "./images/Tottori-bus.jpg"
+            }, 
+            {
+                name: "Tottori Sand museum", 
+                image: "./images/Tottori-sand-museum.jpg"
+            }, 
+        ] 
     },
     {
         name: "Kinosaki-onsen",
-        prefecture: "Hyôgo"
+        prefecture: "Hyôgo", 
+        places: [
+            {
+                name: "Kinosaki onsen", 
+                image: "./images/Kinosaki-onsen.jpg"
+            }, 
+        ]
     },
     {
         name: "Hiroshima",
-        prefecture: "Hiroshima"
+        prefecture: "Hiroshima", 
+        places: [
+            {
+                name: "Hiroshima shrine", 
+                image: "./images/Hiroshima.jpg"
+            }, 
+            {
+                name: "Hiroshima castle mascot", 
+                image: "./images/Hiroshima-castle.jpg"
+            }, 
+            {
+                name: "Hiroshima castle", 
+                image: "./images/Hiroshima-castle-2.jpg"
+            }, 
+        ]
     },
     {
         name: "Onna",
-        prefecture: "Okinawa"
+        prefecture: "Okinawa", 
+        places: [
+            {
+                name: "Cape Manzamo", 
+                image: "./images/Okinawa.jpg"
+            }, 
+            {
+                name: "Okinawa beach", 
+                image: "./images/Okinawa-beach.jpg"
+            }, 
+        ]
     },
     {
         name: "Nagano",
-        prefecture: "Nagano"
+        prefecture: "Nagano", 
+        places: [
+            {
+                name: "Nagano station", 
+                image: "./images/Nagano-eki.jpg"
+            }, 
+        ]
     }
 ];
 
