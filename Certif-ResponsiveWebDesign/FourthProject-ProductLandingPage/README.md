@@ -11,7 +11,7 @@ User stories:
 3. - [x] Within the #header element, you can see a nav element with a corresponding id="nav-bar"
 4. - [x] You can see at least three clickable elements inside the nav element, each with the class nav-link
 5. - [ ] When you click a .nav-link button in the nav element, you are taken to the corresponding section of the landing page
-6. - [ ] You can watch an embedded product video with id="video"
+6. - [x] You can watch an embedded product video with id="video"
 7. - [ ] Your landing page has a form element with a corresponding id="form"
 8. - [ ] Within the form, there is an input field with id="email" where you can enter an email address
 9. - [ ] The #email input field should have placeholder text to let users know what the field is for
@@ -25,7 +25,7 @@ User stories:
 ## Personal features:
 1. - [x] Parallax effect
 2. - [x] Scroll effect on the navbar
-3. - [ ] An interactive map
+3. - [x] An interactive map
 4. - [ ] An automatised review section composed with a user icon and its review (after a certain delay, another user and review takes place)
 
 -- attributions --
