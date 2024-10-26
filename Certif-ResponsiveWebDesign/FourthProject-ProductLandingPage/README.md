@@ -1,7 +1,7 @@
 # Product landing page project
 ## Initialisation
 Clone the repository of each project. Then launch the index.html file.\
-Video aren't push to GitHub because of their sizes. 
+Video aren't push to GitHub because of their sizes, so you have to use your own or won't see them.
 
 ## Instructions for the project:
 User stories: 
