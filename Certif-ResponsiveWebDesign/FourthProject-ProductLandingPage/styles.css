@@ -436,6 +436,8 @@ section {
     align-items: center;
     row-gap: 2vh;
     column-gap: 2vw;
+    scroll-margin-top: 75.9px; 
+    
 }
 
 .title-div {

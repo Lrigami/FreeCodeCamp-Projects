@@ -268,6 +268,7 @@ locationsFilter.forEach((location) => {
 
         let titleDiv = document.createElement("div");
         titleDiv.classList.add("title-div");
+        titleDiv.setAttribute("id", "titleDiv");
 
         let locationName = document.createElement("h3");
         locationName.innerHTML = location.name;
@@ -329,6 +330,8 @@ locationsFilter.forEach((location) => {
 
         let firstChild = document.querySelector(".title-div");
         firstChild.classList.remove("translateInverted");
+
+        window .location.href = "#automatised-locations";
     })
 })
 
