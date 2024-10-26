@@ -44,43 +44,168 @@ window.addEventListener("scroll", () => {
 let locations = [
     {
         name: "Tokyo",
-        prefecture: "Tokyo"
+        prefecture: "Tokyo", 
+        places: [
+            {
+                name: "Shinjuku Gyôen",
+                image: "./images/Shinjuku-Gyoen.jpg"
+            }, 
+            {
+                name: "Tokyo", 
+                image: "./images/Tokyo.jpg"
+            }
+        ]
     }, 
     {
         name: "Takao Mount", 
-        prefecture: "Tokyo"
+        prefecture: "Tokyo", 
+        places: [
+            {
+                name: "Takao Mount", 
+                image: "./images/Takao-mount.jpg"
+            }
+        ]
     }, 
     {
         name: "Oze National Park",
-        prefecture: "Tochigi"
+        prefecture: "Tochigi", 
+        places: [
+            {
+                name: "Oze park", 
+                image: "./images/Oze-park.jpg"
+            }, 
+            {
+                name: "Hiuchigatake mount", 
+                image: "./images/Oze-park-3.jpg"
+            }, 
+            {
+                name: "Sanjo falls", 
+                image: "./images/Oze-park-waterfall.jpg"
+            }, 
+            {
+                name: "Oze park - Miike", 
+                image: "./images/Oze-park-dragonfly.jpg"
+            }
+        ]
     },
     {
         name: "Takayama",
-        prefecture: "Gifu"
+        prefecture: "Gifu",
+        places: [
+            {
+                name: "Hida no sato - folkloric village", 
+                image: "./images/Hida-no-sato-village.jpg"
+            }, 
+            {
+                name: "Hida kokubun-ji", 
+                image: "./images/Hida-Kokubun-ji.jpg"
+            },
+            {
+                name: "Sakurayama Hachimangu Shrine",
+                image: "./images/Sakurayama-Hachimangu-Shrine.jpg"
+            }
+        ]
     },
     {
         name: "Kurobe River",
-        prefecture: "Toyama"
+        prefecture: "Toyama", 
+        places: [
+            {
+                name: "Kurobe river", 
+                image: "./images/Kurobe.jpg"
+            }, 
+            {
+                name: "Kurobe railway", 
+                image: "./images/Kurobe-railway.jpg"
+            }
+        ]
     },
     {
         name: "Shirakawa-Gô",
-        prefecture: "Gifu"
+        prefecture: "Gifu", 
+        places: [
+            {
+                name: "Shirakawa-Gô historic village", 
+                image: "./images/Shirakawa-Go-Village.jpg"
+            }, 
+            {
+                name: "Shirakawa-Gô houses", 
+                image: "./images/Go-Shirakawa-house.jpg"
+            }, 
+            {
+                name: "Shirakawa-Gô waterfall", 
+                image: "./images/Shirakawa-Go-waterfall.jpg"
+            }
+        ]
     },
     {
         name: "Nara",
-        prefecture: "Nara"
+        prefecture: "Nara", 
+        places: [
+            {
+                name: "Kasuga Grand Shrine", 
+                image: "./images/Kasuga-Taisha.jpg"
+            }, 
+            {
+                name: "Nara deers", 
+                image: "./images/Nara-deer.jpg"
+            }, 
+            {
+                name: "Nara deers", 
+                image: "./images/Nara-deer-3.jpg"
+            }
+        ]
     },
     {
         name: "Yoshino-yama",
-        prefecture: "Nara"
+        prefecture: "Nara", 
+        places: [
+            {
+                name: "Yoshino yama", 
+                image: "./images/Yoshino-yama.jpg"
+            }, 
+        ]
     },
     {
         name: "Osaka",
-        prefecture: "Osaka"
+        prefecture: "Osaka", 
+        places: [
+            {
+                name: "Osaka Light festival", 
+                video: "./images/video/Osaka-light-festival.mp4",
+                text: "Short film of Osaka light festival"
+            }, 
+        ]
     },
     {
         name: "Kyôto",
-        prefecture: "Kyôto"
+        prefecture: "Kyôto", 
+        places: [
+            {
+                name: "Tôji Pagoda (by night)", 
+                image: "./images/Tôji.jpg"
+            }, 
+            {
+                name: "Gion matsuri", 
+                image: "./images/Gion-matsuri.jpg"
+            }, 
+            {
+                name: "Fushimi Inari", 
+                image: "./images/Fushimi-Inari.jpg"
+            }, 
+            {
+                name: "Heian Jingu", 
+                image: "./images/Heian-Jingu-2.jpg"
+            }, 
+            {
+                name: "Kinkaku-ji", 
+                image: "./images/Pavillon-dor.jpg"
+            }, 
+            {
+                name: "Nijô castle", 
+                image: "./images/Nijô.jpg"
+            }, 
+        ]
     },
     {
         name: "Tottori",
@@ -125,5 +250,56 @@ locationsFilter.forEach((location) => {
     select.appendChild(option);
     mapButton.appendChild(mapIcon);
     map.appendChild(mapButton);
+
+    // display places cards when we click on a map button
+    mapButton.addEventListener("click", () => {
+        let cardSection = document.getElementById("automatised-locations");
+        if (cardSection.children.length > 0) {
+            cardSection.innerHTML = "";
+        }
+
+        let titleDiv = document.createElement("div");
+        titleDiv.classList.add("title-div");
+
+        let locationName = document.createElement("h3");
+        locationName.innerHTML = location.name;
+        let locationPrefecture = document.createElement("h4");
+        locationPrefecture.innerHTML = location.prefecture;
+
+        titleDiv.appendChild(locationName);
+        titleDiv.appendChild(locationPrefecture);
+        cardSection.appendChild(titleDiv);
+
+        location.places.forEach((place) => {
+            let card = document.createElement("div");
+            card.classList.add("place-card");
+
+            let placeName = document.createElement("h5");
+            placeName.innerHTML = place.name;
+            if (place.image) {
+                card.style.backgroundImage = `url(${place.image})`;
+            } else if (place.video) {
+                let placeVideo = document.createElement("video");
+                placeVideo.setAttribute("muted", "");
+                placeVideo.setAttribute("autoplay", "");
+                placeVideo.setAttribute("loop", "");
+                placeVideo.innerHTML = `${place.text}`;
+
+                let videoSrc = document.createElement("source");
+                videoSrc.setAttribute("src", place.video);
+                videoSrc.setAttribute("type", "video/mp4");
+
+                placeVideo.appendChild(videoSrc);
+                card.appendChild(placeVideo);
+            }
+            let bookNow = document.createElement("button");
+            bookNow.innerHTML = "Book now";
+
+            card.appendChild(placeName);
+            card.appendChild(bookNow);
+
+            cardSection.appendChild(card);
+        })
+    })
 })
 

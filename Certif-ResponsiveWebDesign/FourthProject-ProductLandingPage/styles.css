@@ -112,7 +112,7 @@ header {
 
 .oze3 {
     position: absolute;
-    top: -100px;
+    top: 0;
     left: 0;
     width: 2080px;
     z-index: 13;
@@ -408,6 +408,34 @@ section {
 .Yoshino-yama {
     grid-column: 63 / 64;
     grid-row: 53 / 54;
+}
+
+            /* automatised location cards */
+
+#automatised-locations {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    row-gap: 2vh;
+    column-gap: 1vw;
+}
+
+#automatised-locations div {
+    width: 25%;
+    height: 30vh;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    gap: 5%;
+    padding: 0 5% 20px 5%;
+    border: 1px solid var(--todefine1);
+    border-radius: 10px;
 }
 
 /* animations */
