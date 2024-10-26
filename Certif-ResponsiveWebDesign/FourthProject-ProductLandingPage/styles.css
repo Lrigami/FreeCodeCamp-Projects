@@ -152,6 +152,11 @@ header {
     animation: round-small 30s linear infinite;
 }
 
+#scrollDown {
+    cursor: pointer;
+    text-decoration: none;
+}
+
 .scroll-down {
     z-index: 17;
     position: absolute;
@@ -489,7 +494,7 @@ section {
 
 .place-card.translateInverted {
     position: relative;
-    bottom: -161px;
+    bottom: -164px;
 }
 
 .place-card.translateInverted:hover {
