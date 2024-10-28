@@ -26,7 +26,7 @@ User stories:
 1. - [x] Parallax effect
 2. - [x] Scroll effect on the navbar
 3. - [x] An interactive map
-4. - [ ] An automatised review section composed with a user icon and its review (after a certain delay, another user and review takes place)
+4. - [ ] An automatised review section composed with a user icon and its review (slider)
 
 ## To-Do list : 
 - Change the Css var names & update them
