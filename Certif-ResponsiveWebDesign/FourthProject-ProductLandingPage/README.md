@@ -31,6 +31,7 @@ User stories:
 ## To-Do list : 
 - Change the Css var names & update them
 - Cut js files into multiples files
+- when access select with keyboard : option + enter = go to section
 
 -- attributions --
 I wanted to use personal photos and videos for this project.

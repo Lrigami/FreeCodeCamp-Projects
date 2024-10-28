@@ -591,6 +591,7 @@ section {
 
 #Testimonies {
     background: linear-gradient(var(--white), #727a73);
+    height: 130vh;
 }
 
         /* Join Us section */
@@ -612,7 +613,7 @@ section {
     height: 100%;
     position: absolute;
     top: 18vw;
-    background: linear-gradient(rgba(80, 92, 70, 0), rgba(80, 92, 70, 1) 10%, var(--background2));
+    background: linear-gradient(rgba(80, 92, 70, 0), rgba(80, 92, 70, 1) 12%, var(--background2));
 }
 
 /* animations */

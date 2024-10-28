@@ -566,3 +566,42 @@ window.addEventListener("scroll", () => {
         element.style.top = `${translateValue}vh`;
     })
 })
+
+//review (modifiable array)
+let reviews = [
+    {
+        username: "Dean_Flavor2",
+        userpic: "./images/users/user1.jpg",
+        title: "Unforgettable Journey into Japan's Heart",
+        reviewContent: "Thank you, Nihon Nomad, for an amazing experience! The itineraries were perfectly crafted, letting me discover magical, off-the-beaten-path spots. The day at Hakone’s onsen was pure bliss! Ideal for travelers looking for true authenticity and immersion.",
+        notation: 5
+    }, 
+    {
+        username: "WanderlustJoe",
+        userpic: "./images/users/user2.jpg",
+        title: "A Zen and Authentic Journey",
+        reviewContent: "My trip with Nihon Nomad was unforgettable! Their Kyoto recommendations were spot-on, leading me to serene temples and gardens away from the crowds. Every stop felt meaningful, and I felt like I really got to know Japan.",
+        notation: 5
+    }, 
+    {
+        username: "MountainHiker86",
+        userpic: "./images/users/user3.jpg",
+        title: "Incredible Hiking Experiences",
+        reviewContent: "The hiking trails suggested by Nihon Nomad were spectacular! I especially loved the trek up Mount Takao. It was the perfect mix of nature and culture, and the views were breathtaking. Ideal for those seeking outdoor adventures in Japan!",
+        notation: 5
+    }, 
+    {
+        username: "TokyoDreamer",
+        userpic: "./images/users/user4.jpg",
+        title: "Perfect Tokyo Itinerary!",
+        reviewContent: "Nihon Nomad's Tokyo itinerary was fantastic. I discovered both the bustling streets of Shibuya and quiet tea houses in Asakusa. The balance of activities was perfect, and I felt like I truly experienced Tokyo's unique spirit!",
+        notation: 4
+    }, 
+    {
+        username: "NatureSeeker",
+        userpic: "./images/users/user5.jpg",
+        title: "Breathtaking Views and Peaceful Moments",
+        reviewContent: "The natural spots recommended by Nihon Nomad were just amazing. I loved the quiet trails around Lake Kawaguchi with Mount Fuji in the background. Perfectly organized for travelers seeking peace and beautiful landscapes in Japan.",
+        notation: 5
+    }
+]
