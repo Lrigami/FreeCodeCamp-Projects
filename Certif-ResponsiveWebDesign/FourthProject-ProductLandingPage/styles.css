@@ -340,13 +340,17 @@ section {
 }
 
 .map-location div {
-    background-color: var(--todefine2);
+    background-color: var(--background2);
     font-family: "Roboto Condensed", Arial, Helvetica, sans-serif;
-    padding: 0 5px;
+    padding: 5px;
     width: 100px;
+    height: auto;
+    border-radius: 10px;
+    border: 1px solid var(--todefine3);
     position: relative;
     display: none;
     text-align: center;
+    vertical-align: middle;
     z-index: 999;
 }
 
