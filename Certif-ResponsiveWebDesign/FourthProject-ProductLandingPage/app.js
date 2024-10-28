@@ -4,6 +4,10 @@ const shadow = document.querySelectorAll(".shadow");
 const navbar = document.getElementById("nav-bar");
 const joinUsButton = document.getElementById("join-us-button");
 
+joinUsButton.onclick = () => {
+    window.location.href = "#JoinUs";
+}
+
 window.addEventListener("scroll", () => {
     let scroll = window.scrollY;
     
