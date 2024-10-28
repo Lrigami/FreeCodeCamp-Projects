@@ -437,8 +437,7 @@ section {
 
 #automatised-locations {
     width: 65%;
-    margin: 2% auto;
-    padding: 8% 0;
+    margin: auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -451,7 +450,7 @@ section {
 
 .title-div {
     position: absolute;
-    top: 2%;
+    top: 7%;
     left: -22%;
 }
 

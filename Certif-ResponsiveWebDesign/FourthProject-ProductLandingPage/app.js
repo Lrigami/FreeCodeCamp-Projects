@@ -47,7 +47,8 @@ let locations = [
         places: [
             {
                 name: "Shinjuku Gyôen",
-                image: "./images/Shinjuku-Gyoen.jpg"
+                image: "./images/Shinjuku-Gyoen.jpg",
+                text: "Photo of a pavillion in Shinjuku park in Tokyo."
             }, 
             {
                 name: "Tokyo", 
@@ -327,6 +328,8 @@ const locationsFilter = locations.sort((a, b) => a.name.localeCompare(b.name));
 const select = document.getElementById("select-location");
 const map = document.getElementById("mapgrid");
 locationsFilter.forEach((location) => {
+    location.places.sort((a, b) => a.name.localeCompare(b.name));
+
     let option = document.createElement("option");
     option.value = `${location.name}`;
     option.innerHTML = `${location.name}`;
@@ -354,6 +357,9 @@ locationsFilter.forEach((location) => {
             cardSection.innerHTML = "";
         }
 
+        cardSection.style.paddingTop = "7%";
+        cardSection.style.paddingBottom = "5%";
+
         let titleDiv = document.createElement("div");
         titleDiv.classList.add("title-div");
         titleDiv.setAttribute("id", "titleDiv");
@@ -377,7 +383,19 @@ locationsFilter.forEach((location) => {
             let placeName = document.createElement("h5");
             placeName.innerHTML = place.name;
             if (place.image) {
-                card.style.backgroundImage = `url(${place.image})`;
+                const img = new Image();
+                img.src = `${place.image}`;
+                img.onload = () => {
+                    card.style.backgroundImage = `url(${place.image})`;
+                };
+                img.onerror = () => {
+                    let textAlt = document.createElement("p");
+                    textAlt.innerHTML = `${place.text}`;
+                    textAlt.style.textAlign = "center";
+                    textAlt.style.color = "black";
+                    textAlt.style.margin = "auto";
+                    card.prepend(textAlt);
+                };
             } else if (place.video) {
                 let placeVideo = document.createElement("video");
                 placeVideo.setAttribute("muted", "");
@@ -419,7 +437,7 @@ locationsFilter.forEach((location) => {
         let firstChild = document.querySelector(".title-div");
         firstChild.classList.remove("card-translateInverted");
 
-        window .location.href = "#automatised-locations";
+        window.location.href = "#automatised-locations";
     })
 })
 

@@ -29,8 +29,6 @@ User stories:
 4. - [ ] An automatised review section composed with a user icon and its review (after a certain delay, another user and review takes place)
 
 ## To-Do:
-- add alt on image
-- edit video
 - edit location button and select
 
 -- attributions --
