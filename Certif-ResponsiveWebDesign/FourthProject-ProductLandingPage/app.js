@@ -407,17 +407,17 @@ locationsFilter.forEach((location) => {
         const oddCard = document.querySelectorAll("#automatised-locations > div:nth-child(odd)");
 
         evenCard.forEach((child) => {
-            child.classList.add("translate");
-            child.setAttribute("data-speed", "0.05");
+            child.classList.add("card-translate");
+            child.setAttribute("data-speed", "0.01");
         })
 
         oddCard.forEach((child) => {
-            child.classList.add("translateInverted");
-            child.setAttribute("data-speed", "0.05");
+            child.classList.add("card-translateInverted");
+            child.setAttribute("data-speed", "0.01");
         })
 
         let firstChild = document.querySelector(".title-div");
-        firstChild.classList.remove("translateInverted");
+        firstChild.classList.remove("card-translateInverted");
 
         window .location.href = "#automatised-locations";
     })
@@ -425,17 +425,21 @@ locationsFilter.forEach((location) => {
 
 window.addEventListener("scroll", () => {
     let scroll = window.scrollY;
-    const translate = document.querySelectorAll(".translate");
-    const translateInverted = document.querySelectorAll(".translateInverted");
+    const cardTranslate = document.querySelectorAll(".card-translate");
+    const cardTranslateInverted = document.querySelectorAll(".card-translateInverted");
     
     // parallax effect
-    translate.forEach(element => {
+    cardTranslate.forEach(element => {
         let speed = element.dataset.speed;
-        element.style.transform = `translateY(${scroll * speed}px)`;
+        let translateValue = scroll * speed;
+        element.style.transform = `translateY(${translateValue}vh)`;
+        element.style.top = `-${translateValue}vh`;
     })
 
-    translateInverted.forEach(element => {
+    cardTranslateInverted.forEach(element => {
         let speed = element.dataset.speed;
-        element.style.transform = `translateY(-${scroll * speed}px)`;
+        let translateValue = scroll * speed;
+        element.style.transform = `translateY(-${translateValue}vh)`;
+        element.style.top = `${translateValue}vh`;
     })
 })

@@ -442,13 +442,13 @@ section {
     row-gap: 2vh;
     column-gap: 2vw;
     scroll-margin-top: 75.9px; 
-    
+    position: relative;
 }
 
 .title-div {
     position: absolute;
-    top: 320%;
-    left: 6%;
+    top: 2%;
+    left: -22%;
 }
 
 .title-div h3 {
@@ -483,21 +483,21 @@ section {
     box-shadow: 5px 5px 5px var(--background3);
 }
 
-.place-card.translate {
+.place-card.card-translate {
     position: relative;
-    top: -122px;
+    /* top: -14vh; */
 }
 
-.place-card.translate:hover {
+.place-card.card-translate:hover {
     top: -163px !important;
 }
 
-.place-card.translateInverted {
+.place-card.card-translateInverted {
     position: relative;
-    bottom: -164px;
+    /* top: 14vh; */
 }
 
-.place-card.translateInverted:hover {
+.place-card.card-translateInverted:hover {
     bottom: -163px !important;
 }
 
