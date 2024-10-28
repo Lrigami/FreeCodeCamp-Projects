@@ -605,3 +605,63 @@ let reviews = [
         notation: 5
     }
 ]
+
+let reviewDiv = document.getElementById("slider-content");
+
+reviews.forEach((review) => { 
+    let wholeReview = document.createElement("div");
+
+    let userInfo = document.createElement("div");
+    userInfo.classList.add("user-info");
+
+    let userPicContainer = document.createElement("div");
+    userPicContainer.classList.add("user-pic");
+    let userPic = document.createElement("img");
+    userPic.setAttribute.src = `${review.userpic}`;
+    userPic.setAttribute.alt = `${review.username} profile picture.`
+    userPic.classList.add("pic");
+    userPicContainer.appendChild(userPic)
+
+    let userName = document.createElement("p");
+    userName.innerHTML = `${review.username}`;
+
+    function Rating(rating) {
+        let userNote = document.createElement("p");
+        for (let i = 0; i < rating - 1; i++) {
+            const star = document.createElement("span");
+            star.classList.add("material-icons");
+            star.classList.add("star");
+            star.innerHTML = "star";
+            userNote.appendChild(star);
+        }
+
+        return userNote;
+    }
+
+    userInfo.appendChild(userPicContainer);
+    userInfo.appendChild(userName);
+    userInfo.appendChild(Rating(review.notation));
+
+    let userMsg = document.createElement("div");
+    userMsg.classList.add("review-msg");
+
+    let quote = document.createElement("p");
+    quote.classList.add("quote");
+    quote.innerHTML = "“";
+
+    let textTitle = document.createElement("h4");
+    textTitle.classList.add("review-title");
+    textTitle.innerHTML = `${review.title}`;
+
+    let userText = document.createElement("p");
+    userText.innerHTML = `${review.reviewContent}`;
+
+    userMsg.appendChild(quote);
+    userMsg.appendChild(textTitle);
+    userMsg.appendChild(userText);
+
+    wholeReview.appendChild(userInfo);
+    wholeReview.appendChild(userMsg);
+
+    reviewDiv.appendChild(wholeReview);
+})
