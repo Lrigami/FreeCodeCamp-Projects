@@ -479,26 +479,11 @@ section {
 }
 
 .place-card:hover {
-    scale: 1.15;
     box-shadow: 5px 5px 5px var(--background3);
 }
 
-.place-card.card-translate {
+.place-card.card-translate, .place-card.card-translateInverted {
     position: relative;
-    /* top: -14vh; */
-}
-
-.place-card.card-translate:hover {
-    top: -163px !important;
-}
-
-.place-card.card-translateInverted {
-    position: relative;
-    /* top: 14vh; */
-}
-
-.place-card.card-translateInverted:hover {
-    bottom: -163px !important;
 }
 
 .blur {
