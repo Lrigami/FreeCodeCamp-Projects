@@ -587,6 +587,34 @@ section {
     background-color: var(--background2);
 }
 
+        /* Testimonies section */
+
+#Testimonies {
+    background: linear-gradient(var(--white), #727a73);
+}
+
+        /* Join Us section */
+
+#JoinUs {
+    position: relative;
+    z-index: 2;
+    overflow: visible;
+}
+
+#JoinUs img {
+    position: absolute;
+    width: 100%;
+    top: -40vw;
+}
+
+#gradient-joinus {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 18vw;
+    background: linear-gradient(rgba(80, 92, 70, 0), rgba(80, 92, 70, 1) 10%, var(--background2));
+}
+
 /* animations */
 
 @keyframes round-big {
