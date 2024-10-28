@@ -28,5 +28,9 @@ User stories:
 3. - [x] An interactive map
 4. - [ ] An automatised review section composed with a user icon and its review (after a certain delay, another user and review takes place)
 
+## To-Do list : 
+- Change the Css var names & update them
+- Cut js files into multiples files
+
 -- attributions --
 I wanted to use personal photos and videos for this project.
