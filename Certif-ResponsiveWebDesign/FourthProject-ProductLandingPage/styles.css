@@ -390,7 +390,7 @@ section {
     z-index: 999;
 }
 
-.map-location:hover div {
+.map-location:hover div, .map-location:focus div {
     display: block;
 }
 
@@ -486,7 +486,7 @@ section {
 
 .title-div {
     position: absolute;
-    top: 7%;
+    top: 3%;
     left: -22%;
 }
 
@@ -565,7 +565,26 @@ section {
     bottom: -23%;
     left: -61%;
     z-index: -1;
-    /* éditer les vidéos pour enlever le son */
+}
+
+#go-back-button {
+    height: 35px;
+    width: 120px;
+    font-size: 1.1rem;
+    box-sizing: border-box;
+    background-color: var(--white);
+    border-radius: 10px;
+    border: 1px solid var(--todefine1);
+    text-align: center;
+    font-family: "Roboto Condensed", Arial, Helvetica, sans-serif;
+    cursor: pointer;
+    position: absolute;
+    right: -15%;
+    top: 5%;
+}
+
+#go-back-button:hover {
+    background-color: var(--background2);
 }
 
 /* animations */

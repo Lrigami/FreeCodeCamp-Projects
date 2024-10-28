@@ -438,6 +438,111 @@ locationsFilter.forEach((location) => {
         firstChild.classList.remove("card-translateInverted");
 
         window.location.href = "#automatised-locations";
+
+        let buttonUp = document.createElement("button");
+        buttonUp.innerHTML = "Go back to map";
+        buttonUp.setAttribute("id", "go-back-button"); 
+        cardSection.appendChild(buttonUp);
+        buttonUp.onclick = () => {
+            window.location.href = "#locations";
+        }
+    })
+
+    option.addEventListener("click", () => {
+        let cardSection = document.getElementById("automatised-locations");
+        if (cardSection.children.length > 0) {
+            cardSection.innerHTML = "";
+        }
+
+        cardSection.style.paddingTop = "7%";
+        cardSection.style.paddingBottom = "5%";
+
+        let titleDiv = document.createElement("div");
+        titleDiv.classList.add("title-div");
+        titleDiv.setAttribute("id", "titleDiv");
+
+        let locationName = document.createElement("h3");
+        locationName.innerHTML = location.name;
+        let locationPrefecture = document.createElement("h4");
+        locationPrefecture.innerHTML = location.prefecture;
+
+        titleDiv.appendChild(locationName);
+        titleDiv.appendChild(locationPrefecture);
+        cardSection.appendChild(titleDiv);
+
+        location.places.forEach((place) => {
+            let card = document.createElement("div");
+            card.classList.add("place-card");
+
+            let textAndButton = document.createElement("div");
+            textAndButton.classList.add("blur");
+
+            let placeName = document.createElement("h5");
+            placeName.innerHTML = place.name;
+            if (place.image) {
+                const img = new Image();
+                img.src = `${place.image}`;
+                img.onload = () => {
+                    card.style.backgroundImage = `url(${place.image})`;
+                };
+                img.onerror = () => {
+                    let textAlt = document.createElement("p");
+                    textAlt.innerHTML = `${place.text}`;
+                    textAlt.style.textAlign = "center";
+                    textAlt.style.color = "black";
+                    textAlt.style.margin = "auto";
+                    card.prepend(textAlt);
+                };
+            } else if (place.video) {
+                let placeVideo = document.createElement("video");
+                placeVideo.setAttribute("muted", "");
+                placeVideo.setAttribute("autoplay", "");
+                placeVideo.setAttribute("loop", "");
+                placeVideo.innerHTML = `${place.text}`;
+
+                let videoSrc = document.createElement("source");
+                videoSrc.setAttribute("src", place.video);
+                videoSrc.setAttribute("type", "video/mp4");
+
+                placeVideo.appendChild(videoSrc);
+                card.appendChild(placeVideo);
+            }
+            let bookNow = document.createElement("button");
+            bookNow.innerHTML = "Book now";
+
+            textAndButton.appendChild(placeName);
+            textAndButton.appendChild(bookNow);
+
+            card.appendChild(textAndButton);
+
+            cardSection.appendChild(card);
+        })
+
+        const evenCard = document.querySelectorAll("#automatised-locations > div:nth-child(even)");
+        const oddCard = document.querySelectorAll("#automatised-locations > div:nth-child(odd)");
+
+        evenCard.forEach((child) => {
+            child.classList.add("card-translate");
+            child.setAttribute("data-speed", "0.01");
+        })
+
+        oddCard.forEach((child) => {
+            child.classList.add("card-translateInverted");
+            child.setAttribute("data-speed", "0.01");
+        })
+
+        let firstChild = document.querySelector(".title-div");
+        firstChild.classList.remove("card-translateInverted");
+
+        window.location.href = "#automatised-locations";
+
+        let buttonUp = document.createElement("button");
+        buttonUp.innerHTML = "Go back to map";
+        buttonUp.setAttribute("id", "go-back-button"); 
+        cardSection.appendChild(buttonUp);
+        buttonUp.onclick = () => {
+            window.location.href = "#locations";
+        }
     })
 })
 
