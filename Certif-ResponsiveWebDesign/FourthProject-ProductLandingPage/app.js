@@ -621,7 +621,7 @@ reviews.forEach((review) => {
     let userPicContainer = document.createElement("div");
     userPicContainer.classList.add("user-pic");
     let userPic = document.createElement("img");
-    userPic.setAttribute.src = `${review.userpic}`;
+    userPic.src = `${review.userpic}`;
     userPic.setAttribute.alt = `${review.username} profile picture.`
     userPic.classList.add("pic");
     userPicContainer.appendChild(userPic)
@@ -631,7 +631,7 @@ reviews.forEach((review) => {
 
     function Rating(rating) {
         let userNote = document.createElement("p");
-        for (let i = 0; i < rating - 1; i++) {
+        for (let i = 0; i < rating; i++) {
             const star = document.createElement("span");
             star.classList.add("material-icons");
             star.classList.add("star");
