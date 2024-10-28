@@ -31,7 +31,7 @@ header {
     padding: 10px 10%;
     position: fixed;
     top: 0;
-    z-index: 18;
+    z-index: 50;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -290,10 +290,46 @@ section {
 #japanMapLocations {
     width: 100%;
     background-color: #68936849;
+    position: relative;
 }
 
 #japanMapLocations h2, label, select {
     position: absolute;
+    left : 2%;
+}
+
+#japanMapLocations h2 {
+    top: 2%;
+    font-size: 2.5rem;
+    font-family: "DM Serif Text", Arial, Helvetica, sans-serif;
+}
+
+#japanMapLocations label {
+    top: 7%;
+    font-size: 1.5rem;
+    font-family: "Roboto Condensed", Arial, Helvetica, sans-serif;
+}
+
+#japanMapLocations select {
+    top: 10%;
+    width: 20%;
+    min-width: 185px;
+    text-align: center;
+    font-size: 1rem;
+    z-index: 20;
+    height: 3%;
+    background-color: var(--background2);
+    border: 1px solid var(--todefine3);
+    border-radius: 10px;
+    font-family: "Roboto Condensed", Arial, Helvetica, sans-serif;
+}
+
+#japanMapLocations select:hover {
+    background-color: var(--background1);
+}
+
+#japanMapLocations option {
+    font-family: "Roboto Condensed", Arial, Helvetica, sans-serif;
 }
 
 #container {
