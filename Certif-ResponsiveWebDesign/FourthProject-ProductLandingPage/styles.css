@@ -739,6 +739,7 @@ section {
     overflow: visible;
     display: flex;
     align-items: center;
+    scroll-margin-top: 75.9px;
 }
 
 #JoinUs img {
@@ -749,7 +750,7 @@ section {
 
 #gradient-joinus {
     width: 100%;
-    height: 120.8vh;
+    height: 98.8vh;
     position: absolute;
     top: 19vw;
     background: linear-gradient(rgba(80, 92, 70, 0), rgba(80, 92, 70, 1) 12%, var(--background2));
@@ -762,7 +763,7 @@ section {
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: calc(50% - 125px);
+    top: calc(50% - 175px);
     left: calc(50% - 182.5px);
 }
 
@@ -829,7 +830,7 @@ section {
 
 footer {
     width: 100%;
-    height: 50vh;
+    height: 30vh;
     display: flex;
     z-index: 29;
     position: relative;
