@@ -680,6 +680,7 @@ let reviewDiv = document.getElementById("slider-content");
 
 reviews.forEach((review) => { 
     let wholeReview = document.createElement("div");
+    wholeReview.classList.add("review-item");
 
     let userInfo = document.createElement("div");
     userInfo.classList.add("user-info");
@@ -693,10 +694,12 @@ reviews.forEach((review) => {
     userPicContainer.appendChild(userPic)
 
     let userName = document.createElement("p");
+    userName.classList.add("user-name");
     userName.innerHTML = `${review.username}`;
 
     function Rating(rating) {
         let userNote = document.createElement("p");
+        userNote.classList.add("user-note");
         for (let i = 0; i < rating; i++) {
             const star = document.createElement("span");
             star.classList.add("material-icons");
@@ -715,10 +718,6 @@ reviews.forEach((review) => {
     let userMsg = document.createElement("div");
     userMsg.classList.add("review-msg");
 
-    let quote = document.createElement("p");
-    quote.classList.add("quote");
-    quote.innerHTML = "“";
-
     let textTitle = document.createElement("h4");
     textTitle.classList.add("review-title");
     textTitle.innerHTML = `${review.title}`;
@@ -726,10 +725,14 @@ reviews.forEach((review) => {
     let userText = document.createElement("p");
     userText.innerHTML = `${review.reviewContent}`;
 
-    userMsg.appendChild(quote);
     userMsg.appendChild(textTitle);
     userMsg.appendChild(userText);
 
+    let quote = document.createElement("p");
+    quote.classList.add("quote");
+    quote.innerHTML = "“";
+
+    wholeReview.appendChild(quote);
     wholeReview.appendChild(userInfo);
     wholeReview.appendChild(userMsg);
 

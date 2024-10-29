@@ -596,8 +596,109 @@ section {
         /* Testimonies section */
 
 #Testimonies {
-    background: linear-gradient(var(--white), #727a73);
-    height: 130vh;
+    background: linear-gradient(var(--white) 35%, #727a73);
+    position: relative;
+    display: flex;
+    align-items: center;
+    scroll-margin-top: 74.9px;
+}
+
+#automatised-reviews {
+    width: 100%;
+    height: 60%;
+    position: relative;
+    top: -5%;
+}
+
+#reviews-slider {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+#slider-nav {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#slider-content {
+    width: 80%;
+    display: flex;
+    overflow: hidden;
+    margin: auto;
+}
+
+.review-item {
+    min-width: 100%;
+    display: flex;
+    position: relative;
+    margin: 2% 0;
+}   
+
+.quote {
+    position: absolute;
+    font-size: 10rem;
+    bottom: 36%; 
+    left: 28%;
+    opacity: 0.4;
+}
+
+.user-info {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.user-pic {
+    position: relative;
+    width: 5vw;
+    height: 5vw;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 1px solid var(--todefine1);
+}
+
+.user-pic img {
+    width: 100%;
+}
+
+.user-name {
+    font-family: "Roboto Condensed", Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+}
+
+.user-note {
+    display: flex;
+}
+
+.user-note span {
+    color: var(--todefine3);
+    font-size: 1.5rem; 
+}
+
+.review-msg {
+    width: 70%;
+    max-width: 700px;
+    border-radius: 10px;
+    padding: 2%;
+}
+
+.review-msg h4 {
+    font-size: 2.4rem;
+    font-style: italic;
+    font-weight: lighter;
+    text-align: center;
+    font-family: "DM Serif Text", Arial, Helvetica, sans-serif;
+}
+
+.review-msg p:last-of-type {
+    text-align: center;
+    font-size: 1.1rem;
 }
 
         /* Join Us section */
@@ -611,7 +712,7 @@ section {
 #JoinUs img {
     position: absolute;
     width: 100%;
-    top: -40vw;
+    top: -34vw;
 }
 
 #gradient-joinus {
