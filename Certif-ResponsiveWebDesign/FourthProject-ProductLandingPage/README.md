@@ -34,6 +34,7 @@ User stories:
 - when access select with keyboard : option + enter = go to section
 - responsive
 - footer section
+- update slider button so they disappear when you arrive to the end of the slider
 
 -- attributions --
 I wanted to use personal photos and videos for this project.
