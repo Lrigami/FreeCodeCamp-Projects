@@ -751,7 +751,7 @@ section {
     width: 100%;
     height: 100%;
     position: absolute;
-    top: 18vw;
+    top: 19vw;
     background: linear-gradient(rgba(80, 92, 70, 0), rgba(80, 92, 70, 1) 12%, var(--background2));
 }
 
@@ -761,7 +761,9 @@ section {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: auto;
+    position: absolute;
+    top: calc(50% - 125px);
+    left: calc(50% - 182.5px);
 }
 
 #form-div h2 {
@@ -808,13 +810,25 @@ section {
     background-color: var(--todefine3);
 }
 
-#form button {
+#submit {
     margin: 3% auto;
-    width: 50%;
-    height: 30px;
-    background-color: var(--background2);
-    border: 1px solid var(--todefine3);
+    width: 50% !important;
+    height: 30px !important;
+    background-color: var(--background2) !important;
+    border: 1px solid var(--todefine3) !important;
     border-radius: 10px;
+    color: var(--todefine3) !important;
+    cursor: pointer;
+}
+
+#submit:hover {
+    background-color: var(--background3) !important;
+}
+
+    /* footer */
+
+footer {
+
 }
 
 /* animations */

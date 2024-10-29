@@ -15,7 +15,7 @@
     <body>
         <header id="header">
             <nav id="nav-bar" data-noopacity="0">
-                <img id="header-img" src="images/logo/nihon-nomad-logo/png/logo-no-background.png" alt="Logo of Nihon Nomad Travel Agency" />
+                <a href="#header"><img id="header-img" src="images/logo/nihon-nomad-logo/png/logo-no-background.png" alt="Logo of Nihon Nomad Travel Agency" /></a>
                 <ul type="none">
                     <li><a class="nav-link" href="#AboutUs">About us</a></li>
                     <li><a class="nav-link" href="#locations">Locations</a></li>
@@ -124,7 +124,7 @@
                 <div id="gradient-joinus"></div>
                 <div id="form-div">
                     <h2>Go on an adventure <em>Now</em></h2>
-                    <form id="form">
+                    <form id="form" method="post" action="https://www.freecodecamp.com/email-submit">
                         <div>
                             <label for="form-name">Your name</label>
                             <input type="text" name="name" id="form-name" required placeholder="e.g. John Smith">
@@ -145,14 +145,46 @@
                             <input type="password" name="password-confirm" id="password-confirm" required placeholder="confirmation">
                             <div class="border-bottom"></div>
                         </div>
-                        <button ype="submit">Validate</button>
+                        <input type="submit" id="submit" value="Validate">
                     </form>
                 </div>
             </section>
         </main>
 
         <footer>
+            <section id="contacts">
+                <h3>Contacts</h3>
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li>
+                        <ul>
+                            <li><a><span class="material-icons"></span></a></li>
+                            <li><a><span class="material-icons"></span></a></li>
+                            <li><a><span class="material-icons"></span></a></li>
+                            <li><a><span class="material-icons"></span></a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
 
+            <section id="site-nav">
+                <h3>Site navigation</h3>
+                <ul>
+                    <li><a>Header</a></li>
+                    <li><a>About us</a></li>
+                    <li><a>Locations</a></li>
+                    <li><a>Testimonies</a></li>
+                    <li><a>Join us</a></li>
+                </ul>
+            </section>
+
+            <section id="newsletter">
+                
+            </section>
+
+            <small>Nihon Nomad Travel Angency @Lrigami, 2024</small>
         </footer>
     </body>
 </html>
