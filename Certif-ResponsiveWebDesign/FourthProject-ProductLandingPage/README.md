@@ -33,6 +33,7 @@ User stories:
 - Cut js files into multiples files
 - when access select with keyboard : option + enter = go to section
 - responsive
+- footer section
 
 -- attributions --
 I wanted to use personal photos and videos for this project.
