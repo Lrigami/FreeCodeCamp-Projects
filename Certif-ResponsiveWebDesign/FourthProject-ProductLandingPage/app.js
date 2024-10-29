@@ -286,15 +286,18 @@ let locations = [
         places: [
             {
                 name: "Tottori Dunes", 
-                image: "./images/Tottori-dunes.jpg"
+                image: "./images/Tottori-dunes.jpg", 
+                text: "Photo of Tottori dunes."
             }, 
             {
                 name: "Tottori Bus", 
-                image: "./images/Tottori-bus.jpg"
+                image: "./images/Tottori-bus.jpg", 
+                text: "Photo of a Pokemon themed Tottori bus."
             }, 
             {
                 name: "Tottori Sand museum", 
-                image: "./images/Tottori-sand-museum.jpg"
+                image: "./images/Tottori-sand-museum.jpg", 
+                text: "Photo of a giant teddy bear in sand in the Tottori Sand museum."
             } 
         ] 
     },
@@ -304,7 +307,8 @@ let locations = [
         places: [
             {
                 name: "Kinosaki onsen", 
-                image: "./images/Kinosaki-onsen.jpg"
+                image: "./images/Kinosaki-onsen.jpg", 
+                text: "Photo of Kinosaki onsen river."
             } 
         ]
     },
@@ -314,15 +318,18 @@ let locations = [
         places: [
             {
                 name: "Hiroshima shrine", 
-                image: "./images/Hiroshima.jpg"
+                image: "./images/Hiroshima.jpg", 
+                text: "Photo of a mountain landscape below a Shinto temple rope."
             }, 
             {
                 name: "Hiroshima castle mascot", 
-                image: "./images/Hiroshima-castle.jpg"
+                image: "./images/Hiroshima-castle.jpg", 
+                text: "Photo of the Hiroshima catsle mascot."
             }, 
             {
                 name: "Hiroshima castle", 
-                image: "./images/Hiroshima-castle-2.jpg"
+                image: "./images/Hiroshima-castle-2.jpg", 
+                text: "Photo of the castle of Hiroshima."
             }
         ]
     },
@@ -332,11 +339,13 @@ let locations = [
         places: [
             {
                 name: "Cape Manzamo", 
-                image: "./images/Okinawa.jpg"
+                image: "./images/Okinawa.jpg", 
+                text: "Photo of Cape Manzamo in Okinawa."
             }, 
             {
                 name: "Okinawa beach", 
-                image: "./images/Okinawa-beach.jpg"
+                image: "./images/Okinawa-beach.jpg", 
+                text: "Photo of a beach in Okinawa."
             }, 
             {
                 name: "Snorkeling & fish feeding", 
@@ -351,7 +360,8 @@ let locations = [
         places: [
             {
                 name: "Nagano station", 
-                image: "./images/Nagano-eki.jpg"
+                image: "./images/Nagano-eki.jpg", 
+                text: "Photo of the Nagano station by night."
             }, 
         ]
     }
