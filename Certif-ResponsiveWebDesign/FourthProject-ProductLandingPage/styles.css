@@ -46,11 +46,11 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 37%;
+    width: 45%;
 }
 
 .nav-link {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     text-decoration: none;
     color: black;
     cursor: pointer;
@@ -85,7 +85,7 @@ header {
 .title {
     position: absolute;
     text-align: center;
-    top: calc(42% - 5rem);
+    top: calc(18vw - 5rem);
     width: 100%;
     font-size: 10rem;
     line-height: 8rem;
@@ -96,17 +96,17 @@ header {
 
 .oze1 {
     position: absolute;
-    bottom: -700px;
-    left: -100px;
-    width: 2080px;
+    top: -45%;
+    right: -300px;
+    max-width: 2080px;
     z-index: 16;
 }
 
 .oze2 {
     position: absolute;
-    bottom: -700px;
-    left: -100px;
-    width: 2080px;
+    top: -45%;
+    right: -300px;
+    max-width: 2080px;
     z-index: 15;    
 }
 
@@ -199,7 +199,7 @@ section {
     background-size: cover;
     border-radius: 5px;
     position: relative;
-    bottom: -314px;
+    bottom: calc(-50vh + 25%);
 }
 
 #HowItWorks {
@@ -293,31 +293,37 @@ section {
     position: relative;
 }
 
-#japanMapLocations h2, label, select {
+#locations-titles {
     position: absolute;
-    left : 2%;
+    left: 2%;
+    top: 2%;
+    display: flex;
+    flex-direction: column;
+}
+
+#japanMapLocations h2, label, select {
+    position: relative;
 }
 
 #japanMapLocations h2 {
-    top: 2%;
     font-size: 2.5rem;
     font-family: "DM Serif Text", Arial, Helvetica, sans-serif;
 }
 
 #japanMapLocations label {
-    top: 7%;
     font-size: 1.5rem;
     font-family: "Roboto Condensed", Arial, Helvetica, sans-serif;
 }
 
 #japanMapLocations select {
-    top: 10%;
-    width: 20%;
+    width: 100%;
     min-width: 185px;
     text-align: center;
     font-size: 1rem;
     z-index: 20;
-    height: 3%;
+    height: 5vh;
+    min-height: 30px;
+    max-height: 35px;
     background-color: var(--background2);
     border: 1px solid var(--todefine3);
     border-radius: 10px;
@@ -342,8 +348,8 @@ section {
 #mapgrid {
     position: relative;
     display: grid;
-    grid-template-columns: repeat(113, 10px);
-    grid-template-rows: repeat(104 , 10px);
+    grid-template-columns: repeat(113, 0.8vw);
+    grid-template-rows: repeat(104 , 0.8vw);
     overflow: hidden;
 }
 
