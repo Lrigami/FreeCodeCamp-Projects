@@ -10,7 +10,7 @@ User stories:
 2. - [x] You can see an image within the header element with a corresponding id="header-img" (A logo would make a good image here)
 3. - [x] Within the #header element, you can see a nav element with a corresponding id="nav-bar"
 4. - [x] You can see at least three clickable elements inside the nav element, each with the class nav-link
-5. - [ ] When you click a .nav-link button in the nav element, you are taken to the corresponding section of the landing page
+5. - [x] When you click a .nav-link button in the nav element, you are taken to the corresponding section of the landing page
 6. - [x] You can watch an embedded product video with id="video"
 7. - [x] Your landing page has a form element with a corresponding id="form"
 8. - [x] Within the form, there is an input field with id="email" where you can enter an email address
