@@ -12,7 +12,7 @@ User stories:
 4. - [x] You can see at least three clickable elements inside the nav element, each with the class nav-link
 5. - [ ] When you click a .nav-link button in the nav element, you are taken to the corresponding section of the landing page
 6. - [x] You can watch an embedded product video with id="video"
-7. - [ ] Your landing page has a form element with a corresponding id="form"
+7. - [x] Your landing page has a form element with a corresponding id="form"
 8. - [ ] Within the form, there is an input field with id="email" where you can enter an email address
 9. - [ ] The #email input field should have placeholder text to let users know what the field is for
 10. - [ ] The #email input field uses HTML5 validation to confirm that the entered text is an email address
@@ -26,12 +26,12 @@ User stories:
 1. - [x] Parallax effect
 2. - [x] Scroll effect on the navbar
 3. - [x] An interactive map
-4. - [ ] An automatised review section (slider)
+4. - [x] An automatised review section (slider)
 
 ## To-Do list : 
 - Change the Css var names & update them
 - Cut js files into multiples files
-- when access select with keyboard : option + enter = go to section$
+- when access select with keyboard : option + enter = go to section
 - responsive
 
 -- attributions --
