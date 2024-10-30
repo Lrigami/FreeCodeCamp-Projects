@@ -874,6 +874,15 @@ footer ul li, footer ul li a {
     text-decoration: none;
 }
 
+#icons {
+    margin-top: 20px;
+}
+
+footer a img {
+    width: 24px;
+    height: 24px;
+}
+
 small {
     color: var(--background2);
 }
