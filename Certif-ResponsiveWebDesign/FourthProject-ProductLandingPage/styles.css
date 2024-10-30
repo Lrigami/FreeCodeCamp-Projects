@@ -835,8 +835,10 @@ footer {
     display: flex;
     justify-content: space-around;
     align-items: flex-start;
-    z-index: 29;
+    z-index: 20;
     position: relative;
+    border-top: 2px solid gray;
+    background-color: rgba(0, 0, 0, 0.3);
 }
 
 small {
@@ -848,9 +850,22 @@ small {
 
 footer section {
     width: unset;
+    max-width: 200px;
     height: unset;
     z-index: 30;
     background-color: transparent;
+}
+
+footer h3 {
+    color: var(--background2);
+    font-family: "DM Serif Text", Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+    margin: 10px auto;
+}
+
+#contacts ul ul {
+    display: flex;
+    justify-content: space-between;
 }
 
 /* animations */
