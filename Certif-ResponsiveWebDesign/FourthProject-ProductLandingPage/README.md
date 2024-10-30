@@ -33,7 +33,6 @@ User stories:
 - Cut js files into multiples files
 - when access select with keyboard : option + enter = go to section
 - responsive
-- footer section
 - update slider button so they disappear when you arrive to the end of the slider
 - the 2 passwords input should match
 
