@@ -35,6 +35,7 @@ User stories:
 - responsive
 - footer section
 - update slider button so they disappear when you arrive to the end of the slider
+- the 2 passwords input should match
 
 -- attributions --
 I wanted to use personal photos and videos for this project.
