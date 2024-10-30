@@ -81,6 +81,10 @@ header {
     cursor: pointer;
 }
 
+#nav-bar button:hover {
+    border-color: rgba(81, 164, 127, 1) !important;
+}
+
         /* parallax */
 
 .title {
