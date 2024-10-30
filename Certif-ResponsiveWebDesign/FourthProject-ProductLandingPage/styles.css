@@ -96,7 +96,7 @@ header {
 
 .oze1 {
     position: absolute;
-    top: -45%;
+    bottom: -50vw;
     right: -300px;
     max-width: 2080px;
     z-index: 16;
@@ -104,7 +104,7 @@ header {
 
 .oze2 {
     position: absolute;
-    top: -45%;
+    bottom: -50vw;
     right: -300px;
     max-width: 2080px;
     z-index: 15;    
@@ -521,6 +521,7 @@ section {
     border-radius: 10px;
     transition: .3s;
     overflow: hidden;
+    position: relative;
 }
 
 .place-card:hover {
@@ -537,6 +538,7 @@ section {
     display: flex;
     flex-direction: column;
     background-color: rgba(0, 0, 0, 0.3);
+    position: absolute;
 }
 
 .place-card h5 {
@@ -568,7 +570,6 @@ section {
 .place-card video {
     position: relative;
     height: 34vh;
-    bottom: -23%;
     left: -61%;
     z-index: -1;
 }

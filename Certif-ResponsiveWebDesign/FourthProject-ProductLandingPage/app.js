@@ -443,29 +443,29 @@ locationsFilter.forEach((location) => {
                     card.prepend(textAlt);
                 };
             } else if (place.video) {
-                const vid = new Image();
-                vid.src = `${place.video}`;
-                vid.onload = () => {
-                    let placeVideo = document.createElement("video");
-                    placeVideo.setAttribute("muted", "");
-                    placeVideo.setAttribute("autoplay", "");
-                    placeVideo.setAttribute("loop", "");
-                    placeVideo.innerHTML = `${place.text}`;
-    
-                    let videoSrc = document.createElement("source");
-                    videoSrc.setAttribute("src", place.video);
-                    videoSrc.setAttribute("type", "video/mp4");
-    
-                    placeVideo.appendChild(videoSrc);
-                    card.appendChild(placeVideo);
-                };
-                vid.onerror = () => {
+                let placeVideo = document.createElement("video");
+                placeVideo.setAttribute("muted", "");
+                placeVideo.setAttribute("autoplay", "");
+                placeVideo.setAttribute("loop", "");
+                placeVideo.innerHTML = `${place.text}`;
+
+                let videoSrc = document.createElement("source");
+                videoSrc.setAttribute("src", place.video);
+                videoSrc.setAttribute("type", "video/mp4");
+
+                placeVideo.appendChild(videoSrc);
+
+                placeVideo.onerror = () => {
+                    console.log("error");
                     let textAlt = document.createElement("p");
                     textAlt.innerHTML = `${place.text}`;
                     textAlt.style.textAlign = "center";
                     textAlt.style.color = "black";
                     textAlt.style.margin = "auto";
                     card.prepend(textAlt);
+                }
+                placeVideo.oncanplay = () => {
+                    card.appendChild(placeVideo);
                 }
             }
             let bookNow = document.createElement("button");
@@ -552,29 +552,29 @@ locationsFilter.forEach((location) => {
                     card.prepend(textAlt);
                 };
             } else if (place.video) {
-                const vid = new Image();
-                vid.src = `${place.video}`;
-                vid.onload = () => {
-                    let placeVideo = document.createElement("video");
-                    placeVideo.setAttribute("muted", "");
-                    placeVideo.setAttribute("autoplay", "");
-                    placeVideo.setAttribute("loop", "");
-                    placeVideo.innerHTML = `${place.text}`;
-    
-                    let videoSrc = document.createElement("source");
-                    videoSrc.setAttribute("src", place.video);
-                    videoSrc.setAttribute("type", "video/mp4");
-    
-                    placeVideo.appendChild(videoSrc);
-                    card.appendChild(placeVideo);
-                };
-                vid.onerror = () => {
+                let placeVideo = document.createElement("video");
+                placeVideo.setAttribute("muted", "");
+                placeVideo.setAttribute("autoplay", "");
+                placeVideo.setAttribute("loop", "");
+                placeVideo.innerHTML = `${place.text}`;
+
+                let videoSrc = document.createElement("source");
+                videoSrc.setAttribute("src", place.video);
+                videoSrc.setAttribute("type", "video/mp4");
+
+                placeVideo.appendChild(videoSrc);
+
+                placeVideo.onerror = () => {
+                    console.log("error");
                     let textAlt = document.createElement("p");
                     textAlt.innerHTML = `${place.text}`;
                     textAlt.style.textAlign = "center";
                     textAlt.style.color = "black";
                     textAlt.style.margin = "auto";
                     card.prepend(textAlt);
+                }
+                placeVideo.oncanplay = () => {
+                    card.appendChild(placeVideo);
                 }
             }
             let bookNow = document.createElement("button");
