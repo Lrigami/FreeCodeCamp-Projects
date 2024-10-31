@@ -733,7 +733,7 @@ section {
     font-family: "DM Serif Text", Arial, Helvetica, sans-serif;
 }
 
-.review-msg p:last-of-type {
+.review-msg blockquote {
     text-align: center;
     font-size: 1.1rem;
 }

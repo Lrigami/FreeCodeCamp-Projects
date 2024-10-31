@@ -594,7 +594,7 @@ reviews.forEach((review) => {
     textTitle.classList.add("review-title");
     textTitle.innerHTML = `${review.title}`;
 
-    let userText = document.createElement("p");
+    let userText = document.createElement("blockquote");
     userText.innerHTML = `${review.reviewContent}`;
 
     userMsg.appendChild(textTitle);
