@@ -20,7 +20,7 @@ window.addEventListener("scroll", () => {
     translateInverted.forEach(element => {
         let speed = element.dataset.speed;
         element.style.transform = `translateY(-${scroll * speed}px)`;
-    })
+    });
 
     // Change opacity of scroll-down-circles depending on scrollY
     shadow.forEach(element => {
@@ -370,6 +370,99 @@ let locations = [
 // sort locations array by alphabetical order
 const locationsFilter = locations.sort((a, b) => a.name.localeCompare(b.name));
 
+function createCards(location) {
+    let cardSection = document.getElementById("automatised-locations");
+    if (cardSection.children.length > 0) {
+        cardSection.innerHTML = "";
+    }
+
+    let buttonUp = document.createElement("button");
+    buttonUp.innerHTML = "Go back to map";
+    buttonUp.setAttribute("id", "go-back-button"); 
+    cardSection.appendChild(buttonUp);
+    buttonUp.onclick = () => {
+        window.location.href = "#locations";
+    }
+
+    cardSection.style.paddingTop = "7%";
+    cardSection.style.paddingBottom = "5%";
+
+    let titleDiv = document.createElement("div");
+    titleDiv.classList.add("title-div");
+    titleDiv.setAttribute("id", "titleDiv");
+
+    let locationName = document.createElement("h3");
+    locationName.innerHTML = location.name;
+    let locationPrefecture = document.createElement("h4");
+    locationPrefecture.innerHTML = location.prefecture;
+
+    titleDiv.appendChild(locationName);
+    titleDiv.appendChild(locationPrefecture);
+    cardSection.appendChild(titleDiv);
+
+    location.places.forEach((place) => {
+        let card = document.createElement("div");
+        card.classList.add("place-card");
+
+        let textAndButton = document.createElement("div");
+        textAndButton.classList.add("blur");
+
+        let placeName = document.createElement("h5");
+        placeName.innerHTML = place.name;
+        if (place.image) {
+            const img = new Image();
+            img.src = `${place.image}`;
+            img.onload = () => {
+                card.style.backgroundImage = `url(${place.image})`;
+            };
+            img.onerror = () => {
+                let textAlt = document.createElement("p");
+                textAlt.innerHTML = `${place.text}`;
+                textAlt.style.textAlign = "center";
+                textAlt.style.color = "black";
+                textAlt.style.margin = "auto";
+                card.prepend(textAlt);
+            };
+        } else if (place.video) {
+            let placeVideo = document.createElement("video");
+            placeVideo.setAttribute("muted", "");
+            placeVideo.setAttribute("autoplay", "");
+            placeVideo.setAttribute("loop", "");
+            placeVideo.innerHTML = `${place.text}`;
+
+            let videoSrc = document.createElement("source");
+            videoSrc.setAttribute("src", place.video);
+            videoSrc.setAttribute("type", "video/mp4");
+
+            placeVideo.appendChild(videoSrc);
+
+            placeVideo.onerror = () => {
+                console.log("error");
+                let textAlt = document.createElement("p");
+                textAlt.innerHTML = `${place.text}`;
+                textAlt.style.textAlign = "center";
+                textAlt.style.color = "black";
+                textAlt.style.margin = "auto";
+                card.prepend(textAlt);
+            }
+            placeVideo.oncanplay = () => {
+                card.appendChild(placeVideo);
+            }
+        }
+        let bookNow = document.createElement("button");
+        bookNow.innerHTML = "Book now";
+
+        textAndButton.appendChild(placeName);
+        textAndButton.appendChild(bookNow);
+
+        card.appendChild(textAndButton);
+
+        cardSection.appendChild(card);
+    })
+
+    window.location.href = "#automatised-locations";
+}
+
 // create an option for each location of the sorted array and a button for the map
 const select = document.getElementById("select-location");
 const map = document.getElementById("mapgrid");
@@ -398,242 +491,21 @@ locationsFilter.forEach((location) => {
 
     // display places cards when we click on a map button
     mapButton.addEventListener("click", () => {
-        let cardSection = document.getElementById("automatised-locations");
-        if (cardSection.children.length > 0) {
-            cardSection.innerHTML = "";
-        }
+        createCards(location);
+    })
 
-        cardSection.style.paddingTop = "7%";
-        cardSection.style.paddingBottom = "5%";
-
-        let titleDiv = document.createElement("div");
-        titleDiv.classList.add("title-div");
-        titleDiv.setAttribute("id", "titleDiv");
-
-        let locationName = document.createElement("h3");
-        locationName.innerHTML = location.name;
-        let locationPrefecture = document.createElement("h4");
-        locationPrefecture.innerHTML = location.prefecture;
-
-        titleDiv.appendChild(locationName);
-        titleDiv.appendChild(locationPrefecture);
-        cardSection.appendChild(titleDiv);
-
-        location.places.forEach((place) => {
-            let card = document.createElement("div");
-            card.classList.add("place-card");
-
-            let textAndButton = document.createElement("div");
-            textAndButton.classList.add("blur");
-
-            let placeName = document.createElement("h5");
-            placeName.innerHTML = place.name;
-            if (place.image) {
-                const img = new Image();
-                img.src = `${place.image}`;
-                img.onload = () => {
-                    card.style.backgroundImage = `url(${place.image})`;
-                };
-                img.onerror = () => {
-                    let textAlt = document.createElement("p");
-                    textAlt.innerHTML = `${place.text}`;
-                    textAlt.style.textAlign = "center";
-                    textAlt.style.color = "black";
-                    textAlt.style.margin = "auto";
-                    card.prepend(textAlt);
-                };
-            } else if (place.video) {
-                let placeVideo = document.createElement("video");
-                placeVideo.setAttribute("muted", "");
-                placeVideo.setAttribute("autoplay", "");
-                placeVideo.setAttribute("loop", "");
-                placeVideo.innerHTML = `${place.text}`;
-
-                let videoSrc = document.createElement("source");
-                videoSrc.setAttribute("src", place.video);
-                videoSrc.setAttribute("type", "video/mp4");
-
-                placeVideo.appendChild(videoSrc);
-
-                placeVideo.onerror = () => {
-                    console.log("error");
-                    let textAlt = document.createElement("p");
-                    textAlt.innerHTML = `${place.text}`;
-                    textAlt.style.textAlign = "center";
-                    textAlt.style.color = "black";
-                    textAlt.style.margin = "auto";
-                    card.prepend(textAlt);
-                }
-                placeVideo.oncanplay = () => {
-                    card.appendChild(placeVideo);
-                }
+    select.addEventListener("keydown", (event) => {
+        if (event.key === "Enter") {
+            const selectedOption = select.options[select.selectedIndex].value;
+            const location = locationsFilter.find(loc => loc.name === selectedOption);
+            if (location) {
+                createCards(location);
             }
-            let bookNow = document.createElement("button");
-            bookNow.innerHTML = "Book now";
-
-            textAndButton.appendChild(placeName);
-            textAndButton.appendChild(bookNow);
-
-            card.appendChild(textAndButton);
-
-            cardSection.appendChild(card);
-        })
-
-        const evenCard = document.querySelectorAll("#automatised-locations > div:nth-child(even)");
-        const oddCard = document.querySelectorAll("#automatised-locations > div:nth-child(odd)");
-
-        evenCard.forEach((child) => {
-            child.classList.add("card-translate");
-            child.setAttribute("data-speed", "0.01");
-        })
-
-        oddCard.forEach((child) => {
-            child.classList.add("card-translateInverted");
-            child.setAttribute("data-speed", "0.01");
-        })
-
-        let firstChild = document.querySelector(".title-div");
-        firstChild.classList.remove("card-translateInverted");
-
-        window.location.href = "#automatised-locations";
-
-        let buttonUp = document.createElement("button");
-        buttonUp.innerHTML = "Go back to map";
-        buttonUp.setAttribute("id", "go-back-button"); 
-        cardSection.appendChild(buttonUp);
-        buttonUp.onclick = () => {
-            window.location.href = "#locations";
         }
     })
 
     option.addEventListener("click", () => {
-        let cardSection = document.getElementById("automatised-locations");
-        if (cardSection.children.length > 0) {
-            cardSection.innerHTML = "";
-        }
-
-        cardSection.style.paddingTop = "7%";
-        cardSection.style.paddingBottom = "5%";
-
-        let titleDiv = document.createElement("div");
-        titleDiv.classList.add("title-div");
-        titleDiv.setAttribute("id", "titleDiv");
-
-        let locationName = document.createElement("h3");
-        locationName.innerHTML = location.name;
-        let locationPrefecture = document.createElement("h4");
-        locationPrefecture.innerHTML = location.prefecture;
-
-        titleDiv.appendChild(locationName);
-        titleDiv.appendChild(locationPrefecture);
-        cardSection.appendChild(titleDiv);
-
-        location.places.forEach((place) => {
-            let card = document.createElement("div");
-            card.classList.add("place-card");
-
-            let textAndButton = document.createElement("div");
-            textAndButton.classList.add("blur");
-
-            let placeName = document.createElement("h5");
-            placeName.innerHTML = place.name;
-            if (place.image) {
-                const img = new Image();
-                img.src = `${place.image}`;
-                img.onload = () => {
-                    card.style.backgroundImage = `url(${place.image})`;
-                };
-                img.onerror = () => {
-                    let textAlt = document.createElement("p");
-                    textAlt.innerHTML = `${place.text}`;
-                    textAlt.style.textAlign = "center";
-                    textAlt.style.color = "black";
-                    textAlt.style.margin = "auto";
-                    card.prepend(textAlt);
-                };
-            } else if (place.video) {
-                let placeVideo = document.createElement("video");
-                placeVideo.setAttribute("muted", "");
-                placeVideo.setAttribute("autoplay", "");
-                placeVideo.setAttribute("loop", "");
-                placeVideo.innerHTML = `${place.text}`;
-
-                let videoSrc = document.createElement("source");
-                videoSrc.setAttribute("src", place.video);
-                videoSrc.setAttribute("type", "video/mp4");
-
-                placeVideo.appendChild(videoSrc);
-
-                placeVideo.onerror = () => {
-                    console.log("error");
-                    let textAlt = document.createElement("p");
-                    textAlt.innerHTML = `${place.text}`;
-                    textAlt.style.textAlign = "center";
-                    textAlt.style.color = "black";
-                    textAlt.style.margin = "auto";
-                    card.prepend(textAlt);
-                }
-                placeVideo.oncanplay = () => {
-                    card.appendChild(placeVideo);
-                }
-            }
-            let bookNow = document.createElement("button");
-            bookNow.innerHTML = "Book now";
-
-            textAndButton.appendChild(placeName);
-            textAndButton.appendChild(bookNow);
-
-            card.appendChild(textAndButton);
-
-            cardSection.appendChild(card);
-        })
-
-        const evenCard = document.querySelectorAll("#automatised-locations > div:nth-child(even)");
-        const oddCard = document.querySelectorAll("#automatised-locations > div:nth-child(odd)");
-
-        evenCard.forEach((child) => {
-            child.classList.add("card-translate");
-            child.setAttribute("data-speed", "0.01");
-        })
-
-        oddCard.forEach((child) => {
-            child.classList.add("card-translateInverted");
-            child.setAttribute("data-speed", "0.01");
-        })
-
-        let firstChild = document.querySelector(".title-div");
-        firstChild.classList.remove("card-translateInverted");
-
-        window.location.href = "#automatised-locations";
-
-        let buttonUp = document.createElement("button");
-        buttonUp.innerHTML = "Go back to map";
-        buttonUp.setAttribute("id", "go-back-button"); 
-        cardSection.appendChild(buttonUp);
-        buttonUp.onclick = () => {
-            window.location.href = "#locations";
-        }
-    })
-})
-
-window.addEventListener("scroll", () => {
-    let scroll = window.scrollY;
-    const cardTranslate = document.querySelectorAll(".card-translate");
-    const cardTranslateInverted = document.querySelectorAll(".card-translateInverted");
-    
-    // parallax effect
-    cardTranslate.forEach(element => {
-        let speed = element.dataset.speed;
-        let translateValue = scroll * speed;
-        element.style.transform = `translateY(${translateValue}vh)`;
-        element.style.top = `-${translateValue}vh`;
-    })
-
-    cardTranslateInverted.forEach(element => {
-        let speed = element.dataset.speed;
-        let translateValue = scroll * speed;
-        element.style.transform = `translateY(-${translateValue}vh)`;
-        element.style.top = `${translateValue}vh`;
+        createCards(location);
     })
 })
 
