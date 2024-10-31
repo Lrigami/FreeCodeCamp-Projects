@@ -40,7 +40,8 @@ header {
 }
 
 #header-img {
-    width: 150px;
+    width: 9vw;
+    min-width: 80px;
 }
 
 #nav-bar ul {
@@ -964,7 +965,7 @@ small {
     }
 
     100% {
-        top: 20vw;
+
     }
 }
 
@@ -1065,5 +1066,166 @@ small {
 @media (prefers-reduced-motion: no-preference) {
     * {
         scroll-behavior: smooth;
+    }
+}
+
+/* media queries */
+
+@media screen and (max-width: 1281px) {
+    .oze1, .oze2 {
+        width: 180vw;
+    }
+
+    .oze3 {
+        width: 200vw;
+    }
+}
+
+@media screen and (max-width: 1025px) {
+    #nav-bar {
+        padding: 10px 10px;
+        height: 55px;
+    }
+
+    #nav-bar ul {
+        width: 70%;
+    }
+
+    .title {
+        font-size: 8rem;
+        top: calc(50% - 15rem);
+    }
+
+    .oze3 {
+        width: 400vw;
+    }
+
+    #AboutUs {
+        height: auto;
+        display: flex;
+        gap: 2vw;
+        flex-direction: column-reverse;
+    }
+
+    #HowItWorks, #video {
+        transform: unset !important;
+        bottom: 0 !important;
+        top: 0 !important;
+    }
+
+    section {
+        scroll-margin-top: 55px !important;
+    }
+
+    #mapgrid .material-icons {
+        font-size: 24px !important;
+    }
+}
+
+@media screen and (max-width: 801px) {
+    #nav-bar ul {
+        width: 70%;
+        margin: 0 5px;
+    }
+
+    .nav-link {
+        font-size: 1rem;
+    }
+
+    .title {
+        top: calc(50% - 16rem);
+    }
+
+    .oze1, .oze2 {
+        width: 200vw;
+    }
+
+    #japanMapLocations {
+        height: 80vh;
+        display: flex;
+    }
+
+    #locations-titles {
+        position: relative;
+        width: 50%;
+        margin: 10% auto auto auto;
+        left: 0;
+        top: 0;
+    }
+
+    #locations-titles label {
+        font-size: 1.2rem;
+    }
+
+    #container {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .nav-link {
+        font-size: 0.8rem;
+    }
+
+    .big {
+        width: 300px;
+        height: 300px;
+        left: calc(50% - 150px);
+        bottom: -150px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #nav-bar {
+        flex-wrap: wrap;
+        height: auto;
+        flex-direction: column;
+    }
+
+    #nav-bar ul {
+        flex-wrap: wrap;
+        height: auto;
+        justify-content: center;
+        gap: 10px;
+        margin: 10px 0;
+    }
+
+    .title {
+        font-size: 5rem;
+        top: calc(50% - 15rem);
+    }
+
+    .oze1, .oze2 {
+        width: 230vw;
+        right: -40vw;
+        bottom: -30vw;
+    }
+
+    .oze3 {
+        width: 800vw;
+    }
+
+    .big {
+        width: 300px;
+        height: 300px;
+        left: calc(50% - 150px);
+        bottom: -150px;
+    }
+
+    .medium {
+        width: 150px;
+        height: 150px;
+        left: calc(50% - 75px);
+        bottom: -75px;
+    }
+
+    section {
+        scroll-margin-top: 126.75px !important;
+    }
+}
+
+@media screen and (max-width: 405px) {
+    section {
+        scroll-margin-top: 154.75px !important;
     }
 }

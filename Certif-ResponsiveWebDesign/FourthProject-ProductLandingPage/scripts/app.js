@@ -82,3 +82,17 @@ subscribe.onclick = (event) => {
         window.alert("Please enter a valid email.");
     }
 }
+
+// manage media queries
+const mediaQuery = window.matchMedia("(max-width: 801px)");
+
+mediaQuery.addEventListener("change", () => {
+    let labelchange = document.querySelector("#locations-titles label");
+    if (labelchange) {
+        if (mediaQuery.matches) {
+            labelchange.innerHTML = "Choose a destination in the list below:";
+        } else {
+            labelchange.innerHTML = "Click on the map or choose in the list below:";
+        }
+    }
+});
