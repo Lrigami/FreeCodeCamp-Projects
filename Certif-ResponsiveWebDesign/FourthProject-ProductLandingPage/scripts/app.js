@@ -42,3 +42,36 @@ window.addEventListener("scroll", () => {
     let rgbaJoinUsButtonBorderColor = currentJoinUsButtonBorderColor.replace(/rgba?\((\d+), (\d+), (\d+),? ?[\d\.]*\)/, `rgba($1, $2, $3, ${newJoinUsButtonOpacity})`);
     joinUsButton.style.borderColor = rgbaJoinUsButtonBorderColor;
 })
+
+// manage Join Us form
+let submit = document.getElementById("submit");
+submit.onclick = (event) => {
+    let name = document.getElementById("form-name").value;
+    if (!/^[a-zA-Z]+$/.test(name)) {
+        event.preventDefault();
+        window.alert("Your name should only contain letters.");
+    }
+    let email = document.getElementById("email").value;
+    let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+        event.preventDefault();
+        window.alert("Please enter a valid email.");
+    }
+    let password = document.getElementById("form-password").value;
+    let passwordConfirm = document.getElementById("password-confirm").value;
+    if (password !== passwordConfirm) {
+        event.preventDefault();
+        window.alert("Paswwords should match.");
+    }
+}
+
+// manage newsletter form
+let subscribe = document.getElementById("submit-button");
+subscribe.onclick = (event) => {
+    let email = document.getElementById("email-newsletter").value;
+    let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+        event.preventDefault();
+        window.alert("Please enter a valid email.");
+    }
+}
