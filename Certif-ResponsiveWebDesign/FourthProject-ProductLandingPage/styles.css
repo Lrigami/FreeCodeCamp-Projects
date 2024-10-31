@@ -22,7 +22,9 @@ header {
     height: 100vh;
     position: relative;
     overflow: hidden;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-image: url("images/Oze-park-2.JPG");
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
         /* nav */
