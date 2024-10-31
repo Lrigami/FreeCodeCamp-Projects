@@ -90,36 +90,37 @@ header {
 .title {
     position: absolute;
     text-align: center;
-    top: calc(18vw - 5rem);
+    top: calc(50% - 12rem);
     width: 100%;
     font-size: 10rem;
     line-height: 8rem;
     z-index: 14;
     color: var(--white);
     font-family: "DM Serif Text", Arial, Helvetica, sans-serif ;
+    animation: title 2s ease-out;
 }
 
 .oze1 {
     position: absolute;
-    bottom: -120%;
-    right: -20%;
-    max-width: 150%;
+    bottom: -61vw;
+    right: -20vw;
+    width: 160vw;
     z-index: 16;
 }
 
 .oze2 {
     position: absolute;
-    bottom: -120%;
-    right: -20%;
-    max-width: 150%;
+    bottom: -61vw;
+    right: -20vw;
+    width: 160vw;
     z-index: 15;    
 }
 
 .oze3 {
     position: absolute;
     top: 0;
-    left: 0;
-    width: 2080px;
+    left: -20%;
+    width: 160vw;
     z-index: 13;
 }
 
@@ -290,7 +291,7 @@ section {
     height: 30px;
     background-color: transparent;
     backdrop-filter: blur(1px);
-    bottom: -60px;
+    bottom: 0;
 }
 
         /* Locations section */
@@ -956,6 +957,16 @@ small {
 }
 
 /* animations */
+
+@keyframes title {
+    0% {
+        top: 100%;
+    }
+
+    100% {
+        top: 20vw;
+    }
+}
 
 @keyframes round-big {
     0% {

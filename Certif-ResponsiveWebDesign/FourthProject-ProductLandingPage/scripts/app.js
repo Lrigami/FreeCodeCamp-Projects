@@ -1,5 +1,6 @@
 const translate = document.querySelectorAll(".translate");
 const translateInverted = document.querySelectorAll(".translateInverted");
+const translateHorizontal = document.querySelectorAll(".translate-x");
 const shadow = document.querySelectorAll(".shadow");
 const navbar = document.getElementById("nav-bar");
 const joinUsButton = document.getElementById("join-us-button");
@@ -20,7 +21,13 @@ window.addEventListener("scroll", () => {
     translateInverted.forEach(element => {
         let speed = element.dataset.speed;
         element.style.transform = `translateY(-${scroll * speed}px)`;
-    });
+    })
+
+    translateHorizontal.forEach(element => {
+        let speed = element.dataset.speed;
+        element.style.transform = `translateX(${scroll * speed}px)`;
+        element.style.transform += `translateY(${scroll * speed}px)`;
+    })
 
     // Change opacity of scroll-down-circles depending on scrollY
     shadow.forEach(element => {
