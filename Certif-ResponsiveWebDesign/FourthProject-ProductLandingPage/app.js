@@ -489,7 +489,7 @@ locationsFilter.forEach((location) => {
     divIndicate.innerHTML = `${location.name}`;
     mapButton.appendChild(divIndicate);
 
-    // display places cards when we click on a map button
+    // display places cards when we click on a map button or on an option, or press enter on select
     mapButton.addEventListener("click", () => {
         createCards(location);
     })
