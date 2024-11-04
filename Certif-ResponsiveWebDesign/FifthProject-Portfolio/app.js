@@ -3,6 +3,7 @@ let parallaxL = document.querySelectorAll(".parallaxL");
 let parallaxR = document.querySelectorAll(".parallaxR");
 let parallaxB = document.querySelectorAll(".parallaxB");
 
+// parallax effects
 window.addEventListener("scroll", () => {
     let scroll = window.scrollY;
     parallax.forEach((element) => {
@@ -25,3 +26,5 @@ window.addEventListener("scroll", () => {
         element.style.transform = `translateY(${scroll * speed}px)`;
     })
 })
+
+// projects solar-system effects
