@@ -11,31 +11,51 @@
 
     <body>
         <header>
-            <nav>
+            <nav id="navbar">
                 <ul type="none">
                     <li><a href="#about-me">About Me</a></li>
-                    <li><a href="projects">Projects</a></li>
-                    <li><a href="contact-me">Contacte Me</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact-me">Contact Me</a></li>
                 </ul>
             </nav>
             <img src="img/header-calque1.png" alt="">
             <img src="img/header-calque2.png" alt="">
             <img src="img/header-calque3.png" alt="">
-            <img src="img/header-calque4.png" alt="">
-            <h1 class="parallax" data-speed="4">Web Developer</h1>
-            <img src="img/header-calque5.png" alt="">
-            <img src="img/header-calque6.png" alt="">
-            <img src="img/header-calque7.png" alt="">
-            <img src="img/header-calque8.png" alt="">
-            <img src="img/header-calque9.png" alt="">
-            <img src="img/header-calque10.png" alt="">
+            <img class="parallaxL" data-speed="0.6" src="img/header-calque4.png" alt="">
+            <img class="parallaxR" data-speed="0.6" src="img/header-calque5.png" alt="">
+            <img class="parallaxR" data-speed="0.8" src="img/header-calque6.png" alt="">
+            <img class="parallaxL" data-speed="0.8" src="img/header-calque7.png" alt="">
+            <img class="parallaxB" data-speed="2" src="img/header-calque8.png" alt="">
+            <img class="parallaxL" data-speed="1" src="img/header-calque9.png" alt="">
+            <img class="parallaxR" data-speed="1" src="img/header-calque10.png" alt="">
             <img src="img/header-calque11.png" alt="">
             <img src="img/header-calque12.png" alt="">
+            <h1 class="parallax" data-speed="4">Web Developer</h1>
+            <p class="parallaxB" data-speed="2">click on the flag to switch to French</p>
+            <button class="parallaxB" data-speed="2"></button>
         </header>
 
         <main>
             <section id="about-me">
-
+                <div id="constellation">
+                    <img src="img/chevron-constellation-open.png" alt="">
+                    <h2>About me</h2>
+                    <img src="img/chevron-constellation-close.png" alt="">
+                </div>
+                <div id="photo">
+                    <!--?xml version="1.0" standalone="no"?-->              
+                    <svg id="sw-js-blob-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" version="1.1">                    
+                        <defs>                         
+                            <linearGradient id="sw-gradient" x1="0" x2="1" y1="1" y2="0">                            
+                                <stop id="stop1" stop-color="rgba(245, 168, 224, 1)" offset="0%"></stop>                            
+                                <stop id="stop2" stop-color="rgba(64, 1, 131, 1)" offset="100%"></stop>                        
+                            </linearGradient>                    
+                        </defs>                
+                        <path fill="none" d="M24.8,-32.4C30.2,-25.1,31.3,-15.4,32.5,-6.1C33.7,3.2,35,12.1,31.3,17.9C27.7,23.7,19.2,26.5,11.5,27.6C3.8,28.7,-3.1,28.1,-11.2,26.9C-19.2,25.6,-28.4,23.6,-32,18.1C-35.7,12.6,-33.7,3.5,-30.3,-3.5C-26.9,-10.5,-21.9,-15.3,-16.6,-22.7C-11.3,-30.1,-5.7,-40,2,-42.4C9.7,-44.9,19.4,-39.8,24.8,-32.4Z" width="100%" height="100%" transform="translate(50 50)" style="transition: 0.3s;" stroke-width="1" stroke="url(#sw-gradient)"></path>              
+                    </svg>        
+                    <img id="portrait" src="img/photo.jpg" alt="">
+                </div>
+                <button>Download CV</button>
             </section>
 
             <section id="projects">
