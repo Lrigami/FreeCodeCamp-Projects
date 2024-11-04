@@ -8,6 +8,10 @@
     scroll-behavior: smooth;
 }
 
+html {
+    overflow-x: hidden;
+}
+
 body {
     width: 100vw;
     height: 100vh;
@@ -49,6 +53,7 @@ nav li {
     border-radius: 25px;
     z-index: 15;
     position: relative;
+    overflow: visible;
 }
 
 nav li::before {
@@ -56,12 +61,10 @@ nav li::before {
     display: block;
     height: 40px;
     width: 3px;
-    background-color: rgba(0, 255, 0, 0.5);
     position: absolute;
     z-index: -1;
     left: calc(50% - 3px);
     bottom: calc(50% - 20px);
-    box-shadow: 0px 0px 5px 3px rgba(0, 255, 0, 1);
     transition: 1s;
 }
 
@@ -69,7 +72,33 @@ nav li:hover::before {
     width: 100%;
     left: 0;
     border-radius: 25px;
+}
+
+nav li:first-of-type::before {
+    background-color: rgba(255, 0, 255, 0.5);
+    box-shadow: 0px 0px 5px 3px rgba(255, 0, 255, 1);
+}
+
+nav li:nth-of-type(2)::before {
+    background-color: rgba(0, 255, 0, 0.5);
+    box-shadow: 0px 0px 5px 3px rgba(0, 255, 0, 1);
+}
+
+nav li:last-of-type::before {
+    background-color: rgba(0, 255, 255, 0.5);
+    box-shadow: 0px 0px 5px 3px rgba(0, 255, 255, 1);
+}
+
+nav li:first-of-type:hover::before {
+    background-color: rgba(255, 0, 255, 1);
+}
+
+nav li:nth-of-type(2):hover::before {
     background-color: rgba(0, 255, 0, 1);
+}
+
+nav li:last-of-type:hover::before {
+    background-color: rgba(0, 255, 255, 1);
 }
 
 nav li:hover a {
@@ -204,15 +233,16 @@ header button {
 /* Main */
 
 main {
-    height: 100vh;
+    height: auto;
     background: radial-gradient(ellipse at top, #060e40 30%, #400183 100%);
 }
 
-/* About me */
-
-#about-me {
+section {
+    height: 100vh;
     position: relative;
 }
+
+/* About me */
 
 #constellation {
     width: 100%;
