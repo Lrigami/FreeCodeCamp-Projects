@@ -47,7 +47,6 @@ nav ul {
 }
 
 nav li {
-    background: linear-gradient(60deg, rgba(0, 0, 0, 0.5), rgba(125, 125, 125, 0.5));
     padding: 5px 20px;
     box-sizing: border-box;
     border-radius: 25px;
