@@ -35,6 +35,7 @@ User stories:
 - responsive
 - update slider button so they disappear when you arrive to the end of the slider
 - the 2 passwords input should match
+- jpg to progressive jpeg
 
 -- attributions --
 I wanted to use personal photos and videos for this project.
