@@ -250,6 +250,10 @@ section {
 
 /* About me */
 
+#about-me {
+    background-image: url("img/header-calque1.png");
+}
+
 #constellation {
     width: 100%;
     display: flex;
@@ -322,6 +326,11 @@ section {
 }
 
 /* Projects */
+
+#projects {
+    scroll-margin-top: 60px;
+}
+
 /* Solar system */
 
 #solar-system {
@@ -427,7 +436,7 @@ section {
     bottom: 50%;
     left: 10%;
     background-image: url("img/projects/project1.jpg");
-    filter: drop-shadow(0 0 10px rgb(100, 100, 100));
+    filter: drop-shadow(0 0 15px rgb(100, 100, 100));
 }
 
 /* Footer */

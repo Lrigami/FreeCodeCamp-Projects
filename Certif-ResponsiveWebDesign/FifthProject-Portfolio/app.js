@@ -28,3 +28,18 @@ window.addEventListener("scroll", () => {
 })
 
 // projects solar-system effects
+
+
+// slider navigation buttons
+let previousButton = document.getElementById("slider-before");
+let nextButton = document.getElementById("slider-after");
+
+previousButton.onclick = () => {
+    const sliderWidth = document.getElementById("slider-content").offsetWidth;
+    document.getElementById("slider-content").scrollLeft -= sliderWidth;
+}
+
+nextButton.onclick = () => {
+    const sliderWidth = document.getElementById("slider-content").offsetWidth;
+    document.getElementById("slider-content").scrollLeft += sliderWidth;
+}
