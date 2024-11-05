@@ -209,6 +209,7 @@ header img:last-of-type {
     position: absolute;
     bottom: -5%;
     z-index: 12;
+    animation: levitating-inverted 5s ease infinite;
 }
 
 header p {
@@ -328,50 +329,51 @@ section {
     height: 60%;
     position: relative;
     overflow-x: hidden;
+    overflow: visible;
   }
   
-  .line {
+.line {
     border-radius: 100% 0 0 100% / 50%;
     box-sizing: border-box;
     border: 2px solid white;
     height: 100%;
     width: 100%;
-  }
+}
 
-  .project {
+.project {
     position: absolute;
     box-sizing: border-box;
-  }
-  
-  .project.four {
+}
+
+.project.four {
     width: 90%;
     height: 93%;
     right: -10px;
     top: 3.5%;
-  }
-  
-  .project.three {
+}
+
+.project.three {
     width: 80%;
     height: 90%;
     right: 0;
     top: 5%;
-  }
-  
-  .project.two {
+}
+
+.project.two {
     width: 60%;
     height: 80%;
     right: 0;
     top: 10%;
-  }
-  
-  .project.one {
+}
+
+.project.one {
     width: 50%;
     height: 70%;
     right: 0;
     top: 15%;
-  }
-  
-  .sun {
+}
+
+.sun {
     width: 45%;
     height: 65%;
     border-radius: 50%;
@@ -379,7 +381,54 @@ section {
     right: -22.5%;
     top: 17.5%;
     filter: drop-shadow(-10px 1px 20px white);
-  }
+}
+
+.planet {
+    border-radius: 50%;
+    position: absolute;
+    cursor: pointer;
+    border: none;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.planet.four {
+    width: 120px;
+    height: 120px;
+    bottom:80%;
+    left: 50%;
+    background-image: url("img/projects/project4.jpg");
+    filter: drop-shadow(0 0 5px rgb(0, 255, 155));
+}
+
+.planet.three {
+    width: 100px;
+    height: 100px;
+    bottom: 55%;
+    left: 5%;
+    background-image: url("img/projects/project3.jpg");
+
+    filter: drop-shadow(0 0 10px rgb(255, 155, 155));
+}
+
+.planet.two {
+    width: 90px;
+    height: 90px;
+    bottom: -5%;
+    left: 40%;
+    background-image: url("img/projects/project2.jpg");
+    filter: drop-shadow(0 0 10px rgb(0, 150, 255));
+}
+
+.planet.one {
+    width: 110px;
+    height: 110px;
+    bottom: 50%;
+    left: 10%;
+    background-image: url("img/projects/project1.jpg");
+    filter: drop-shadow(0 0 10px rgb(100, 100, 100));
+}
 
 /* Footer */
 
@@ -400,6 +449,20 @@ footer {
 
     100% {
 
+    }
+}
+
+@keyframes levitating-inverted {
+    0% {
+        transform: translateY(1%);
+    }
+
+    50% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(1%);
     }
 }
 
