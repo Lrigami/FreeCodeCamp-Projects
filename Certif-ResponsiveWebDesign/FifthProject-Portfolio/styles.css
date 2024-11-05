@@ -1,0 +1,397 @@
+:root {
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
+/* Header */
+
+header {
+    height: 100%;
+    background-image: url("img/header-calque1.jpg");
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
+}
+
+nav {
+    position: fixed;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    z-index: 15;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 30%;
+    margin: auto;
+}
+
+nav li {
+    padding: 5px 20px;
+    box-sizing: border-box;
+    border-radius: 25px;
+    z-index: 15;
+    position: relative;
+    overflow: visible;
+}
+
+nav li::before {
+    content: "";
+    display: block;
+    height: 40px;
+    width: 3px;
+    position: absolute;
+    z-index: -1;
+    left: calc(50% - 3px);
+    bottom: calc(50% - 20px);
+    transition: 1s;
+}
+
+nav li:hover::before {
+    width: 100%;
+    left: 0;
+    border-radius: 25px;
+}
+
+nav li:first-of-type::before {
+    background-color: rgba(255, 0, 255, 0.5);
+    box-shadow: 0px 0px 5px 3px rgba(255, 0, 255, 1);
+}
+
+nav li:nth-of-type(2)::before {
+    background-color: rgba(0, 255, 0, 0.5);
+    box-shadow: 0px 0px 5px 3px rgba(0, 255, 0, 1);
+}
+
+nav li:last-of-type::before {
+    background-color: rgba(0, 255, 255, 0.5);
+    box-shadow: 0px 0px 5px 3px rgba(0, 255, 255, 1);
+}
+
+nav li:first-of-type:hover::before {
+    background-color: rgba(255, 0, 255, 1);
+}
+
+nav li:nth-of-type(2):hover::before {
+    background-color: rgba(0, 255, 0, 1);
+}
+
+nav li:last-of-type:hover::before {
+    background-color: rgba(0, 255, 255, 1);
+}
+
+nav li:hover a {
+    color: black;
+}
+
+nav li a {
+    font-size: 1.5rem;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 1s;
+}
+
+h1 {
+    position: absolute;
+    font-size: 10rem;
+    color: white;
+    top: calc(50% - 5rem);
+    left: calc(50% - 26%);
+    z-index: 4;
+}
+
+header img:first-of-type {
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+}
+
+header img:nth-of-type(2) {
+    position: absolute;
+    top: -20%;
+    right: 0;
+    animation: levitating 5s ease infinite;
+    z-index: 2;
+}
+
+header img:nth-of-type(3) {
+    position: absolute;
+    top: -2%;
+    left: 0;
+    animation: header-spaceship 1.5s ease-in;
+    z-index: 3;
+}
+
+header img:nth-of-type(4) {
+    position: absolute;
+    height: 100%;
+    bottom: 0;
+    left: 0;
+    z-index: 5;
+}
+
+header img:nth-of-type(5) {
+    position: absolute;
+    height: 100%;
+    bottom: 0;
+    right: 0;
+    z-index: 6;
+}
+
+header img:nth-of-type(6) {
+    position: absolute;
+    height: 100%;
+    bottom: 0;
+    right: 0;
+    z-index: 7;
+}
+
+header img:nth-of-type(7) {
+    position: absolute;
+    height: 100%;
+    bottom: 0;
+    left: 0;
+    z-index: 8;
+}
+
+header img:nth-of-type(8) {
+    position: absolute;
+    height: 100%;
+    bottom: -10%;
+    right: 20%;
+    z-index: 9;
+}
+
+header img:nth-of-type(9) {
+    position: absolute;
+    height: 100%;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+}
+
+header img:nth-of-type(10) {
+    position: absolute;
+    height: 100%;
+    bottom: 0;
+    right: 0;
+    z-index: 11;
+}
+
+header img:last-of-type {
+    position: absolute;
+    bottom: -5%;
+    z-index: 12;
+}
+
+header p {
+    position: absolute;
+    z-index: 15;
+    left: 47%;
+    top: 35%;
+    color: white;
+    font-size: 1rem;
+    width: 160px;
+    text-align: center;
+}
+
+header button {
+    position: absolute;
+    background-color: transparent;
+    z-index: 15;
+    width: 110px;
+    height: 60px;
+    box-sizing: border-box;
+    border: none;
+    left: 48.2%;
+    top: 40.5%;
+    cursor: pointer;
+}
+
+/* Main */
+
+main {
+    height: auto;
+    background: radial-gradient(ellipse at top, #060e40 30%, #400183 100%);
+}
+
+section {
+    height: 100vh;
+    position: relative;
+}
+
+/* About me */
+
+#constellation {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    height: 500px;
+    position: relative;
+}
+
+#constellation h2 {
+    color: white;
+    font-size: 6rem;
+    position: absolute;
+    left: 45%;
+    top: calc(50% - 6rem);
+}
+
+#photo {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    top: 10%;
+    left: 18%;
+}
+
+#portrait {
+    position: absolute;
+    width: 300px;
+    border-radius: 50%;
+    z-index: 2;
+    top: 10%;
+    left: 5%;
+}
+
+#about-me button {
+    width: 100px;
+    height: 100px;
+    background: url("img/MoonCV.png");
+    background-size: contain;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: .2s;
+}
+
+#about-me button:hover {
+    filter: drop-shadow(1px 1px 20px #eee1b4);
+}
+
+/* Projects */
+/* Solar system */
+
+#solar-system {
+    width: 100%;
+    height: 60%;
+    position: relative;
+    overflow-x: hidden;
+  }
+  
+  .line {
+    border-radius: 100% 0 0 100% / 50%;
+    box-sizing: border-box;
+    border: 2px solid white;
+    height: 100%;
+    width: 100%;
+  }
+  
+  #project4 {
+    width: 90%;
+    height: 93%;
+    position: absolute;
+    right: -10px;
+    top: 3.5%;
+    box-sizing: border-box;
+  }
+  
+  #project3 {
+    width: 80%;
+    height: 90%;
+    position: absolute;
+    right: 0;
+    top: 5%;
+    box-sizing: border-box;
+  }
+  
+  #project2 {
+    width: 60%;
+    height: 80%;
+    position: absolute;
+    right: 0;
+    top: 10%;
+    box-sizing: border-box;
+  }
+  
+  #project1 {
+    width: 50%;
+    height: 70%;
+    position: absolute;
+    right: 0;
+    top: 15%;
+    box-sizing: border-box;
+  }
+  
+  #sun {
+    width: 45%;
+    height: 65%;
+    box-sizing: border-box;
+    border-radius: 50%;
+    background: radial-gradient(circle at right, yellow, white);
+    position: absolute;
+    right: -22.5%;
+    top: 17.5%;
+    filter: drop-shadow(-10px 1px 20px white);
+  }
+
+/* Footer */
+
+footer {
+    background: linear-gradient(#400183, #ab50b0, #f5a8e0);
+}
+
+/* Animations */
+
+@keyframes levitating {
+    0% {
+
+    }
+
+    50% {
+        transform: translateY(1%);
+    }
+
+    100% {
+
+    }
+}
+
+@keyframes header-spaceship {
+    0% {
+        top: 50%;
+    }
+
+    100% {
+
+    }
+}
+
+
+
+
+/* Media queries */

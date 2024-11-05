@@ -22,7 +22,9 @@ header {
     height: 100vh;
     position: relative;
     overflow: hidden;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-image: url("images/Oze-park-2.JPG");
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
         /* nav */
@@ -40,7 +42,8 @@ header {
 }
 
 #header-img {
-    width: 150px;
+    width: 9vw;
+    min-width: 80px;
 }
 
 #nav-bar ul {
@@ -90,36 +93,37 @@ header {
 .title {
     position: absolute;
     text-align: center;
-    top: calc(18vw - 5rem);
+    top: calc(50% - 12rem);
     width: 100%;
     font-size: 10rem;
     line-height: 8rem;
     z-index: 14;
     color: var(--white);
     font-family: "DM Serif Text", Arial, Helvetica, sans-serif ;
+    animation: title 2s ease-out;
 }
 
 .oze1 {
     position: absolute;
-    bottom: -50vw;
-    right: -300px;
-    max-width: 2080px;
+    bottom: -61vw;
+    right: -20vw;
+    width: 160vw;
     z-index: 16;
 }
 
 .oze2 {
     position: absolute;
-    bottom: -50vw;
-    right: -300px;
-    max-width: 2080px;
+    bottom: -61vw;
+    right: -20vw;
+    width: 160vw;
     z-index: 15;    
 }
 
 .oze3 {
     position: absolute;
     top: 0;
-    left: 0;
-    width: 2080px;
+    left: -20%;
+    width: 160vw;
     z-index: 13;
 }
 
@@ -197,6 +201,7 @@ section {
     column-gap: 5%;
     align-items: center;
     padding: 5% 10%;
+    position: relative;
 }
 
 #AboutUs video {
@@ -283,12 +288,21 @@ section {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+#blur {
+    position: absolute;
+    width: 100%;
+    height: 30px;
+    background-color: transparent;
+    backdrop-filter: blur(1px);
+    bottom: 0;
+}
+
         /* Locations section */
 
 #locations {
     width: 100%;
     height: auto;
-    margin: 30px 0 0 0;
+    margin: 10px 0 0 0;
     scroll-margin-top: 75.9px; 
 }
 
@@ -527,6 +541,7 @@ section {
     transition: .3s;
     overflow: hidden;
     position: relative;
+    animation: card-placement 0.5s linear;
 }
 
 .place-card:hover {
@@ -732,7 +747,7 @@ section {
     font-family: "DM Serif Text", Arial, Helvetica, sans-serif;
 }
 
-.review-msg p:last-of-type {
+.review-msg blockquote {
     text-align: center;
     font-size: 1.1rem;
 }
@@ -819,12 +834,14 @@ section {
 
 #submit {
     margin: 3% auto;
-    width: 50% !important;
-    height: 30px !important;
+    width: 55% !important;
+    height: 40px !important;
     background-color: var(--background2) !important;
     border: 1px solid var(--todefine3) !important;
     border-radius: 10px;
     color: var(--todefine3) !important;
+    font-weight: 400;
+    font-size: 1.2rem;
     cursor: pointer;
 }
 
@@ -837,7 +854,8 @@ section {
 footer {
     width: 100%;
     height: 19vw;
-    min-height: 230px;
+    min-height: 268px;
+    padding-top: 30px;
     display: flex;
     justify-content: space-around;
     align-items: flex-start;
@@ -905,23 +923,26 @@ footer ul li, footer ul li a {
     align-items: center;
 }
 
-#newsletter input[type="email"] {
+#email-newsletter {
     width: 100%;
-    height: 25px;
+    height: 30px;
     border-radius: 5px;
+    padding-left: 5px;
+    background-color: var(--background2);
+    border: 1px solid var(--todefine1);
 }
 
-#newsletter input[type="submit"] {
-    width: 60%;
-    height: 25px;
-    border-radius: 15px;
+#submit-button {
+    width: 100%;
+    height: 30px;
+    border-radius: 5px;
     background-color: var(--background2);
     border: 1px solid var(--todefine1);
     font-family: "Roboto Condensed", Arial, Helvetica, sans-serif;
     cursor: pointer;
 }
 
-#newsletter input[type="submit"]:hover {
+#submit:hover {
     background-color: var(--background1);
 }
 
@@ -939,6 +960,16 @@ small {
 }
 
 /* animations */
+
+@keyframes title {
+    0% {
+        top: 100%;
+    }
+
+    100% {
+
+    }
+}
 
 @keyframes round-big {
     0% {
@@ -979,6 +1010,16 @@ small {
 
     100% {
         rotate: 360deg;
+    }
+}
+
+@keyframes card-placement {
+    0% {
+        top: -100px;
+    }
+
+    100% {
+        top: 0px;
     }
 }
 
@@ -1027,5 +1068,166 @@ small {
 @media (prefers-reduced-motion: no-preference) {
     * {
         scroll-behavior: smooth;
+    }
+}
+
+/* media queries */
+
+@media screen and (max-width: 1281px) {
+    .oze1, .oze2 {
+        width: 180vw;
+    }
+
+    .oze3 {
+        width: 200vw;
+    }
+}
+
+@media screen and (max-width: 1025px) {
+    #nav-bar {
+        padding: 10px 10px;
+        height: 55px;
+    }
+
+    #nav-bar ul {
+        width: 70%;
+    }
+
+    .title {
+        font-size: 8rem;
+        top: calc(50% - 15rem);
+    }
+
+    .oze3 {
+        width: 400vw;
+    }
+
+    #AboutUs {
+        height: auto;
+        display: flex;
+        gap: 2vw;
+        flex-direction: column-reverse;
+    }
+
+    #HowItWorks, #video {
+        transform: unset !important;
+        bottom: 0 !important;
+        top: 0 !important;
+    }
+
+    section {
+        scroll-margin-top: 55px !important;
+    }
+
+    #mapgrid .material-icons {
+        font-size: 24px !important;
+    }
+}
+
+@media screen and (max-width: 801px) {
+    #nav-bar ul {
+        width: 70%;
+        margin: 0 5px;
+    }
+
+    .nav-link {
+        font-size: 1rem;
+    }
+
+    .title {
+        top: calc(50% - 16rem);
+    }
+
+    .oze1, .oze2 {
+        width: 200vw;
+    }
+
+    #japanMapLocations {
+        height: 80vh;
+        display: flex;
+    }
+
+    #locations-titles {
+        position: relative;
+        width: 50%;
+        margin: 10% auto auto auto;
+        left: 0;
+        top: 0;
+    }
+
+    #locations-titles label {
+        font-size: 1.2rem;
+    }
+
+    #container {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .nav-link {
+        font-size: 0.8rem;
+    }
+
+    .big {
+        width: 300px;
+        height: 300px;
+        left: calc(50% - 150px);
+        bottom: -150px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #nav-bar {
+        flex-wrap: wrap;
+        height: auto;
+        flex-direction: column;
+    }
+
+    #nav-bar ul {
+        flex-wrap: wrap;
+        height: auto;
+        justify-content: center;
+        gap: 10px;
+        margin: 10px 0;
+    }
+
+    .title {
+        font-size: 5rem;
+        top: calc(50% - 15rem);
+    }
+
+    .oze1, .oze2 {
+        width: 230vw;
+        right: -40vw;
+        bottom: -30vw;
+    }
+
+    .oze3 {
+        width: 800vw;
+    }
+
+    .big {
+        width: 300px;
+        height: 300px;
+        left: calc(50% - 150px);
+        bottom: -150px;
+    }
+
+    .medium {
+        width: 150px;
+        height: 150px;
+        left: calc(50% - 75px);
+        bottom: -75px;
+    }
+
+    section {
+        scroll-margin-top: 126.75px !important;
+    }
+}
+
+@media screen and (max-width: 405px) {
+    section {
+        scroll-margin-top: 154.75px !important;
     }
 }

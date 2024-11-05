@@ -11,8 +11,10 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Nerko+One&family=Notable&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Playwrite+CU&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
         <link rel="icon" type="image/x-icon" href="/images/icons/logo-grayscale-inverted.ico">
-        <script src="app.js" defer></script>
-        <title>Nihon Nomad Travel Agency</title>
+        <script src="./scripts/locations.js" defer></script>
+        <script src="./scripts/review.js" defer></script>
+        <script src="./scripts/app.js" defer></script>
+        <title>Nihon Nomad travel Agency</title>
     </head>
 
     <body>
@@ -28,10 +30,10 @@
                 <button id="join-us-button" data-noopacity="0">Join Us <span class="material-icons">login</span></button>
             </nav>
 
-            <h1 class="title translate" data-speed="0.4">Uncover Japan</h1>
-            <img src="images/Oze-park-1.png" class="oze1 translate" data-speed="0.1" alt="Photo of a trail in Oze Park"/>
-            <img src="images/Oze-park-2.png" class="oze2 translate" data-speed="0.1" alt="Photo of a trail in Oze Park"/>
-            <img src="images/Oze-park-3.png" class="oze3 translate" data-speed="0.4" alt="Photo of a trail in Oze Park"/>
+            <h1 class="title translate-x" data-speed="0.4">Uncover Japan</h1>
+            <img src="images/Oze-park-1.png" class="oze1 translateInverted" data-speed="0.15" alt="Photo of a trail in Oze Park"/>
+            <img src="images/jpeg-progressifs/oze-park-2.png" class="oze2 translateInverted" data-speed="0.15" alt="Photo of a trail in Oze Park"/>
+            <img src="images/Oze-park-3.png" class="oze3 translateInverted" data-speed="0.2" alt="Photo of a trail in Oze Park"/>
 
             <div class="round big shadow" data-opacity="1"></div>
             <div class="round medium shadow" data-opacity="1"></div>
@@ -83,6 +85,7 @@
                         </li>
                     </ol>
                 </div>
+                <div id="blur"></div>
             </section>
 
             <section id="locations">
@@ -133,7 +136,7 @@
                             <div class="border-bottom"></div>
                         </div>
                         <div>
-                            <label for="form-email">Your email</label>
+                            <label for="email">Your email</label>
                             <input type="email" name="email" id="email" required placeholder="e.g. youremail@example.com">
                             <div class="border-bottom"></div>
                         </div>
@@ -147,7 +150,7 @@
                             <input type="password" name="password-confirm" id="password-confirm" required placeholder="confirmation">
                             <div class="border-bottom"></div>
                         </div>
-                        <input type="submit" id="submit" value="Validate">
+                        <input type="submit" id="submit" value="Join Us">
                     </form>
                 </div>
             </section>
@@ -157,8 +160,8 @@
             <section id="contacts">
                 <h3>Contacts</h3>
                 <ul>
-                    <li><a href="tel:+10123456789"><span class="material-icons">call</span>&nbsp;: 012-345-6789</a></li> <!-- ::after instead of &nbsp; -->
-                    <li><a href= "mailto:name@email.com"><span class="material-icons">mail</span>&nbsp;: name@email.com</a></li>
+                    <li><a href="tel:+10123456789"><span class="material-icons">call</span>&nbsp;: 012-345-6789</a></li>
+                    <li><a href="mailto: name@email.com"><span class="material-icons">mail</span>&nbsp;: name@email.com</a></li>
                     <li><span class="material-icons">home</span>&nbsp;: 123 John Smith Avenue, 251-0069, SmithCity</li>
                     <li>
                         <ul id="icons" type="none">
