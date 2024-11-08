@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="Portfolio">
         <link rel="stylesheet" href="styles.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=DM+Serif+Text:ital@0;1&family=Nerko+One&family=Notable&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Playwrite+CU&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
@@ -12,6 +13,7 @@
         <title>Thiry Prune Portfolio</title>
     </head>
 
+    <!-- Attention au fait que les id soient exceptionnels, et privilégier au maximum les classes etc. -->
     <body>
         <header>
             <nav id="navbar">
@@ -21,18 +23,17 @@
                     <li><a href="#contact-me">Contact Me</a></li>
                 </ul>
             </nav>
-            <img src="img/header-calque1.png" alt="">
-            <img src="img/header-calque2.png" alt="">
-            <img src="img/header-calque3.png" alt="">
-            <img class="parallaxL" data-speed="0.6" src="img/header-calque4.png" alt="">
-            <img class="parallaxR" data-speed="0.6" src="img/header-calque5.png" alt="">
-            <img class="parallaxR" data-speed="0.8" src="img/header-calque6.png" alt="">
-            <img class="parallaxL" data-speed="0.8" src="img/header-calque7.png" alt="">
-            <img class="parallaxB" data-speed="2" src="img/header-calque8.png" alt="">
-            <img class="parallaxL" data-speed="1" src="img/header-calque9.png" alt="">
-            <img class="parallaxR" data-speed="1" src="img/header-calque10.png" alt="">
-            <img src="img/header-calque11.png" alt="">
-            <img src="img/header-calque12.png" alt="">
+            <img src="img/header-calque1.png" alt="Illustration of mutliple stars.">
+            <img src="img/header-calque2.png" alt="Illustration of two floating planets.">
+            <img src="img/header-calque3.png" alt="Illustration of a spaceship.">
+            <img class="parallaxL" data-speed="0.6" src="img/header-calque4.png" alt="Illustration of a cloud of pink smoke.">
+            <img class="parallaxR" data-speed="0.6" src="img/header-calque5.png" alt="Illustration of a cloud of pink smoke.">
+            <img class="parallaxR" data-speed="1" src="img/header-calque6.png" alt="Illustration of a mountain.">
+            <img class="parallaxL" data-speed="1" src="img/header-calque7.png" alt="Illustration of a mountain.">
+            <img class="parallaxB" data-speed="2" src="img/header-calque8.png" alt="Illustration of an astronaut holding a flag on a sand dune."> <!-- change the flag star color to match the language -->
+            <img class="parallaxL" data-speed="1.4" src="img/header-calque9.png" alt="Illustration of a sand dune.">
+            <img class="parallaxR" data-speed="1.4" src="img/header-calque10.png" alt="Illustration of a sand dune.">
+            <img src="img/header-calque12.png" alt="Illustration of floating elements.">
             <h1 class="parallax" data-speed="4">Web Developer</h1>
             <p class="parallaxB" data-speed="2">click on the flag to switch to French</p>
             <button class="parallaxB" data-speed="2"></button>
@@ -41,46 +42,65 @@
         <main>
             <section id="about-me">
                 <div id="constellation">
-                    <img src="img/chevron-constellation-open.png" alt="">
+                    <img src="img/chevron-constellation-open.png" alt="illustration of a constellation shaped as an open chevron">
                     <h2>Thiry Prune</h2>
-                    <img src="img/chevron-constellation-close.png" alt="">
+                    <img src="img/chevron-constellation-close.png" alt="illustration of a constellation shaped as a closed chevron">
                 </div>
 
                 <div id="photo">
-                    <img id="portrait" src="img/photo.jpg" alt="">
+                    <img id="portrait" src="img/photo.jpg" alt="Photo of Thiry Prune.">
+                    <button>Get my CV</button>
                 </div>
 
                 <div id="description">
-                    <button>Download CV</button>
                     <p></p>
                 </div>
 
                 <div id="skills">
                     <h3>Skills</h3>
                     <ul type="none">
-                        <li><img src="" alt=""></li>
-                        <li><img src="" alt=""></li>
-                        <li><img src="" alt=""></li>
+                        <li><img src="img/skills/html5-logo.svg" alt="HTML5 logo" title="HTML5 logo"></li>
+                        <li><img src="img/skills/css3-logo.svg" alt="CSS3 logo" title="CSS3 logo"></li>
+                        <li><img src="img/skills/js-logo.svg" alt="JavaScript logo" title="JavaScript logo"></li>
+                        <li><img src="img/skills/react-logo.svg" alt="React Native logo" title="React logo"></li>
                     </ul>
                 </div>
+
+                <div id="spaceship-container">
+                    <div id="spaceship">
+                      <div id="wings"></div>
+                      <div id="body">
+                        <div id="tip"></div>
+                        <div id="window"></div>
+                        <div id="line"></div>
+                      </div>
+                      <div class="reactor one"></div>
+                      <div class="reactor two"></div>
+                    </div>
+                    <div id="fire">
+                      <div class="fire one"></div>
+                      <div class="fire two"></div>
+                      <div class="fire three"></div>
+                    </div>
+                  </div>
             </section>
 
             <section id="projects">
                 <h2>Projects</h2>
                 <div id="solar-system">
-                    <div id="project4">
+                    <div class="project four">
                         <div class="line"></div>
-                        <img src="" alt="">
-                        <div id="project3">
+                        <a class="planet four"></a>
+                        <div class="project three">
                             <div class="line"></div>
-                            <img src="" alt="">
-                            <div id="project2">
+                            <a class="planet three"></a>
+                            <div class="project two">
                                 <div class="line"></div>
-                                <img src="" alt="">
-                                <div id="project1">
+                                <a class="planet two"></a>
+                                <div class="project one">
                                     <div class="line"></div>
-                                    <img src="" alt="">
-                                    <div id="sun"></div>
+                                    <a class="planet one"></a>
+                                    <div class="project sun"></div>
                                 </div>
                            </div>
                         </div>
@@ -89,6 +109,16 @@
 
                 <div id="projects-slider">
                     <!-- chaque slider a le css du projet assigné dans le système solaire. On retrouve pour chaque projet une image cliquable, un titre, une brève description, les langages utilisés et le lien github associé -->
+                    <div id="projects-slider">
+                        <div id="slider-nav">
+                            <button id="slider-before"><span class="material-icons">chevron_left</span></button>
+                            <button id="slider-after"><span class="material-icons">chevron_right</span></button>
+                        </div>
+
+                        <div id="slider-content">
+                            
+                        </div>
+                    </div>
                 </div>
             </section>
 

@@ -2,6 +2,8 @@
 
 }
 
+/* Attention à nettoyer correctement le CSS  */
+
 * {
     margin: 0;
     padding: 0;
@@ -65,6 +67,7 @@ nav li::before {
     left: calc(50% - 3px);
     bottom: calc(50% - 20px);
     transition: 1s;
+    border-radius: 5px;
 }
 
 nav li:hover::before {
@@ -74,30 +77,33 @@ nav li:hover::before {
 }
 
 nav li:first-of-type::before {
-    background-color: rgba(255, 0, 255, 0.5);
+    background-color: rgba(255, 0, 255, 0.7);
     box-shadow: 0px 0px 5px 3px rgba(255, 0, 255, 1);
 }
 
 nav li:nth-of-type(2)::before {
-    background-color: rgba(0, 255, 0, 0.5);
+    background-color: rgba(0, 255, 0, 0.7);
     box-shadow: 0px 0px 5px 3px rgba(0, 255, 0, 1);
 }
 
 nav li:last-of-type::before {
-    background-color: rgba(0, 255, 255, 0.5);
+    background-color: rgba(0, 255, 255, 0.7);
     box-shadow: 0px 0px 5px 3px rgba(0, 255, 255, 1);
 }
 
 nav li:first-of-type:hover::before {
     background-color: rgba(255, 0, 255, 1);
+    box-shadow: 0px 0px 15px 3px rgb(255, 0, 255);
 }
 
 nav li:nth-of-type(2):hover::before {
     background-color: rgba(0, 255, 0, 1);
+    box-shadow: 0px 0px 15px 3px rgb(0, 255, 0);
 }
 
 nav li:last-of-type:hover::before {
     background-color: rgba(0, 255, 255, 1);
+    box-shadow: 0px 0px 15px 3px rgb(0, 255, 255);
 }
 
 nav li:hover a {
@@ -113,11 +119,11 @@ nav li a {
 }
 
 h1 {
-    position: absolute;
+    position: relative;
     font-size: 10rem;
     color: white;
     top: calc(50% - 5rem);
-    left: calc(50% - 26%);
+    text-align: center;
     z-index: 4;
 }
 
@@ -203,6 +209,7 @@ header img:last-of-type {
     position: absolute;
     bottom: -5%;
     z-index: 12;
+    animation: levitating-inverted 5s ease infinite;
 }
 
 header p {
@@ -243,11 +250,15 @@ section {
 
 /* About me */
 
+#about-me {
+    background-image: url("img/header-calque1.png");
+}
+
 #constellation {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    height: 500px;
+    height: 60%;
     position: relative;
 }
 
@@ -261,10 +272,11 @@ section {
 
 #photo {
     position: absolute;
-    width: 100%;
-    height: auto;
-    top: 10%;
+    width: 400px;
+    height: 50%;
+    top: 3%;
     left: 18%;
+    filter: drop-shadow(0 0 10px #eee1b4);
 }
 
 #portrait {
@@ -276,7 +288,7 @@ section {
     left: 5%;
 }
 
-#about-me button {
+#photo button {
     width: 100px;
     height: 100px;
     background: url("img/MoonCV.png");
@@ -285,15 +297,177 @@ section {
     border: none;
     border-radius: 50%;
     cursor: pointer;
-    font-size: 1.2rem;
+    font-family: "Roboto Condensed", Arial, Helvetica, sans-serif;
+    font-size: 1rem;
     transition: .2s;
+    position: absolute;
+    bottom: 0;
+    right: 0;
 }
 
-#about-me button:hover {
+#photo button:hover {
     filter: drop-shadow(1px 1px 20px #eee1b4);
 }
 
+#skills {
+    width: 80%;
+    margin: auto;
+}
+
+#skills ul {
+    width: 70%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+
+#skills li img {
+    width: 90px;
+}
+
+/* spaceship */
+#spaceship-container {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    bottom: 0;
+    right: 10px;
+    z-index: 20;
+  }
+
+#spaceship-container:hover {
+    animation: css-spaceship 8s ease-in-out;
+}
+  
+  #spaceship {
+    height: 80%;
+    width: 100%;
+    position: relative;
+    z-index: 3;
+  }
+  
+  #wings {
+    width: 50%;
+    height: 40%;
+    background-color: transparent;
+    position: absolute; 
+    bottom: -5%;
+    left: 25%;
+    border-radius: 50%;
+    box-shadow: 0px -20px 0px 8px #613768, 0px -25px 0px 8px #6137b9;
+  }
+  
+  #body {
+    height: 90%;
+    width: 35%;
+    position: absolute;
+    left: 32.5%;
+    background-color: #0f3041;
+    border-radius: 50%;
+    overflow: hidden;
+    box-sizing: border-box;
+    border: 3px solid black;
+  }
+  
+  #tip {
+    width: 100%;
+    height: 40%;
+    position: absolute;
+    top: -6%;
+    background: linear-gradient(60deg, #613768, #6137b9);
+    border-radius: 47%;
+    box-sizing: border-box;
+    border: 2px solid black;
+  }
+  
+  #window {
+    height: 25%;
+    width: 50%;
+    background-color: #c2e2f2;
+    position: absolute;
+    top: 42.5%;
+    left: 25%;
+    border-radius: 50%;
+    box-sizing: border-box;
+    border: 10px solid grey;
+  }
+  
+  #line {
+    width: 100%;
+    height: 5%;
+    position: absolute;
+    bottom: 18%;
+    box-sizing: border-box;
+    border: 2px solid black;
+    background-color: #613768;
+  }
+  
+  .reactor {
+    width: 20%;
+    height: 20%;
+    background: linear-gradient(#613768 70%, #6137b9);
+    position: absolute;
+    bottom: 0;
+    box-sizing: border-box;
+    border: 2px solid black;
+  }
+  
+  .reactor.one {
+    left: 35%;
+    transform: skewX(-26deg);
+  }
+  
+  .reactor.two {
+    right: 35%;
+    transform: skewX(26deg);
+  }
+  
+  #fire {
+    height: 20%;
+    width: 100%;
+    position: relative;
+    display: none;
+  }
+
+#spaceship-container:hover #fire {
+    display: block;
+}
+  
+  .fire {
+    width: 25%;
+    height: 250%;
+    position: absolute;
+    background: radial-gradient(ellipse at top, #ffa5bb, #ffa500);
+    box-sizing: border-box;
+    border-radius: 50%;
+    border: 6px solid rgba(255, 150, 0, 1);
+  }
+  
+  .fire.one {
+    left: 37.5%;
+    top: -15%;
+  }
+  
+  .fire.two {
+    scale: 0.7;
+    left: 23%;
+    top: -60%;
+    transform: rotate(30deg);
+  }
+  
+  .fire.three {
+    scale: 0.7;
+    right: 23%;
+    top: -60%;
+    transform: rotate(-30deg);
+  }
+
 /* Projects */
+
+#projects {
+    scroll-margin-top: 60px;
+}
+
 /* Solar system */
 
 #solar-system {
@@ -301,63 +475,106 @@ section {
     height: 60%;
     position: relative;
     overflow-x: hidden;
+    overflow: visible;
   }
   
-  .line {
+.line {
     border-radius: 100% 0 0 100% / 50%;
     box-sizing: border-box;
     border: 2px solid white;
     height: 100%;
     width: 100%;
-  }
-  
-  #project4 {
+}
+
+.project {
+    position: absolute;
+    box-sizing: border-box;
+}
+
+.project.four {
     width: 90%;
     height: 93%;
-    position: absolute;
     right: -10px;
     top: 3.5%;
-    box-sizing: border-box;
-  }
-  
-  #project3 {
+}
+
+.project.three {
     width: 80%;
     height: 90%;
-    position: absolute;
     right: 0;
     top: 5%;
-    box-sizing: border-box;
-  }
-  
-  #project2 {
+}
+
+.project.two {
     width: 60%;
     height: 80%;
-    position: absolute;
     right: 0;
     top: 10%;
-    box-sizing: border-box;
-  }
-  
-  #project1 {
+}
+
+.project.one {
     width: 50%;
     height: 70%;
-    position: absolute;
     right: 0;
     top: 15%;
-    box-sizing: border-box;
-  }
-  
-  #sun {
+}
+
+.sun {
     width: 45%;
     height: 65%;
-    box-sizing: border-box;
     border-radius: 50%;
     background: radial-gradient(circle at right, yellow, white);
-    position: absolute;
     right: -22.5%;
     top: 17.5%;
     filter: drop-shadow(-10px 1px 20px white);
-  }
+}
+
+.planet {
+    border-radius: 50%;
+    position: absolute;
+    cursor: pointer;
+    border: none;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.planet.four {
+    width: 120px;
+    height: 120px;
+    bottom:80%;
+    left: 50%;
+    background-image: url("img/projects/project4.jpg");
+    filter: drop-shadow(0 0 5px rgb(0, 255, 155));
+}
+
+.planet.three {
+    width: 100px;
+    height: 100px;
+    bottom: 55%;
+    left: 5%;
+    background-image: url("img/projects/project3.jpg");
+
+    filter: drop-shadow(0 0 10px rgb(255, 155, 155));
+}
+
+.planet.two {
+    width: 90px;
+    height: 90px;
+    bottom: -5%;
+    left: 40%;
+    background-image: url("img/projects/project2.jpg");
+    filter: drop-shadow(0 0 10px rgb(0, 150, 255));
+}
+
+.planet.one {
+    width: 110px;
+    height: 110px;
+    bottom: 50%;
+    left: 10%;
+    background-image: url("img/projects/project1.jpg");
+    filter: drop-shadow(0 0 15px rgb(100, 100, 100));
+}
 
 /* Footer */
 
@@ -381,9 +598,37 @@ footer {
     }
 }
 
+@keyframes levitating-inverted {
+    0% {
+        transform: translateY(1%);
+    }
+
+    50% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(1%);
+    }
+}
+
 @keyframes header-spaceship {
     0% {
         top: 50%;
+    }
+
+    100% {
+
+    }
+}
+
+@keyframes css-spaceship {
+    0% {
+
+    }
+
+    50% {
+        bottom: 120%;
     }
 
     100% {
