@@ -29,6 +29,12 @@ window.addEventListener("scroll", () => {
 
 // projects solar-system effects
 
+// slider management
+let slider = document.getElementById("projects-slider");
+let planet = document.querySelectorAll(".planet");
+planet.addEventListener("click", () => {
+    slider.classList.remove("hide");
+})
 
 // slider navigation buttons
 let previousButton = document.getElementById("slider-before");

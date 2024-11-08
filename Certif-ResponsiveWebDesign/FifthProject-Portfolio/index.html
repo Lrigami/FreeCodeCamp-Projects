@@ -41,19 +41,17 @@
 
         <main>
             <section id="about-me">
-                <div id="constellation">
+                <div id="presentation">
                     <img src="img/chevron-constellation-open.png" alt="illustration of a constellation shaped as an open chevron">
-                    <h2>Thiry Prune</h2>
-                    <img src="img/chevron-constellation-close.png" alt="illustration of a constellation shaped as a closed chevron">
-                </div>
-
-                <div id="photo">
-                    <img id="portrait" src="img/photo.jpg" alt="Photo of Thiry Prune.">
-                    <button>Get my CV</button>
-                </div>
-
-                <div id="description">
-                    <p></p>
+                    <div id="photo">
+                        <img id="portrait" src="img/photo.jpg" alt="Photo of Thiry Prune.">
+                        <button>Get my CV</button>
+                    </div>
+                    <div id="description">
+                        <h2>Thiry Prune</h2>
+                        <p>Passionate and dedicated web developer with a strong foundation in JavaScript. I thrive on building intuitive and efficient solutions, focusing on clean code and user-centered design. With experience in integration, I continuously explore new technologies and stay committed to improving my skills. I'm excited to contribute to projects that make a real impact and always eager to learn from others in the field.</p>
+                    </div>
+                    <img src="img/chevron-constellation-close.png" alt="illustration of a constellation shaped as a closed chevron"> 
                 </div>
 
                 <div id="skills">
@@ -90,16 +88,24 @@
                 <div id="solar-system">
                     <div class="project four">
                         <div class="line"></div>
-                        <a class="planet four"></a>
+                        <a class="planet four">
+                            <div></div>
+                        </a>
                         <div class="project three">
                             <div class="line"></div>
-                            <a class="planet three"></a>
+                            <a class="planet three">
+                                <div></div>
+                            </a>
                             <div class="project two">
                                 <div class="line"></div>
-                                <a class="planet two"></a>
+                                <a class="planet two">
+                                    <div></div>
+                                </a>
                                 <div class="project one">
                                     <div class="line"></div>
-                                    <a class="planet one"></a>
+                                    <a class="planet one">
+                                        <div></div>
+                                    </a>
                                     <div class="project sun"></div>
                                 </div>
                            </div>
@@ -107,17 +113,16 @@
                     </div>
                 </div>
 
-                <div id="projects-slider">
+                <div id="projects-slider" class="hide">
+                    <h3>Information about projects.</h3>
                     <!-- chaque slider a le css du projet assigné dans le système solaire. On retrouve pour chaque projet une image cliquable, un titre, une brève description, les langages utilisés et le lien github associé -->
-                    <div id="projects-slider">
-                        <div id="slider-nav">
-                            <button id="slider-before"><span class="material-icons">chevron_left</span></button>
-                            <button id="slider-after"><span class="material-icons">chevron_right</span></button>
-                        </div>
+                    <div id="slider-nav">
+                        <button id="slider-before"><span class="material-icons">chevron_left</span></button>
+                        <button id="slider-after"><span class="material-icons">chevron_right</span></button>
+                    </div>
 
-                        <div id="slider-content">
-                            
-                        </div>
+                    <div id="slider-content">
+                        
                     </div>
                 </div>
             </section>

@@ -1,0 +1,30 @@
+{
+    "project1" : {
+        "design" : "url(img/planet1.png)", 
+        "source" : , 
+        "name" : "The 100 Favorite Books of All Times", 
+        "description" : "The aim was to create a survey form on a subject of our choice.", 
+        "languages" : ["HTML", "CSS"]
+    }, 
+    "project2" : {
+        "design" : , 
+        "project" : , 
+        "name" : , 
+        "description" : , 
+        "languages" : 
+    }, 
+    "project3" : {
+        "design" : , 
+        "project" : , 
+        "name" : , 
+        "description" : , 
+        "languages" : 
+    }, 
+    "project4" : {
+        "design" : , 
+        "project" : , 
+        "name" : , 
+        "description" : , 
+        "languages" : 
+    }
+}
