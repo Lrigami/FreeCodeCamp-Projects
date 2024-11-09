@@ -48,16 +48,20 @@ async function getData() {
 
             const projectDiv = document.createElement("div");
 
-            let projectTool = document.createElement("span");
-            projectTool.classList.add("tool");
+            projectDiv.innerHTML = `<p><span>Name: </span class="info">${project.name}</p>
+            <p><span>Description: </span class="info">${project.description}</p>
+            <p><span class="info">Languages & Techno: </span></p>`;
+
+            const lastP = projectDiv.querySelector("p:last-of-type");
+
             for (const tool of project.tools) {
-                projectTool.innerText = tool;
+                const projectTool = document.createElement("span");
+                projectTool.classList.add("tool");
+                projectTool.innerText = `${tool}`;
+                lastP.appendChild(projectTool);
             }
 
-            projectDiv.innerHTML = `<p><span>Name: </span>${project.name}</p>
-            <p><span>Description: </span>${project.description}</p>
-            <p><span>Languages & Techno: </span>${projectTool}</p>
-            <p><span>GitHub: </span>${project.github}</p>`;
+            projectDiv.innerHTML += `<p><span class="info">GitHub: </span><a href=${project.github} target="_blank">Project on GitHub</a></p>`
 
             projectContent.appendChild(projectViewport);
             projectContent.appendChild(projectDiv);
