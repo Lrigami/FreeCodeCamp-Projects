@@ -643,7 +643,7 @@ section {
     height: 70dvh;
     top: calc(50% - 35dvh);
     left: calc(50% - 35dvw);
-    background-color: rgba(0, 255, 255, 0.7); 
+    background-color: rgba(0, 255, 255, 0.7);
     backdrop-filter: blur(2px);
     box-sizing: border-box;
     border: 4px solid rgb(100, 100, 100); 
@@ -662,7 +662,6 @@ section {
 }
 
 #slider-nav {
-    border: 1px solid black;
     display: flex;
     justify-content: space-between;
     width: 90%;
@@ -675,6 +674,28 @@ section {
     max-width: 900px;
     height: 75%;
     border: 1px solid black;
+    display: flex;
+    gap: 10px;
+}
+
+iframe {
+    height: 100%;
+    width: 55%;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 10px;
+}
+
+#slider-content div:first-of-type {
+    height: 100%;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-info {
+    font-family: Audiowide, Arial, Helvetica, sans-serif;
+    font-size: 1.3rem;
 }
 
 /* .hide {
