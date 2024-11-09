@@ -21,15 +21,62 @@ window.addEventListener("scroll", () => {
         let speed = element.dataset.speed;
         element.style.transform = `translateY(${scroll * speed}px)`;
     })
-})
+});
 
 // projects solar-system effects
 
 // slider management
+// get data from data.json
+async function getData() {
+    const json = "./data.json";
+    try {
+        const response = await fetch(json);
+        if (!response.ok) {
+            throw new Error (`Response status: ${response.status}`);
+        }
+
+        const data = await response.json();
+        console.log(data);
+
+        for (const project of data.projects) {
+            const projectContent = document.createElement("div");
+
+            const projectViewport = document.createElement("iframe");
+            projectViewport.src = project.source;
+
+            const projectDiv = document.createElement("div");
+
+            let projectTool = document.createElement("span");
+            projectTool.classList.add("tool");
+            for (const tool of project.tools) {
+                projectTool.innerText = tool;
+            }
+
+            projectDiv.innerHTML = `<p><span>Name: </span>${project.name}</p>
+            <p><span>Description: </span>${project.description}</p>
+            <p><span>Languages & Techno: </span>${projectTool}</p>`;
+
+            projectContent.appendChild(projectViewport);
+            projectContent.appendChild(projectDiv);
+
+            document.getElementById("slider-content").appendChild(projectContent);
+        }
+
+    } catch (error) {
+        console.error(error.message);
+    }
+}
+
+getData();
+
+
 let slider = document.getElementById("projects-slider");
-let planet = document.querySelectorAll(".planet");
-planet.addEventListener("click", () => {
-    slider.classList.remove("hide");
+let planets = document.querySelectorAll(".planet");
+
+planets.forEach((planet) => {
+    planet.addEventListener("click", () => {
+        slider.classList.remove("hide");
+    });
 })
 
 // slider navigation buttons
