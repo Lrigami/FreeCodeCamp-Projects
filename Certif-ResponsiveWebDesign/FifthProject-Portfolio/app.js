@@ -38,8 +38,10 @@ async function getData() {
         const data = await response.json();
         console.log(data);
 
+        // create slider project content for each project
         for (const project of data.projects) {
             const projectContent = document.createElement("div");
+            projectContent.classList.add("slider-project");
 
             const projectViewport = document.createElement("iframe");
             projectViewport.src = project.source;
@@ -54,7 +56,8 @@ async function getData() {
 
             projectDiv.innerHTML = `<p><span>Name: </span>${project.name}</p>
             <p><span>Description: </span>${project.description}</p>
-            <p><span>Languages & Techno: </span>${projectTool}</p>`;
+            <p><span>Languages & Techno: </span>${projectTool}</p>
+            <p><span>GitHub: </span>${project.github}</p>`;
 
             projectContent.appendChild(projectViewport);
             projectContent.appendChild(projectDiv);
@@ -66,9 +69,7 @@ async function getData() {
         console.error(error.message);
     }
 }
-
 getData();
-
 
 let slider = document.getElementById("projects-slider");
 let planets = document.querySelectorAll(".planet");
