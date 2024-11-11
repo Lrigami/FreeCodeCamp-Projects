@@ -36,7 +36,6 @@ async function getData() {
         }
 
         const data = await response.json();
-        console.log(data);
 
         // create slider project content for each project
         for (const project of data.projects) {
@@ -48,8 +47,8 @@ async function getData() {
 
             const projectDiv = document.createElement("div");
 
-            projectDiv.innerHTML = `<p><span>Name: </span class="info">${project.name}</p>
-            <p><span>Description: </span class="info">${project.description}</p>
+            projectDiv.innerHTML = `<p><span class="info">Name: </span>${project.name}</p>
+            <p><span class="info">Description: </span>${project.description}</p>
             <p><span class="info">Languages & Techno: </span></p>`;
 
             const lastP = projectDiv.querySelector("p:last-of-type");
@@ -78,22 +77,33 @@ getData();
 let slider = document.getElementById("projects-slider");
 let planets = document.querySelectorAll(".planet");
 
-planets.forEach((planet) => {
-    planet.addEventListener("click", () => {
+console.log(planets);
+
+// When I click on a planet, the slider display the right project
+for (let i = 0; i < planets.length ; i++) {
+    planets[i].onclick = () => {
         slider.classList.remove("hide");
-    });
-})
+        const sliderContent = document.getElementById("slider-content");
+        const sliderWidth = sliderContent.offsetWidth;
+        sliderContent.scrollLeft += (sliderWidth * (i));
+    }
+}
 
 // slider navigation buttons
 let previousButton = document.getElementById("slider-before");
 let nextButton = document.getElementById("slider-after");
 
 previousButton.onclick = () => {
-    const sliderWidth = document.getElementById("slider-content").offsetWidth;
-    document.getElementById("slider-content").scrollLeft -= sliderWidth;
+    const sliderContent = document.getElementById("slider-content");
+    const sliderWidth = sliderContent.offsetWidth;
+    sliderContent.scrollLeft -= sliderWidth;
 }
 
 nextButton.onclick = () => {
-    const sliderWidth = document.getElementById("slider-content").offsetWidth;
-    document.getElementById("slider-content").scrollLeft += sliderWidth;
+    const sliderContent = document.getElementById("slider-content");
+    const sliderWidth = sliderContent.offsetWidth;
+    sliderContent.scrollLeft += sliderWidth;
+    const scrollLeft = sliderContent.scrollLeft;
+    const sliderProject = document.querySelectorAll(".slider-project");
+
 }

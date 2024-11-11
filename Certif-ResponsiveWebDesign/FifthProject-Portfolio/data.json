@@ -1,13 +1,21 @@
 {
     "projects" : [
         {
-            "design" : "url(img/planet1.png)", 
-            "source" : "url(FirstProject-SurveyForm/index.html)", 
-            "name" : "The 100 Favorite Books of All Times", 
-            "description" : "The aim was to create a survey form on a subject of our choice.", 
-            "tools" : ["HTML", "CSS"], 
-            "github" : "https://github.com/Lrigami/FreeCodeCamp-Projects/tree/main/Certif-ResponsiveWebDesign/FirstProject-SurveyForm"
+            "design" : "url(img/planet4.png)", 
+            "source" : "url(FourthProject-ProductLandingPage/index.html)", 
+            "name" : "Nihon Nomad Travel Agency", 
+            "description" : "The aim was to create a landing page for a product of our choice. I chose to create a fake Japan travel Agency. For this project, I used only my own photos, and I wanted to integrate a slider and parallax effects.", 
+            "tools" : ["HTML", "CSS", "JavaScript"], 
+            "github" : "https://github.com/Lrigami/FreeCodeCamp-Projects/tree/main/Certif-ResponsiveWebDesign/FourthProject-ProductLandingPage"
         }, 
+        {
+            "design" : "url(img/planet3.png)", 
+            "source" : "url(ThirdProject-TechnicalDocumentationPage/index.html)", 
+            "name" : "JLPT Documentation Page", 
+            "description" : "The aim was to create a technical documentation page on a subject of our choice. I chose the Japanese Language Proficiency Test, an examination I took three times already. I successfully passed the N2 level (equivalent to a B2-C1 understanding level). I integrated charts and wanted to create a day-night mode switch button for this project.", 
+            "tools" : ["HTML", "CSS", "JavaScript"], 
+            "github" : "https://github.com/Lrigami/FreeCodeCamp-Projects/tree/main/Certif-ResponsiveWebDesign/ThirdProject-TechnicalDocumentationPage"
+        },
         {
             "design" : "url(img/planet2.png)", 
             "source" : "url(SeconProject-TributePage/index.html)", 
@@ -17,20 +25,12 @@
             "github" : "https://github.com/Lrigami/FreeCodeCamp-Projects/tree/main/Certif-ResponsiveWebDesign/SecondProject-TributePage"
         }, 
         {
-            "design" : "url(img/planet3.png)", 
-            "source" : "url(ThirdProject-TechnicalDocumentationPage/index.html)", 
-            "name" : "JLPT Documentation Page", 
-            "description" : "The aim was to create a technical documentation page on a subject of our choice. I chose the Japanese Language Proficiency Test, an examination I took three times already. I successfully passed the N2 level (equivalent to a B2-C1 understanding level). I integrated charts and wanted to create a day-night mode switch button for this project.", 
-            "tools" : ["HTML", "CSS", "JavaScript"], 
-            "github" : "https://github.com/Lrigami/FreeCodeCamp-Projects/tree/main/Certif-ResponsiveWebDesign/ThirdProject-TechnicalDocumentationPage"
-        }, 
-        {
-            "design" : "url(img/planet4.png)", 
-            "source" : "url(FourthProject-ProductLandingPage/index.html)", 
-            "name" : "Nihon Nomad Travel Agency", 
-            "description" : "The aim was to create a landing page for a product of our choice. I chose to create a fake Japan travel Agency. For this project, I used only my own photos, and I wanted to integrate a slider and parallax effects.", 
-            "tools" : ["HTML", "CSS", "JavaScript"], 
-            "github" : "https://github.com/Lrigami/FreeCodeCamp-Projects/tree/main/Certif-ResponsiveWebDesign/FourthProject-ProductLandingPage"
+            "design" : "url(img/planet1.png)", 
+            "source" : "url(FirstProject-SurveyForm/index.html)", 
+            "name" : "The 100 Favorite Books of All Times", 
+            "description" : "The aim was to create a survey form on a subject of our choice.", 
+            "tools" : ["HTML", "CSS"], 
+            "github" : "https://github.com/Lrigami/FreeCodeCamp-Projects/tree/main/Certif-ResponsiveWebDesign/FirstProject-SurveyForm"
         }
     ]
 }
