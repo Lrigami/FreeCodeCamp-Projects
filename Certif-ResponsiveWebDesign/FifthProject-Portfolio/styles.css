@@ -8,6 +8,7 @@
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 html {
@@ -466,6 +467,17 @@ section {
 /* Projects section */
 #projects {
     position: relative;
+    display: flex;
+}
+
+#projects h2 {
+    font-size: 5rem;
+    color: white;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    position: absolute;
+    top: 2px;
+    left: 2px;
 }
 
 /* Solar system */
@@ -675,15 +687,44 @@ section {
     display: flex;
     justify-content: space-between;
     width: 90%;
-    max-width: 1100px;
+    max-width: 1150px;
     position: absolute;
+}
+
+#slider-nav button {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    box-sizing: border-box;
+    border: 3px dotted black;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+#slider-after:hover {
+    animation: nav-button 10s linear infinite;
+}
+
+#slider-before:hover {
+    animation: nav-button-inverted 10s linear infinite;
+}
+
+#slider-after:hover span {
+    animation: nav-button-inverted 10s linear infinite;
+}
+
+#slider-before:hover span {
+    animation: nav-button 10s linear infinite;
+}
+
+#slider-nav button span {
+    transform: translate(50 50);
 }
 
 #slider-content {
     width: 75%;
     max-width: 900px;
     height: 75%;
-    border: 1px solid black;
     position: relative;
     display: flex;
     overflow: hidden;
@@ -695,10 +736,27 @@ section {
     height: 100%;
     display: flex;
     gap: 10px;
+    position: relative;
+}
+
+.slider-project div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.planet-design {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+    width: 40px;
+    height: 40px;
 }
 
 iframe {
     width: 400%;
+    max-width: 600px;
     height: 100%;
     box-sizing: border-box;
     border: none;
@@ -710,17 +768,96 @@ iframe {
     font-size: 1.3rem;
 }
 
+.tool {
+    padding: 2px 10px;
+    margin: 0 10px;
+    background-color: rgba(219, 208, 46, 0.9);
+    box-sizing: border-box;
+    border-radius: 2px;
+}
+
 /* Contact Me section */
 #contact-me {
     background-image: url("img/footer.png");
+    background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    position: relative;
+    display: flex;
 }
 
-footer {
-    background: linear-gradient(#400183, #ab50b0, #f5a8e0);
+#contact {
+    margin: auto;
+    position: relative;
 }
+
+#contact::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: pink;
+    z-index: 100;
+    mix-blend-mode: color;
+    animation: animateColor 15s linear infinite;
+}
+
+.box {
+    position: relative;
+    width: 800px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.change {
+    color: white;
+    font-size: 3rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-shadow: 0 0 10px #003bff, 
+    0 0 20px #003bff, 
+    0 0 40px #003bff, 
+    0 0 80px #003bff, 
+    0 0 120px #003bff, 
+    0 0 150px #003bff;
+}
+
+.lightbar {
+    position: absolute;
+    top: 0;
+    left: 0; 
+    width: 10px;
+    height: 100%;
+    z-index: 110;
+    border-radius: 10px;
+    background: white;
+    box-shadow: 0 0 10px #003bff, 
+    0 0 20px #003bff, 
+    0 0 40px #003bff, 
+    0 0 80px #003bff, 
+    0 0 120px #003bff, 
+    0 0 150px #003bff;
+    animation: animatelightBar 5s linear infinite;
+}
+
+.toplayer {
+    position: absolute;
+    top: 0; 
+    left: 0; 
+    width: 100%;
+    height: 100%;
+    background-image: url("img/footer.png");
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    animation: animatetoplayer 10s linear infinite;
+}
+
 
 /* Animations */
 @keyframes levitating {
@@ -772,6 +909,81 @@ footer {
 
     100% {
 
+    }
+}
+
+@keyframes nav-button {
+    0% {
+        scale: 1.1;
+        translate: 50 50;
+        rotate: 0deg;
+    }
+
+    100% {
+        rotate: 360deg;
+    }
+}
+
+@keyframes nav-button-inverted {
+    0% {
+        scale: 1.1;
+        translate: 50 50;
+        rotate: 0deg;
+    }
+
+    100% {
+        rotate: -360deg;
+    }
+}
+
+@keyframes animateColor {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
+
+@keyframes animatelightBar {
+    0%, 5% {
+        transform: scaleY(0) translateX(0);
+    }
+    10% {
+        transform: scaleY(1) translateX(0);
+    }
+    90% {
+        transform: scaleY(1) translateX(calc(800px - 10px));
+    }
+    95%, 100% {
+        transform: scaleY(0) translateX(calc(800px - 10px));
+    }
+}
+
+@keyframes animatetoplayer {
+    0%, 2.5% {
+        left: 0;
+    }
+    5% {
+        left: 0;
+    }
+    45% {   
+        left: 100%;
+    }
+    47.5%, 50% {
+        left: 100%;
+    }
+    50.01%, 52.5% {
+        left: -100%;
+    }
+    55% {
+        left: -100%;
+    }
+    95% {   
+        left: 0;
+    }
+    97.5%, 100% {
+        left: 0;
     }
 }
 

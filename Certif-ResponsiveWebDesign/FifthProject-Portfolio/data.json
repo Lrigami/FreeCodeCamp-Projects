@@ -1,7 +1,7 @@
 {
     "projects" : [
         {
-            "design" : "url(img/planet4.png)", 
+            "design" : "./img/planet4.png", 
             "source" : "./FourthProject-ProductLandingPage/index.html", 
             "name" : "Nihon Nomad Travel Agency", 
             "description" : "The aim was to create a landing page for a product of our choice. I chose to create a fake Japan travel Agency. For this project, I used only my own photos, and I wanted to integrate a slider and parallax effects.", 
@@ -9,7 +9,7 @@
             "github" : "https://github.com/Lrigami/FreeCodeCamp-Projects/tree/main/Certif-ResponsiveWebDesign/FourthProject-ProductLandingPage"
         }, 
         {
-            "design" : "url(img/planet3.png)", 
+            "design" : "./img/planet3.png", 
             "source" : "./ThirdProject-TechnicalDocumentationPage/index.html", 
             "name" : "JLPT Documentation Page", 
             "description" : "The aim was to create a technical documentation page on a subject of our choice. I chose the Japanese Language Proficiency Test, an examination I took three times already. I successfully passed the N2 level (equivalent to a B2-C1 understanding level). I integrated charts and wanted to create a day-night mode switch button for this project.", 
@@ -17,7 +17,7 @@
             "github" : "https://github.com/Lrigami/FreeCodeCamp-Projects/tree/main/Certif-ResponsiveWebDesign/ThirdProject-TechnicalDocumentationPage"
         },
         {
-            "design" : "url(img/planet2.png)", 
+            "design" : "./img/planet2.png", 
             "source" : "./SecondProject-TributePage/index.html", 
             "name" : "Ogawa Yôko Tribute Page", 
             "description" : "The aim was to create a tribute page for a person of our choice. I chose Ogawa Yôko, a famous japanese author on which I did my Master thesis intitulated \" The Diary of Anne Frank as inspiration for The Memory Police by Ogawa Yôko. Places of memory in a totalitarian regime.\" I tried working with the DeepL API for this project.", 
@@ -25,7 +25,7 @@
             "github" : "https://github.com/Lrigami/FreeCodeCamp-Projects/tree/main/Certif-ResponsiveWebDesign/SecondProject-TributePage"
         }, 
         {
-            "design" : "url(img/planet1.png)", 
+            "design" : "./img/planet1.png", 
             "source" : "./FirstProject-SurveyForm/index.html", 
             "name" : "The 100 Favorite Books of All Times", 
             "description" : "The aim was to create a survey form on a subject of our choice.", 
