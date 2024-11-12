@@ -214,7 +214,6 @@ header img:last-of-type {
 }
 
 /* Main */
-
 main {
     height: auto;
     background: radial-gradient(ellipse at top, #060e40 30%, #400183 100%);
@@ -225,8 +224,7 @@ section {
     position: relative;
 }
 
-/* About me */
-
+/* About me section */
 #about-me {
     background-image: url("img/header-calque1.png");
 }
@@ -297,7 +295,6 @@ section {
 }
 
 /* skills  */
-
 #skills {
     width: 80%;
     height: 40%;
@@ -337,20 +334,20 @@ section {
     bottom: 0;
     right: 10px;
     z-index: 20;
-  }
+}
 
 #spaceship-container:hover {
     animation: css-spaceship 8s ease-in-out;
 }
   
-  #spaceship {
+#spaceship {
     height: 80%;
     width: 100%;
     position: relative;
     z-index: 3;
-  }
-  
-  #wings {
+}
+
+#wings {
     width: 50%;
     height: 40%;
     background-color: transparent;
@@ -359,9 +356,9 @@ section {
     left: 25%;
     border-radius: 50%;
     box-shadow: 0px -20px 0px 8px #613768, 0px -25px 0px 8px #6137b9;
-  }
-  
-  #body {
+}
+
+#body {
     height: 90%;
     width: 35%;
     position: absolute;
@@ -371,9 +368,9 @@ section {
     overflow: hidden;
     box-sizing: border-box;
     border: 3px solid black;
-  }
-  
-  #tip {
+}
+
+#tip {
     width: 100%;
     height: 40%;
     position: absolute;
@@ -382,9 +379,9 @@ section {
     border-radius: 47%;
     box-sizing: border-box;
     border: 2px solid black;
-  }
-  
-  #window {
+}
+
+#window {
     height: 25%;
     width: 50%;
     background-color: #c2e2f2;
@@ -394,9 +391,9 @@ section {
     border-radius: 50%;
     box-sizing: border-box;
     border: 10px solid grey;
-  }
-  
-  #line {
+}
+
+#line {
     width: 100%;
     height: 5%;
     position: absolute;
@@ -404,9 +401,9 @@ section {
     box-sizing: border-box;
     border: 2px solid black;
     background-color: #613768;
-  }
-  
-  .reactor {
+}
+
+.reactor {
     width: 20%;
     height: 20%;
     background: linear-gradient(#613768 70%, #6137b9);
@@ -414,30 +411,30 @@ section {
     bottom: 0;
     box-sizing: border-box;
     border: 2px solid black;
-  }
-  
-  .reactor.one {
+}
+
+.reactor.one {
     left: 35%;
     transform: skewX(-26deg);
-  }
-  
-  .reactor.two {
+}
+
+.reactor.two {
     right: 35%;
     transform: skewX(26deg);
-  }
-  
-  #fire {
+}
+
+#fire {
     height: 20%;
     width: 100%;
     position: relative;
     display: none;
-  }
+}
 
 #spaceship-container:hover #fire {
     display: block;
 }
   
-  .fire {
+.fire {
     width: 25%;
     height: 250%;
     position: absolute;
@@ -445,35 +442,33 @@ section {
     box-sizing: border-box;
     border-radius: 50%;
     border: 6px solid rgba(255, 150, 0, 1);
-  }
-  
-  .fire.one {
+}
+
+.fire.one {
     left: 37.5%;
     top: -15%;
-  }
-  
-  .fire.two {
+}
+
+.fire.two {
     scale: 0.7;
     left: 23%;
     top: -60%;
     transform: rotate(30deg);
-  }
-  
-  .fire.three {
+}
+
+.fire.three {
     scale: 0.7;
     right: 23%;
     top: -60%;
     transform: rotate(-30deg);
-  }
+}
 
-/* Projects */
-
+/* Projects section */
 #projects {
     position: relative;
 }
 
 /* Solar system */
-
 #solar-system {
     width: 100%;
     margin-top: 60px;
@@ -481,7 +476,7 @@ section {
     position: relative;
     overflow-x: hidden;
     overflow: visible;
-  }
+}
   
 .line {
     border-radius: 100% 0 0 100% / 50%;
@@ -610,10 +605,48 @@ section {
     background-image: url("img/projects/project1.jpg");
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* pour le déplacement des planètes focus : planet:focus > not:focus  */
 
-/* slider */
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* slider */
 #projects-slider {
     position: absolute;
     width: 70dvw;
@@ -677,8 +710,7 @@ iframe {
     font-size: 1.3rem;
 }
 
-/* Contact Me */
-
+/* Contact Me section */
 #contact-me {
     background-image: url("img/footer.png");
     background-repeat: no-repeat;
@@ -691,7 +723,6 @@ footer {
 }
 
 /* Animations */
-
 @keyframes levitating {
     0% {
 
@@ -743,8 +774,5 @@ footer {
 
     }
 }
-
-
-
 
 /* Media queries */
