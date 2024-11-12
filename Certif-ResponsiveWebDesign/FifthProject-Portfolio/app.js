@@ -75,21 +75,9 @@ async function getData() {
 getData();
 
 let slider = document.getElementById("projects-slider");
-let planets = document.querySelectorAll(".planet");
+let planets = document.querySelectorAll(".planet div");
 
-console.log(planets);
-
-// When I click on a planet, the slider display the right project
-for (let i = 0; i < planets.length ; i++) {
-    planets[i].onclick = () => {
-        slider.classList.remove("hide");
-        const sliderContent = document.getElementById("slider-content");
-        const sliderWidth = sliderContent.offsetWidth;
-        sliderContent.scrollLeft += (sliderWidth * (i));
-    }
-}
-
-// slider navigation buttons
+// slider navigation
 let previousButton = document.getElementById("slider-before");
 let nextButton = document.getElementById("slider-after");
 
@@ -105,5 +93,30 @@ nextButton.onclick = () => {
     sliderContent.scrollLeft += sliderWidth;
     const scrollLeft = sliderContent.scrollLeft;
     const sliderProject = document.querySelectorAll(".slider-project");
-
 }
+
+// When I click on a planet, the slider display the right project
+for (let i = 0; i < planets.length+1 ; i++) {
+    planets[i].onclick = () => {
+        slider.style.display = "flex";
+        const sliderContent = document.getElementById("slider-content");
+        let sliderWidth = sliderContent.offsetWidth;
+        sliderContent.scrollLeft += (sliderWidth * i-1);
+        console.log(`sliderWidht=${sliderWidth}, scrollLeft=${sliderContent.scrollLeft}`)
+
+        // When I click outside of the slider, it disappears and scrollLeft resets to 0
+        function handleClickOutside(event) { 
+            if (!slider.contains(event.target) && event.target !== planets[i]) {
+                const sliderContent = document.getElementById("slider-content");
+                sliderContent.scrollLeft = 0;
+                slider.style.display = "none";
+                document.removeEventListener("click", handleClickOutside); 
+            }
+        }
+
+        document.addEventListener("click", handleClickOutside);
+    }
+}
+
+
+
