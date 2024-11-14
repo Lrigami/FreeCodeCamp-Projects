@@ -10,14 +10,18 @@ If a projet requires additional steps, refer to the README.md file project itsel
 
 ## Certifications
 ### Certification 1 - Responsive Web Design: 
-1. [Survey form](https://github.com/Lrigami/FreeCodeCamp-Projects/tree/main/Certif-ResponsiveWebDesign/FirstProject-SurveyForm)
+1. [Survey Form](https://github.com/Lrigami/FreeCodeCamp-Projects/tree/main/Certif-ResponsiveWebDesign/FirstProject-SurveyForm)
 2. [Tribute Page](https://github.com/Lrigami/FreeCodeCamp-Projects/tree/main/Certif-ResponsiveWebDesign/SecondProject-TributePage)
 3. [Technical Documentation Page](https://github.com/Lrigami/FreeCodeCamp-Projects/tree/main/Certif-ResponsiveWebDesign/ThirdProject-TechnicalDocumentationPage)
 4. [Product Landing Page](https://github.com/Lrigami/FreeCodeCamp-Projects/tree/main/Certif-ResponsiveWebDesign/FourthProject-ProductLandingPage)
-5. Portfolio (in progress)
+5. [Portfolio (in progress)](https://github.com/Lrigami/Lrigami.github.io)
 
-### Certification 2 - JavaScript Algorithms and Data Structures (Beta):
-(In progress)
+### Certification 2 - JavaScript Algorithms and Data Structures (Beta) (In progress) :
+1. [Palindrome Checker](https://github.com/Lrigami/FreeCodeCamp-Projects/tree/main/Certif-JavaScriptAlgorithmsAndDataStructures/FirstProject-PalindromeChecker)
+2. Roman Numeral Converter (in progress)
+3. Telephone Number Validator
+4. Cash Register
+5. Pokémon Search App
 
 ## License
 (to update)
