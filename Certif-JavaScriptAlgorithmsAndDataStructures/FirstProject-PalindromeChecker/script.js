@@ -14,10 +14,10 @@ function checkPalindrome() {
         }
         if (a.toString() === b.toString()) {
             resultP.style.display = "block"; 
-            resultP.innerText = `${textInput.value} is a Palindrome`;
+            resultP.innerText = `"${textInput.value}" is a palindrome`;
         } else {
             resultP.style.display = "block"; 
-            resultP.innerText = `${textInput.value} is not a Palindrome`;
+            resultP.innerText = `"${textInput.value}" is not a palindrome`;
         }
     }
 };
