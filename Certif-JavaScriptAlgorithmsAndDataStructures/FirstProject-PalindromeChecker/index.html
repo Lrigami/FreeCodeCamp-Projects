@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=content-width, initial-scale=1.0">
+        <meta description="Palindrome Checker Project">
+        <title>Palindrome Checker</title>
+        <link rel="stylesheet" href="styles.css">
+        <script src="script.js" defer></script>
+    </head>
+
+    <body>
+        <header>
+            <h1>Palindrome Checker</h1>
+        </header>
+
+        <main>
+            <h2>Is it a palindrome?</h2>
+            <div class="box">
+                <label for="text-input">Enter in text to check for a palindrome:</label>
+                <input id="text-input" type="text" name="text" placeholder="e.g: charade"/>
+                <button onclick="checkPalindrome()" id="check-btn">Verify</button>
+            </div>
+            <p id="result" style="display: hidden;"></p>
+        </main>
+
+        <footer>
+            <small>Palindrome Checker @Lrigami, 2024</small>
+        </footer>
+    </body>
+</html>
