@@ -12,11 +12,10 @@ function checkPalindrome() {
             a.push(checkedText[i]);
             b.push(checkedText[checkedText.length-(i+1)]);
         }
+        resultP.style.display = "block"; 
         if (a.toString() === b.toString()) {
-            resultP.style.display = "block"; 
             resultP.innerText = `"${textInput.value}" is a palindrome`;
         } else {
-            resultP.style.display = "block"; 
             resultP.innerText = `"${textInput.value}" is not a palindrome`;
         }
     }
