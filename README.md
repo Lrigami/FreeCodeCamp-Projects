@@ -4,7 +4,7 @@ You can find here all of my Certification projects required by FreeCodeCamp for 
 I tried to make each project more personal and deepened by adding additional functionnalities (automatised translation, day/night mode button, carousel, graphs...).
 You can find the detailed documentation in a Readme file on each project. 
 
-## Initialization 
+## Initialisation 
 Clone the repository of each project. Then launch the index.html file. \
 If a projet requires additional steps, refer to the README.md file project itself.
 
