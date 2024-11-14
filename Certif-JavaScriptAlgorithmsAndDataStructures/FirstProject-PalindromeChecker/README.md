@@ -1,3 +1,13 @@
+# Palindrome Checker Project
+
+The Palindrome Checker is the first certification project needed for the JS Cetification on FreeCodeCamp. It was needed to remove all non-alphanumeric characters (punctuation, spaces and symbols) and turn everything into the same case (lower or upper case) in order to check for palindromes.
+
+# Initialisation
+
+Clone this repository and launch the index.html file.
+
+## User Stories
+
 - [x] You should have an input element with an id of "text-input".
 - [x] You should have a button element with an id of "check-btn".
 - [x] You should have a div, span or p element with an id of "result".
