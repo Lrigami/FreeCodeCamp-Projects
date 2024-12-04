@@ -1,6 +1,7 @@
 let textInput = document.getElementById("text-input");
 let checkBtn = document.getElementById("check-btn");
 let resultParagraph = document.getElementById("result");
+let normalizedText;
 
 // Try #1 (functional code):
 
@@ -49,12 +50,18 @@ function hasSomethingBeenTyped() { // check is something has been typed in textI
     }
 }
 
-function checkIfIsAPalindrom() { // check if what has been typed is a palindrome.
+function normalizeInput() {
+    let typedText = textInput.value.toString().toLowerCase().replace(/[^A-Z0-9À-ú]/ig, ""); // get what is typed without special chars in lower case.
+    normalizedText = typedText.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+    console.log(normalizedText);
+    return normalizedText;
+}
+
+function checkIfIsAPalindrom(normalizedText) { // check if what has been typed is a palindrome.
     resultParagraph.style.display = "block";
 
-    let typedText = textInput.value.toString().toLowerCase().replace(/[^A-Z0-9]/ig, ""); // get what is typed without special chars in lower case.
-    let textToCheck = typedText.split("").toString(); // reform the string without special chars.
-    let reversedTextToCheck = typedText.split("").reverse().toString(); // reform the string without special chars in reverse.
+    let textToCheck = normalizedText.split("").toString(); // reform the string without special chars.
+    let reversedTextToCheck = normalizedText.split("").reverse().toString(); // reform the string without special chars in reverse.
 
     if (textToCheck === reversedTextToCheck) { // check if the string is equal to the reversed string.
         resultParagraph.innerText = `"${textInput.value}" is a palindrome`;
@@ -65,6 +72,7 @@ function checkIfIsAPalindrom() { // check if what has been typed is a palindrome
 
 checkBtn.addEventListener("click", () => {
     if (hasSomethingBeenTyped()) {
-        checkIfIsAPalindrom();
+        normalizeInput();
+        checkIfIsAPalindrom(normalizedText);
     }
 })
