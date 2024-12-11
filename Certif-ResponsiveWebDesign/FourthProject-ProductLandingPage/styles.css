@@ -739,7 +739,7 @@ section {
     padding: 2%;
 }
 
-.review-msg h4 {
+.review-title {
     font-size: 2.4rem;
     font-style: italic;
     font-weight: lighter;
@@ -771,9 +771,9 @@ section {
 
 #gradient-joinus {
     width: 100%;
-    height: 100vh;
+    height: calc(81vh + 268px);
     position: absolute;
-    top: 19vw;
+    top: 19vh;
     background: linear-gradient(rgba(80, 92, 70, 0), rgba(80, 92, 70, 1) 12%, var(--background2));
 }
 
@@ -1081,6 +1081,15 @@ small {
     .oze3 {
         width: 200vw;
     }
+
+    #automatised-locations {
+        padding-top: 200px !important;
+    }
+
+    .place-card {
+        min-width: 250px;
+        max-width: 250px;
+    }
 }
 
 @media screen and (max-width: 1025px) {
@@ -1122,6 +1131,10 @@ small {
     #mapgrid .material-icons {
         font-size: 24px !important;
     }
+
+    .review-item {
+        gap: 20px;
+    }
 }
 
 @media screen and (max-width: 801px) {
@@ -1143,16 +1156,14 @@ small {
     }
 
     #japanMapLocations {
-        height: 80vh;
+        height: 25vh;
         display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     #locations-titles {
-        position: relative;
-        width: 50%;
-        margin: 10% auto auto auto;
-        left: 0;
-        top: 0;
+        position: unset;
     }
 
     #locations-titles label {
@@ -1161,6 +1172,15 @@ small {
 
     #container {
         display: none;
+    }
+
+    #slider-nav {
+        width: 95%;
+    }
+
+    #gradient-joinus {
+        height: calc(75vh + 268px);
+        top: 15vh;
     }
 }
 
@@ -1174,6 +1194,21 @@ small {
         height: 300px;
         left: calc(50% - 150px);
         bottom: -150px;
+    }
+
+    .review-item {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    #gradient-joinus {
+        height: calc(92vh + 268px);
+        top: 8vh;
+    }
+
+    footer {
+        padding-top: 5px;
     }
 }
 
@@ -1224,10 +1259,54 @@ small {
     section {
         scroll-margin-top: 126.75px !important;
     }
+
+    .review-title {
+        font-size: 2.1rem;
+    }
+
+    #gradient-joinus {
+        height: calc(92vh + 450px);
+        top: 8vh;
+    }
+
+    footer {
+        height: 450px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+        padding: 0 10px;
+        column-gap: 10px;
+    }
+
+    #contacts {
+        grid-column: 1 / 3;
+        grid-row: 1 / 2;
+        width: 100%;
+        max-width: unset;
+    }
+
+    #contacts ul li:last-of-type:not(#icons li:last-of-type){
+        width: 50%;
+        margin: auto;
+        list-style: none;
+    }
+
+    small {
+        position: unset;
+        grid-row: 3 / 4;
+        grid-column: 1 / 3;
+        padding-top: 10px;
+    }
 }
 
 @media screen and (max-width: 405px) {
     section {
         scroll-margin-top: 154.75px !important;
+    }
+
+    #form-div {
+        width: 300px;
+        margin: auto;
+        left: calc(50% - 150px)
     }
 }
