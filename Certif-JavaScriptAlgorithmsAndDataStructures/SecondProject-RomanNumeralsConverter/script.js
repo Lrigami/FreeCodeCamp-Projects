@@ -24,7 +24,7 @@ function isInputValid(input) {
 // cut number into units, tens, hundreds and thousands
 function cutNumber(number) {
     isInputValid(inputNumber);
-    let cutN = number.toString().split("");
+    let cutN = Math.floor(number).toString().split("");
     let toConvert = [];
     let count = 1;
     while(cutN.length > 0) {
