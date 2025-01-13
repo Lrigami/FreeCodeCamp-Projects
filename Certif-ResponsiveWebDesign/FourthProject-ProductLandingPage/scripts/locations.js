@@ -6,12 +6,12 @@ const locations = [
         places: [
             {
                 name: "Shinjuku Gyôen",
-                image: "./images/Shinjuku-Gyoen.jpg",
+                image: "./images/Shinjuku-Gyoen.JPG",
                 text: "Photo of a pavillion in Shinjuku park in Tokyo."
             }, 
             {
                 name: "Tokyo", 
-                image: "./images/Tokyo.jpg", 
+                image: "./images/Tokyo.JPG", 
                 text: "Photo of Tokyo buildings from a water lilies pond."
             }, 
             {
@@ -32,7 +32,7 @@ const locations = [
         places: [
             {
                 name: "Takao Mount", 
-                image: "./images/Takao-mount.jpg", 
+                image: "./images/Takao-mount.JPG", 
                 text: "Photo of mountains from Takao Mount summit."
             }, 
             {
@@ -48,22 +48,22 @@ const locations = [
         places: [
             {
                 name: "Oze park", 
-                image: "./images/Oze-park.jpg", 
+                image: "./images/Oze-park.JPG", 
                 text: "Photo of Oze national park."
             }, 
             {
                 name: "Hiuchigatake mount", 
-                image: "./images/Oze-park-3.jpg", 
+                image: "./images/Oze-park-3.JPG", 
                 text: "Photo of Hiuchigatake mount in Oze national park."
             }, 
             {
                 name: "Sanjo falls", 
-                image: "./images/Oze-park-waterfall.jpg", 
+                image: "./images/Oze-park-waterfall.JPG", 
                 text: "Photo of Sanjo falls in Oze national park."
             }, 
             {
                 name: "Oze park - Miike", 
-                image: "./images/Oze-park-dragonfly.jpg", 
+                image: "./images/Oze-park-dragonfly.JPG", 
                 text: "Photo of a dragonfly in Oze national park."
             }, 
             {
@@ -84,22 +84,22 @@ const locations = [
         places: [
             {
                 name: "Hida no sato - folkloric village", 
-                image: "./images/Hida-no-sato-village.jpg", 
+                image: "./images/Hida-no-sato-village.JPG", 
                 text: "Photo of Hida no sato, a folkloric village near Takayama."
             }, 
             {
                 name: "Hida kokubun-ji", 
-                image: "./images/Hida-Kokubun-ji.jpg", 
+                image: "./images/Hida-Kokubun-ji.JPG", 
                 text: "Photo of the pagoda in Hida Kokubun temple"
             },
             {
                 name: "Sakurayama Hachimangu Shrine",
-                image: "./images/Sakurayama-Hachimangu-Shrine.jpg", 
+                image: "./images/Sakurayama-Hachimangu-Shrine.JPG", 
                 text: "Photo of the great Torii of Sakurayama Hachimangu sanctuary."
             }, 
             {
                 name: "Hida no sato - folkloric village", 
-                image: "./images/Takayama.jpg", 
+                image: "./images/Takayama.JPG", 
                 text: "Photo of Hida no sato, a folkloric village near Takayama."
             }
         ]
@@ -110,12 +110,12 @@ const locations = [
         places: [
             {
                 name: "Kurobe river", 
-                image: "./images/Kurobe.jpg", 
+                image: "./images/Kurobe.JPG", 
                 text: "Photo of Kurobe river."
             }, 
             {
                 name: "Kurobe railway", 
-                image: "./images/Kurobe-railway.jpg", 
+                image: "./images/Kurobe-railway.JPG", 
                 text: "Photo of the train on Kurobe river railway."
             }
         ]
@@ -126,17 +126,17 @@ const locations = [
         places: [
             {
                 name: "Shirakawa-Gô historic village", 
-                image: "./images/Shirakawa-Go-Village.jpg",
+                image: "./images/Shirakawa-Go-Village.JPG",
                 text: "Photo of the historic village of Shirakawa-Gô."
             }, 
             {
                 name: "Shirakawa-Gô houses", 
-                image: "./images/Go-Shirakawa-house.jpg", 
+                image: "./images/Go-Shirakawa-house.JPG", 
                 text: "Photo of two houses in the historic village of Shirakawa-Gô."
             }, 
             {
                 name: "Shirakawa-Gô waterfall", 
-                image: "./images/Shirakawa-Go-waterfall.jpg", 
+                image: "./images/Shirakawa-Go-waterfall.JPG", 
                 text: "Photo of a house and a waterfall in the historic village of Shirakawa-Gô."
             }
         ]
@@ -147,17 +147,17 @@ const locations = [
         places: [
             {
                 name: "Kasuga Grand Shrine", 
-                image: "./images/Kasuga-Taisha.jpg", 
+                image: "./images/Kasuga-Taisha.JPG", 
                 text: "Photo of the Kasuga Grand Shrine."
             }, 
             {
                 name: "Nara deers", 
-                image: "./images/Nara-deer.jpg", 
+                image: "./images/Nara-deer.JPG", 
                 text: "Photo of a deer in Nara."
             }, 
             {
                 name: "Nara deers", 
-                image: "./images/Nara-deer-3.jpg", 
+                image: "./images/Nara-deer-3.JPG", 
                 text: "Photo of a deer near a tree in Nara."
             }
         ]
@@ -168,7 +168,7 @@ const locations = [
         places: [
             {
                 name: "Yoshino yama", 
-                image: "./images/Yoshino-yama.jpg", 
+                image: "./images/Yoshino-yama.JPG", 
                 text: "Photo in two houses among sakura trees in Yoshino yama."
             }
         ]
@@ -190,22 +190,22 @@ const locations = [
         places: [
             {
                 name: "Tôji Pagoda (by night)", 
-                image: "./images/Tôji.jpg", 
+                image: "./images/Tôji.JPG", 
                 text: "Photo of the Tôji Pagoda by night in Kyôto."
             }, 
             {
                 name: "Gion matsuri", 
-                image: "./images/Gion-matsuri.jpg", 
+                image: "./images/Gion-matsuri.JPG", 
                 text: "Photo of a woman participating in Gion matsuri, Kyôto."
             }, 
             {
                 name: "Fushimi Inari", 
-                image: "./images/Fushimi-Inari.jpg", 
+                image: "./images/Fushimi-Inari.JPG", 
                 text: "Photo of the Fushimi Inari in Kyôto."
             }, 
             {
                 name: "Heian Jingu", 
-                image: "./images/Heian-Jingu-2.jpg", 
+                image: "./images/Heian-Jingu-2.JPG", 
                 text: "Photo of a pavillion in Heian Jingu gardens."
             }, 
             {
@@ -215,7 +215,7 @@ const locations = [
             }, 
             {
                 name: "Nijô castle", 
-                image: "./images/Nijô.jpg", 
+                image: "./images/Nijô.JPG", 
                 text: "Photo of the Nijô castle."
             }, 
             {
@@ -273,12 +273,12 @@ const locations = [
         places: [
             {
                 name: "Hiroshima shrine", 
-                image: "./images/Hiroshima.jpg", 
+                image: "./images/Hiroshima.JPG", 
                 text: "Photo of a mountain landscape below a Shinto temple rope."
             }, 
             {
                 name: "Hiroshima castle mascot", 
-                image: "./images/Hiroshima-castle.jpg", 
+                image: "./images/Hiroshima-castle.JPG", 
                 text: "Photo of the Hiroshima catsle mascot."
             }, 
             {
