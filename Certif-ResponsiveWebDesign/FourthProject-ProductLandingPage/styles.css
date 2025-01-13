@@ -1190,6 +1190,11 @@ small {
     .oze1, .oze2 {
         bottom: -69vw;
     }
+
+    #gradient-joinus {
+        height: calc(83vh + 268px);
+        top: 17vh;
+    }
 }
 
 @media screen and (max-width: 600px) {
