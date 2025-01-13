@@ -305,6 +305,7 @@ section {
     height: auto;
     margin: 10px 0 0 0;
     scroll-margin-top: 75.9px; 
+    background-color: var(--white);
 }
 
 #japanMapLocations {
@@ -508,7 +509,6 @@ section {
     column-gap: 2vw;
     scroll-margin-top: 75.9px; 
     position: relative;
-    background-color: var(--white);
 }
 
 .title-div {

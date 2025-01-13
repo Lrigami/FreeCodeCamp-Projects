@@ -380,31 +380,41 @@ function createCards(location) {
                 card.prepend(textAlt);
             };
         } else if (place.video) {
-            let placeVideo = document.createElement("video");
-            placeVideo.setAttribute("muted", "");
-            placeVideo.setAttribute("autoplay", "");
-            placeVideo.setAttribute("loop", "");
-            placeVideo.innerHTML = `${place.text}`;
+            fetch(place.video, { method: "HEAD" })
+        .then((response) => {
+            if (response.ok) {
+                let placeVideo = document.createElement("video");
+                placeVideo.setAttribute("muted", "");
+                placeVideo.setAttribute("autoplay", "");
+                placeVideo.setAttribute("loop", "");
+                placeVideo.innerHTML = `${place.text}`;
 
-            let videoSrc = document.createElement("source");
-            videoSrc.setAttribute("src", place.video);
-            videoSrc.setAttribute("type", "video/mp4");
+                let videoSrc = document.createElement("source");
+                videoSrc.setAttribute("src", place.video);
+                videoSrc.setAttribute("type", "video/mp4");
 
-            placeVideo.appendChild(videoSrc);
-
-            placeVideo.onerror = () => {
-                console.log("error");
-                let textAlt = document.createElement("p");
-                textAlt.innerHTML = `${place.text}`;
-                textAlt.style.textAlign = "center";
-                textAlt.style.color = "black";
-                textAlt.style.margin = "auto";
-                card.prepend(textAlt);
+                placeVideo.appendChild(videoSrc);
+                placeVideo.oncanplay = () => {
+                    card.appendChild(placeVideo);
+                };
+            } else {
+                handleMissingMedia(card, place.text);
             }
-            placeVideo.oncanplay = () => {
-                card.appendChild(placeVideo);
-            }
+            })
+            .catch(() => {
+                handleMissingMedia(card, place.text);
+            });
         }
+
+        function handleMissingMedia(card, text) {
+            let textAlt = document.createElement("p");
+            textAlt.innerHTML = text;
+            textAlt.style.textAlign = "center";
+            textAlt.style.color = "black";
+            textAlt.style.margin = "auto";
+            card.prepend(textAlt);
+        }
+        
         let bookNow = document.createElement("button");
         bookNow.innerHTML = "Book now";
 
