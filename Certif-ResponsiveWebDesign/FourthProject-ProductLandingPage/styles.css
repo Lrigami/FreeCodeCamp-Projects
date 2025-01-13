@@ -508,6 +508,7 @@ section {
     column-gap: 2vw;
     scroll-margin-top: 75.9px; 
     position: relative;
+    background-color: var(--white);
 }
 
 .title-div {
