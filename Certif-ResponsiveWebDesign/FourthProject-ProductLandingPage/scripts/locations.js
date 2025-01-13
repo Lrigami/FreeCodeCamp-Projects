@@ -392,7 +392,7 @@ function createCards(location) {
 
             placeVideo.appendChild(videoSrc);
 
-            placeVideo.onstalled = () => {
+            placeVideo.onerror = () => {
                 console.log("error");
                 let textAlt = document.createElement("p");
                 textAlt.innerHTML = `${place.text}`;
