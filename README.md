@@ -21,7 +21,7 @@ If a projet requires additional steps, refer to the README.md file project itsel
 2. [Roman Numeral Converter](https://github.com/Lrigami/FreeCodeCamp-Projects/tree/main/Certif-JavaScriptAlgorithmsAndDataStructures/SecondProject-RomanNumeralsConverter)
 3. [Telephone Number Validator](https://github.com/Lrigami/FreeCodeCamp-Projects/tree/main/Certif-JavaScriptAlgorithmsAndDataStructures/ThirdProject-TelephoneNumberValidator)
 4. [Cash Register](https://github.com/Lrigami/FreeCodeCamp-Projects/tree/main/Certif-JavaScriptAlgorithmsAndDataStructures/FourthProject-CashRegister)
-5. [Pokémon Search App](https://github.com/Lrigami/FreeCodeCamp-Projects/tree/main/Certif-JavaScriptAlgorithmsAndDataStructures/FifthProject-Pokedex)
+5. [Pokémon Search App](https://github.com/Lrigami/FreeCodeCamp-Projects/tree/main/Certif-JavaScriptAlgorithmsAndDataStructures/FifthProject-Pokedex) (FreeCodeCamp project), or [Pokédex](https://github.com/Lrigami/Pokedex) (side-project)
 
 ### Certification 3 - Back End Development and APIs (In progress):
 1. [Timestamp Microservice](https://github.com/Lrigami/FreeCodeCamp-Projects/tree/main/Certif-BackEndDevelopmentAndAPIs/Timestamp-Microservice)
