@@ -2,6 +2,8 @@
 
 ## Initialisation
 
+Clone this repository, then launch the index.html file.
+
 ## User Stories
 
 - [x] You should have an input element with an id of "search-input".

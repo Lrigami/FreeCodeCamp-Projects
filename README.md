@@ -16,12 +16,19 @@ If a projet requires additional steps, refer to the README.md file project itsel
 4. [Product Landing Page](https://github.com/Lrigami/FreeCodeCamp-Projects/tree/main/Certif-ResponsiveWebDesign/FourthProject-ProductLandingPage)
 5. [Portfolio (in progress)](https://github.com/Lrigami/Lrigami.github.io)
 
-### Certification 2 - JavaScript Algorithms and Data Structures (Beta) (In progress) :
+### Certification 2 - JavaScript Algorithms and Data Structures (Beta):
 1. [Palindrome Checker](https://github.com/Lrigami/FreeCodeCamp-Projects/tree/main/Certif-JavaScriptAlgorithmsAndDataStructures/FirstProject-PalindromeChecker)
-2. Roman Numeral Converter (in progress)
-3. Telephone Number Validator
-4. Cash Register
-5. Pokémon Search App
+2. [Roman Numeral Converter](https://github.com/Lrigami/FreeCodeCamp-Projects/tree/main/Certif-JavaScriptAlgorithmsAndDataStructures/SecondProject-RomanNumeralsConverter)
+3. [Telephone Number Validator](https://github.com/Lrigami/FreeCodeCamp-Projects/tree/main/Certif-JavaScriptAlgorithmsAndDataStructures/ThirdProject-TelephoneNumberValidator)
+4. [Cash Register](https://github.com/Lrigami/FreeCodeCamp-Projects/tree/main/Certif-JavaScriptAlgorithmsAndDataStructures/FourthProject-CashRegister)
+5. [Pokémon Search App](https://github.com/Lrigami/FreeCodeCamp-Projects/tree/main/Certif-JavaScriptAlgorithmsAndDataStructures/FifthProject-Pokedex) (FreeCodeCamp project), or [Pokédex](https://github.com/Lrigami/Pokedex) (side-project)
+
+### Certification 3 - Back End Development and APIs (In progress):
+1. [Timestamp Microservice](https://github.com/Lrigami/FreeCodeCamp-Projects/tree/main/Certif-BackEndDevelopmentAndAPIs/Timestamp-Microservice)
+2. Request Header Parser Microservice
+3. URL Shortener Microservice
+4. Exercise Tracker
+5. File Metadata Microservice
 
 ## License
 (to update)

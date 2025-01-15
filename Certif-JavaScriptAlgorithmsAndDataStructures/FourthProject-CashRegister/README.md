@@ -2,6 +2,8 @@
 
 ## Initialisation
 
+Clone this repository and launch the index.html file.
+
 ## User Stories
 
 - [x] You should have an input element with an id of "cash".
